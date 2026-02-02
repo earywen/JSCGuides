@@ -9,178 +9,269 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">← Retour</a>
-        <h1>Vaelgor & Ezzorak</h1>
-        <div class="difficulty-switcher">
-            <button class="difficulty-btn" data-mode="normal">Normal</button>
-            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
-            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
-        </div>
-    </header>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">JSCGUIDE</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item active">Vaelgor & Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
+        </nav>
+    </aside>
 
-    <main class="container boss-page-layout">
-        <!-- SIDEBAR -->
-        <aside class="guide-sidebar">
-            <div class="video-section">
-                <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container video-trigger" id="videoTrigger">
-                    <img src="https://img.youtube.com/vi/WN7eQPcdHyE/maxresdefault.jpg" alt="Video Guide"
-                        class="video-thumb">
-                    <div class="play-button">
-                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
+    <main class="main-view">
+        <header class="main-header">
+            <h1>Vaelgor & Ezzorak</h1>
+            <div class="difficulty-switcher">
+                <button class="diff-btn" data-mode="normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic">Mythique</button>
+            </div>
+        </header>
+
+        <div class="content-area blur-fade">
+            <div class="guide-content">
+                <!-- Overview Grid -->
+                <div class="strategy-header-grid">
+                    <div class="strategy-column">
+                        <section class="tldr-grid">
+                            <div class="role-column tanks">
+                                <h3>🛡️ Tanks</h3>
+                                <ul>
+                                    <li><strong>Alternatance :</strong> Un boss au sol, l'autre en l'air. Ils swappent
+                                        après l'intermission.</li>
+                                    <li><strong>Nullbeam :</strong> Orientez le rayon loin du raid. Accumulez les stacks
+                                        pour réduire la traction du <em>Nullzone</em>.</li>
+                                    <li><strong>Placement :</strong> Ne restez JAMAIS derrière les dragons (Tail Lash /
+                                        Impale). Gardez-les à >15m.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column healers">
+                                <h3>💚 Healers</h3>
+                                <ul>
+                                    <li><strong>Nullsnap :</strong> Prévoyez de gros CDs lors de la rupture des tethers.
+                                        C'est le pic de dégâts majeur.</li>
+                                    <li><strong>Radiant Barrier :</strong> Stockez vos CDs pour le <em>Midnight
+                                            Flames</em> (Intermission). Restez dans la zone PNJ.</li>
+                                    <li><strong>Soins Ciblés :</strong> Surveillez les tanks pendant <em>Nullbeam</em>
+                                        et les cibles de <em>Void Howl</em>.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column dps">
+                                <h3>⚔️ DPS</h3>
+                                <ul>
+                                    <li><strong>Gloom (Héro) :</strong> Rotation de 2 groupes de 5 joueurs pour soak les
+                                        sphères. Ne soakez pas deux fois de suite (Diminish).</li>
+                                    <li><strong>Void Orbs :</strong> Priorité absolue ! Grips, stuns et nukes immédiats
+                                        sur ces adds.</li>
+                                    <li><strong>HP Balance :</strong> Les boss doivent mourir ensemble (max 10%
+                                        d'écart). Focus le dragon au sol.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Strategy -->
+                        <section class="phase-block">
+                            <h2>Tactique Globale</h2>
+                            <div class="tactics-box">
+                                <ul>
+                                    <li><strong>Bloodlust :</strong> À la fin du combat ou lors du swap de phases si le
+                                        raid est en difficulté.</li>
+                                    <li><strong>Séparation :</strong> Maintenez impérativement les deux boss à plus de
+                                        15 mètres l'un de l'autre pour éviter le buff de dégâts.</li>
+                                    <li><strong>Rotation Gloom :</strong> Respectez strictement la rotation des 2
+                                        groupes (5 joueurs chacun) pour soak les zones de <em>Gloom</em>.</li>
+                                </ul>
+                            </div>
+
+                            <h2>Dualité du Vide : Sol et Air</h2>
+                            <p>Vaelgor et Ezzorak alternent entre phase de combat actif et phase de soutien aérien.</p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Phase</th>
+                                        <th style="width: 45%">Capacités Clés</th>
+                                        <th style="width: 30%">Action Requise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Phase 1 (Sol/L'air)</strong></td>
+                                        <td>Un dragon est au sol (mécaniques lourdes), l'autre plane (moins actif).</td>
+                                        <td><strong>Focus Grounded :</strong> Swappez de cible après chaque
+                                            intermission.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Intermission</strong></td>
+                                        <td>À 100 Énergie, les deux s'envolent (<em>Midnight Flames</em>).</td>
+                                        <td><strong>Stack Radiant Barrier :</strong> Tuez l'add de fixate à l'intérieur
+                                            de la zone protective PNJ.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tethering</strong></td>
+                                        <td>Les dragons partagent leurs PV mais doivent rester séparés.</td>
+                                        <td><strong>Distance :</strong> Gardez les Dragons à >15m pour éviter
+                                            <em>Twilight Fury</em>.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2 class="mechanic-heroic">Soutien Intensif</h2>
+                            <p>Le dragon en phase de soutien lance ses sorts plus fréquemment.</p>
+                            <ul>
+                                <li><strong>Gloomtouched :</strong> Débuff cumulatif infligeant des dégâts d'ombre
+                                    constants.</li>
+                                <li><strong>Lightbound Vanguard :</strong> Invoquent des zones de lumière à soaker pour
+                                    réduire les dégâts pris.</li>
+                            </ul>
+                        </section>
+
+                        <section class="visuals-section">
+                            <h2>Visualisation Stratégique</h2>
+                            <div class="schemas-grid">
+                                <!-- Schema 1: Placement de Base -->
+                                <div class="visual-mechanic">
+                                    <h3>Positionnement & Ligne de Raid</h3>
+                                    <div class="arena-visual rectangular">
+                                        <div class="boss-dragon" style="left: 15%; top: 50%;">🐲</div>
+                                        <div class="boss-dragon" style="left: 85%; top: 50%;">🐉</div>
+                                        <div class="raid-line"></div>
+
+                                        <!-- Player Icons Spread in the line -->
+                                        <div class="p-icon heal" style="top: 35%; left: 50%;">💚</div>
+                                        <div class="p-icon dps" style="top: 45%; left: 50%;">⚔️</div>
+                                        <div class="p-icon tank" style="top: 20%; left: 15%;">🛡️</div>
+                                        <div class="p-icon tank" style="top: 20%; left: 85%;">🛡️</div>
+                                        <div class="p-icon dps" style="top: 55%; left: 50%;">⚔️</div>
+                                        <div class="p-icon heal" style="top: 65%; left: 50%;">💚</div>
+
+                                        <div class="schema-legend">
+                                            <span><i class="engine-indicator"
+                                                    style="background: rgba(255,255,255,0.1);"></i> Ligne de Raid</span>
+                                            <span><i class="orb-indicator" style="background: #a335ee;"></i> Dragons
+                                                (>15m)</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Gardez les boss aux extrémités. Raid aligné au centre.</em>
+                                    </p>
+                                </div>
+
+                                <!-- Schema 2: Rotation Gloom HM -->
+                                <div class="visual-mechanic">
+                                    <h3>Rotation HM : Gloom Sphere</h3>
+                                    <div class="arena-visual rectangular">
+                                        <div class="gloom-sphere"></div>
+
+                                        <!-- Group 1 -->
+                                        <div class="soak-group g1">
+                                            <span>🛡️</span><span>🛡️</span><span>🛡️</span><span>🛡️</span><span>🛡️</span>
+                                            <div class="active-label">Groupe 1 (Soak)</div>
+                                        </div>
+
+                                        <!-- Group 2 -->
+                                        <div class="soak-group g2">
+                                            <span>🛡️</span><span>🛡️</span><span>🛡️</span><span>🛡️</span><span>🛡️</span>
+                                            <div class="active-label">Groupe 2 (Soak)</div>
+                                        </div>
+
+                                        <div class="schema-legend">
+                                            <span><i class="orb-indicator" style="background: #a335ee;"></i>
+                                                Sphère</span>
+                                            <span><i class="engine-indicator" style="background: #4ade80;"></i> Soakers
+                                                actifs</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Alternez les deux groupes de 5 pour le debuff (60s).</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
                     </div>
+
+                    <aside class="supplementary-info">
+                        <div class="video-section">
+                            <h2>Vidéo Guide</h2>
+                            <div class="video-container video-trigger" id="videoTrigger">
+                                <img src="https://img.youtube.com/vi/WN7eQPcdHyE/maxresdefault.jpg" alt="Video"
+                                    class="video-thumb">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="spell-section">
+                            <h2>Sorts des Dragons</h2>
+                            <div class="spell-list accordion">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Vaelgor</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1262623">Nullbeam
+                                                (Tank)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244672">Nullzone
+                                                (Tethers)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244413">Nullsnap (Raid
+                                                Damage)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244221">Dread Breath</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1265131">Vaelwing
+                                                (Tank)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Ezzorak</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1249748">Midnight
+                                                Flames</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1245391">Gloom (Soak)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1270852">Diminish (Gloom
+                                                Debuff)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244917">Void Howl</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1245645">Rakfang
+                                                (Tank)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1248847">Radiant Barrier
+                                                (Safe Zone)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Mythique</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244672">Nullzone
+                                                (Mythic)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1270189">Twilight Bond
+                                                (15y)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </div>
-
-            <div class="spell-section">
-                <h2>Liste des Sorts</h2>
-                <div class="spell-list accordion">
-                    <!-- Vaelgor -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Vaelgor (Sol P1)</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1262623" target="_blank"
-                                        data-wowhead="spell=1262623">Nullbeam (Tank)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1244672" target="_blank"
-                                        data-wowhead="spell=1244672">Nullzone (Tether)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1244221" target="_blank"
-                                        data-wowhead="spell=1244221">Dread Breath (Frontal)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1265131" target="_blank"
-                                        data-wowhead="spell=1265131">Vaelwing (Buster)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Ezzorak -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Ezzorak (Air P1)</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1244917" target="_blank"
-                                        data-wowhead="spell=1244917">Void Howl (Orbes)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1245391" target="_blank"
-                                        data-wowhead="spell=1245391">Gloom (Sphere)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1245645" target="_blank"
-                                        data-wowhead="spell=1245645">Rakfang (Buster)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Communs -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Communs / Inter.</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1249748" target="_blank"
-                                        data-wowhead="spell=1249748">Midnight Flames</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1248847" target="_blank"
-                                        data-wowhead="spell=1248847">Radiant Barrier</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1270189" target="_blank"
-                                        data-wowhead="spell=1270189">Twilight Bond (15m)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- CONTENT -->
-        <div class="guide-content">
-            <!-- TL;DR -->
-            <section class="tldr-grid">
-                <div class="role-column">
-                    <h3>🛡️ Tanks</h3>
-                    <ul>
-                        <li><strong>Split :</strong> Séparez les boss (anneau d'or au sol). Plus de 15m d'écart !</li>
-                        <li><strong>Nullbeam (Vaelgor) :</strong> Orientez vers l'extérieur. Prenez ~8 stacks (réduit le
-                            pull du Tether).</li>
-                        <li><strong>Swap :</strong> À 1-2 stacks de Vaelwing / Rakfang.</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>⚔️ DPS</h3>
-                    <ul>
-                        <li><strong>Split :</strong> Divisez le raid en deux groupes égaux (mêlée/distants ou mix).</li>
-                        <li><strong>Void Orbs :</strong> Priorité absolue. Grip, stun, kick et burst.</li>
-                        <li><strong>Tether :</strong> Courez LOIN de la Nullzone pour casser le lien.</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>💚 Soigneurs</h3>
-                    <ul>
-                        <li><strong>Nullsnap :</strong> Gros dégâts raid quand les tethers cassent.</li>
-                        <li><strong>Dread Breath :</strong> Dispel immédiat de la peur sur la cible.</li>
-                        <li><strong>Gloom :</strong> Remontez les joueurs qui soak la sphère (DoT).</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Combat Flow -->
-            <section class="phase-block">
-                <h2>Déroulement du Combat</h2>
-                <p>Le combat alterne entre une phase au sol et une intermission. À chaque cycle, les boss échangent leur
-                    état (Vaelgor au sol, Ezzorak en l'air, puis l'inverse).</p>
-
-                <table class="ability-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%">Mécanique</th>
-                            <th style="width: 45%">Description</th>
-                            <th style="width: 30%">Stratégie</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Nullbeam & Tether</strong></td>
-                            <td>Vaelgor tire un rayon sur le Tank, puis crée une zone qui attire tout le monde.</td>
-                            <td>Le Tank "stack" le rayon. Le raid court à l'opposé pour casser les liens.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Void Howl (Orbes)</strong></td>
-                            <td>Ezzorak pose des cercles sous les joueurs qui invoquent des orbes du vide.</td>
-                            <td>Packez les orbes, contrôlez-les et tuez-les vite.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gloom (Sphère)</strong></td>
-                            <td>Une sphère se déplace vers le mur.</td>
-                            <td><strong>SOAK.</strong> Au moins 5 joueurs doivent se mettre sur son chemin pour la
-                                réduire.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Midnight Flames</strong></td>
-                            <td>À 100 Énergie : Phase de transition. Dégâts massifs sur tout le raid.</td>
-                            <td>Packés dans la <strong>Radiant Barrier</strong> (Bouclier allié). Tuez l'add fuyant.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Heroic Modifiers -->
-            <section class="phase-block mechanic-heroic">
-                <h2>Mode <span class="heroic-badge">HÉROÏQUE</span></h2>
-                <ul>
-                    <li><strong>Gloom Rotation :</strong> Soaker donne un debuff de 1min. Alternez entre deux groupes de
-                        5 soakers.</li>
-                    <li><strong>Nullsnap DoT :</strong> Casser le tether laisse un DoT sur tout le raid. Healers,
-                        prévoyez des CDs.</li>
-                    <li><strong>Rakfang Absorb :</strong> Ezzorak gagne un bouclier d'absorption sur le tank. Ne
-                        dépassez pas 2 stacks.</li>
-                </ul>
-            </section>
         </div>
     </main>
 

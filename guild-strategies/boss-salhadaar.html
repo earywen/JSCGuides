@@ -9,172 +9,306 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">← Retour</a>
-        <h1>Fallen-King Salhadaar</h1>
-        <div class="difficulty-switcher">
-            <button class="difficulty-btn" data-mode="normal">Normal</button>
-            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
-            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
-        </div>
-    </header>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">JSCGUIDE</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item active">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
+        </nav>
+    </aside>
 
-    <main class="container boss-page-layout">
-        <!-- SIDEBAR -->
-        <aside class="guide-sidebar">
-            <div class="video-section">
-                <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container video-trigger" id="videoTrigger">
-                    <img src="https://img.youtube.com/vi/y4PVfpsI5EY/maxresdefault.jpg" alt="Video Guide"
-                        class="video-thumb">
-                    <div class="play-button">
-                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                    </div>
-                </div>
+    <main class="main-view">
+        <header class="main-header">
+            <h1>Fallen-King Salhadaar</h1>
+            <div class="difficulty-switcher">
+                <button class="diff-btn" data-mode="normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic">Mythique</button>
             </div>
+        </header>
 
-            <div class="spell-section">
-                <h2>Liste des Sorts</h2>
-                <div class="spell-list accordion">
-                    <!-- Boss -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Salhadaar</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1250803" target="_blank"
-                                        data-wowhead="spell=1250803">Shattering Twilight (Tank)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1271577" target="_blank"
-                                        data-wowhead="spell=1271577">Instability (DoT)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1246175" target="_blank"
-                                        data-wowhead="spell=1246175">Cosmic Unraveling (100e)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1250686" target="_blank"
-                                        data-wowhead="spell=1250686">Twisting Obscurity</a></li>
-                            </ul>
-                        </div>
+        <div class="content-area blur-fade">
+            <div class="guide-content">
+                <!-- Overview Grid -->
+                <div class="strategy-header-grid">
+                    <div class="strategy-column">
+                        <section class="tldr-grid">
+                            <div class="role-column tanks">
+                                <h3>🛡️ Tanks</h3>
+                                <ul>
+                                    <li><strong>Shattering Twilight :</strong> L'impact fait apparaître des pics.
+                                        Éloignez-vous du raid AVANT l'impact.</li>
+                                    <li><strong>Kiting :</strong> Déplacez le boss loin des orbes de <em>Concentrated
+                                            Void</em> pour donner du temps aux DPS.</li>
+                                    <li><strong>Instability :</strong> Swap à chaque <em>Shattering Twilight</em> ou
+                                        quand le dot devient trop lourd.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column healers">
+                                <h3>💚 Healers</h3>
+                                <ul>
+                                    <li><strong>Cosmic Unraveling :</strong> Phase de burn (20s). Soins de zone massifs
+                                        requis pendant les rayons.</li>
+                                    <li><strong>Despotic Command :</strong> Dispelez les joueurs UNIQUEMENT lorsqu'ils
+                                        sont au bord de la salle.</li>
+                                    <li><strong>Heal Absorb :</strong> Soignez intensivement le joueur après le dispel
+                                        pour vider l'absorb.</li>
+                                    <li><strong>Orb DOT (Héroïques) :</strong> Ne tuez pas les orbes en même temps !
+                                        Laissez le DOT expirer.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column dps">
+                                <h3>⚔️ DPS</h3>
+                                <ul>
+                                    <li><strong>Focus Orbes (Héro) :</strong> Tuez les orbes UNE PAR UNE. Ne les tuez
+                                        jamais simultanément.</li>
+                                    <li><strong>Bloodlust :</strong> Utilisez la BL pendant l'<em>Unbound Phase</em>
+                                        (+25% dégâts subis par le boss).</li>
+                                    <li><strong>Despotic Command :</strong> Si vous avez le cercle rose, courez
+                                        IMMÉDIATEMENT au bord de la salle.</li>
+                                    <li><strong>Fractured Images :</strong> Priorité ABSOLUE aux interruptions pour
+                                        éviter de remplir la salle de vide.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Strategy -->
+                        <section class="phase-block">
+                            <h2>Tactique Globale</h2>
+                            <div class="tactics-box">
+                                <ul>
+                                    <li><strong>Bloodlust :</strong> Phase <em>Unbound</em>. Le boss subit +25% de
+                                        dégâts, c'est le moment d'envoyer tout le burst.</li>
+                                    <li><strong>Gestion des Orbes :</strong> Ne tuez jamais plusieurs orbes
+                                        simultanément (Héro). Attendez que le DOT raid expire.</li>
+                                    <li><strong>Zones de Vide :</strong> Si vous avez un cercle (<em>Despotic
+                                            Command</em>), posez-le sur les bords pour garder le centre propre.</li>
+                                    <li><strong>Positionnement :</strong> Tanks, orientez les <em>Shattering
+                                            Twilight</em> vers les bords pour ne pas encombrer le centre.</li>
+                                </ul>
+                            </div>
+
+                            <h2>Le Vide Déchaîné : Unbound</h2>
+                            <p>Salhadaar gagne de l'énergie passivement. À 100 Énergie, il entre en **Cosmic
+                                Unraveling**.</p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Phase</th>
+                                        <th style="width: 45%">Description</th>
+                                        <th style="width: 30%">Stratégie</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Phase Normale</strong></td>
+                                        <td>Attire des orbes de <em>Concentrated Void</em> vers lui depuis les bords.
+                                        </td>
+                                        <td><strong>Interceptez/Tuez</strong> (Une par une en Héroïque). Priorité aux
+                                            orbes les plus proches.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Unbound Phase</strong></td>
+                                        <td>À 100 énergie, le boss subit <strong>+25% dégâts</strong> pendant 20 sec.
+                                        </td>
+                                        <td><strong>Phase de Burst (BL) :</strong> Évitez les rayons rotatifs
+                                            (<em>Uncontainable Cosmos</em>).</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>Sorts et Dangers</h2>
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Capacité</th>
+                                        <th style="width: 45%">Effet</th>
+                                        <th style="width: 30%">Contre-mesure</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Shattering Twilight</strong></td>
+                                        <td>Huerle une étoile noire + pointes au sol (<em>Twilight Spikes</em>).</td>
+                                        <td>Sortez vite des zones d'impact et des lignes de pointes.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Uncontainable Cosmos</strong></td>
+                                        <td>Rayons d'énergie cosmique partant du boss dans plusieurs directions.</td>
+                                        <td>Évitez le contact direct avec les rayons.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Despotic Command</strong></td>
+                                        <td>Cercle rose sur un joueur. Laisse une zone de vide + heal absorb au dispel.
+                                        </td>
+                                        <td><strong>Bords de salle :</strong> Courez au bord avant le dispel. Healers,
+                                            videz l'absorb.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Twisting Obscurity</strong></td>
+                                        <td>Éclairs de ténèbres qui sautent entre tous les joueurs.</td>
+                                        <td>Restez packés pour faciliter les soins de zone.</td>
+                                    </tr>
+                                    <tr class="mechanic-heroic">
+                                        <td><strong>Echoing Star</strong></td>
+                                        <td>La <em>Shattering Twilight</em> rebondit sur plusieurs joueurs.</td>
+                                        <td>Dispersion maximale lors de l'incantation.</td>
+                                    </tr>
+                                    <tr class="mechanic-mythic-only">
+                                        <td><strong>Fracturer Projection</strong></td>
+                                        <td>Le boss se divise en images qui incantent <em>Unstable Nexus</em>.</td>
+                                        <td><strong>Interrompez</strong> les images. Brisez les <em>Nexus Shields</em>
+                                            en priorité.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="visuals-section">
+                            <h2>Visualisation Stratégique</h2>
+                            <div class="schemas-grid">
+                                <!-- Schema 1: Placement -->
+                                <div class="visual-mechanic">
+                                    <h3>Placement & Flux d'Orbes</h3>
+                                    <div class="arena-visual circular">
+                                        <!-- Boss -->
+                                        <div class="boss-token king">👑</div>
+
+                                        <!-- Void Engines & Orbs -->
+                                        <div class="void-engine n"></div>
+                                        <div class="void-orb-path n"><span></span></div>
+
+                                        <div class="void-engine e"></div>
+                                        <div class="void-orb-path e"><span></span></div>
+
+                                        <div class="void-engine s"></div>
+                                        <div class="void-orb-path s"><span></span></div>
+
+                                        <div class="void-engine w"></div>
+                                        <div class="void-orb-path w"><span></span></div>
+
+                                        <!-- Players -->
+                                        <div class="player-group spread">
+                                            <div class="p-icon tank" style="top: 30%; left: 50%;">🛡️</div>
+                                            <div class="p-icon heal" style="top: 70%; left: 40%;">💚</div>
+                                            <div class="p-icon heal" style="top: 70%; left: 60%;">💚</div>
+                                            <div class="p-icon dps" style="top: 50%; left: 25%;">⚔️</div>
+                                            <div class="p-icon dps" style="top: 50%; left: 75%;">⚔️</div>
+                                        </div>
+
+                                        <div class="schema-legend">
+                                            <span><i class="engine-indicator"></i> Moteurs</span>
+                                            <span><i class="orb-indicator"></i> Orbes</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Positionnement central requis.</em>
+                                    </p>
+                                </div>
+
+                                <!-- Schema 2: Dispel -->
+                                <div class="visual-mechanic">
+                                    <h3>Gestion du Dispel (Command)</h3>
+                                    <div class="arena-visual circular dispel-visual">
+                                        <div class="boss-token">👑</div>
+                                        <div class="movement-arrow"></div>
+                                        <div class="appearing-pool"></div>
+                                        <div class="target-circle"></div>
+                                        <div class="running-player">⚔️</div>
+                                        <div class="healer-cue">💚</div>
+
+                                        <div class="schema-legend">
+                                            <span><i class="echo-indicator" style="background: #e0245e;"></i>
+                                                Cercle</span>
+                                            <span><i class="orb-indicator"
+                                                    style="background: #4ade80; border-radius: 50%;"></i> Dispel</span>
+                                            <span><i class="orb-indicator"
+                                                    style="background: rgba(224, 36, 94, 0.4);"></i> Vide</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Courez au bord dès le cercle rose.</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
-                    <!-- Adds & Mechanics -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Adds & Mécaniques</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1245960" target="_blank"
-                                        data-wowhead="spell=1245960">Void Orb (Reckless Inf.)</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1254081" target="_blank"
-                                        data-wowhead="spell=1254081">Fractured Projection</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1248697" target="_blank"
-                                        data-wowhead="spell=1248697">Despotic Command</a></li>
-                            </ul>
+                    <aside class="supplementary-info">
+                        <div class="video-section">
+                            <h2>Vidéo Guide</h2>
+                            <div class="video-container video-trigger" id="videoTrigger">
+                                <img src="https://img.youtube.com/vi/y4PVfpsI5EY/maxresdefault.jpg" alt="Video"
+                                    class="video-thumb">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="spell-section">
+                            <h2>Sorts du Boss</h2>
+                            <div class="spell-list accordion">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Salhadaar</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1246175">Cosmic
+                                                Unraveling</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1250803">Shattering
+                                                Twilight</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1260015">Uncontainable
+                                                Cosmos</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1250686">Twisting
+                                                Obscurity</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1271577">Instability
+                                                (Tanks)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1245960">Reckless
+                                                Infusion</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Effets Nocifs</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1245592">Torturous
+                                                Residue</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1251213">Twilight
+                                                Spikes</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1248697">Despotic
+                                                Command</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1248709">Oppressive
+                                                Darkness (Heal Absorb)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1254081">Unstable Nexus
+                                                (Interrupt)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
+
             </div>
-        </aside>
-
-        <!-- CONTENT -->
-        <div class="guide-content">
-            <!-- TL;DR -->
-            <section class="tldr-grid">
-                <div class="role-column">
-                    <h3>🛡️ Tanks</h3>
-                    <ul>
-                        <li><strong>Shattering Twilight :</strong> Tank Buster. Courez <strong>LOIN</strong> du raid
-                            après l'impact.
-                            Des piques vont sortir de vous.</li>
-                        <li><strong>Instability :</strong> DoT cumulable. Échangez au Clean ou après chaque Shattering
-                            Twilight.</li>
-                        <li><strong>Kiting :</strong> Bougez le boss constamment pour éviter les Orbes du Vide.</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>⚔️ DPS</h3>
-                    <ul>
-                        <li><strong>Priorité Absolue :</strong> Orbes du Vide > Boss.</li>
-                        <li><strong>Interrupt :</strong> Coupez les <em>Fractured Projection</em> pour les faire depop.
-                        </li>
-                        <li><strong>100 Énergie :</strong> Phase de Burn (+25% Dégâts subis par le boss).</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>💚 Soigneurs</h3>
-                    <ul>
-                        <li><strong>Despotic Command :</strong> Les joueurs ciblés doivent aller au bord. Dispel = Zone
-                            au
-                            sol.</li>
-                        <li><strong>Heroic :</strong> Tuer un Orbe met un DoT sur le raid. Ne tuez pas les deux en même
-                            temps !</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Mechanics Table -->
-            <section class="phase-block">
-                <h2>Phase 1 : Orbes & Images</h2>
-                <p>Le boss invoque des menaces qui convergent vers lui. La gestion de l'espace est clé.</p>
-
-                <table class="ability-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%">Mécanique</th>
-                            <th style="width: 45%">Description</th>
-                            <th style="width: 30%">Stratégie</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Void Orbs</strong></td>
-                            <td>2 Orbes apparaissent et avancent vers le boss. Si elles le touchent = Wipe.</td>
-                            <td><strong>FOCUS.</strong> <span class="heroic-badge">HM</span> DoT raid à la mort.
-                                Tuez-les une par une.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fractured Projection</strong></td>
-                            <td>Copies qui incantent. Si le cast passe = Zone de dégâts permanente.</td>
-                            <td><strong>INTERRUPT.</strong> Un kick suffit pour les faire disparaître.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Shattering Twilight</strong></td>
-                            <td>Gros coup sur le Tank + Debuff "Time Bomb".</td>
-                            <td>Le Tank visé s'éloigne. Le Off-Tank reprend le boss.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Phase 2 -->
-            <section class="phase-block">
-                <h2>Phase 2 : 100% Énergie (Burn Phase)</h2>
-                <p>Le boss s'arrête de bouger et canalise.</p>
-                <ul>
-                    <li><strong>Dégâts augmentés (+25%) :</strong> CLAQUAGE DE CD / HÉROÏSME ICI.</li>
-                    <li><strong>Rotating Beams :</strong> Rayons qui tournent autour du boss. Trouvez l'espace safe et
-                        tournez avec.</li>
-                    <li><strong>Soft Enrage :</strong> À la fin, laisse une énorme zone au sol. L'espace se réduit au
-                        fur et à mesure.</li>
-                </ul>
-            </section>
-
-            <!-- Heroic -->
-            <section class="phase-block mechanic-heroic">
-                <h2>Mode <span class="heroic-badge">HÉROÏQUE</span></h2>
-                <ul>
-                    <li><strong>Void Orbs :</strong> Explosion raid à la mort. STAGGER les kills (attendez la fin du
-                        DoT).</li>
-                    <li><strong>Shattering Twilight :</strong> Plusieurs joueurs (pas que le Tank) reçoivent les piques.
-                        Ils doivent s'écarter du raid.</li>
-                </ul>
-            </section>
-
         </div>
     </main>
+
     <!-- Lightbox Modal -->
     <div id="videoLightbox" class="lightbox-overlay">
         <div class="lightbox-content">
