@@ -34,6 +34,11 @@
   --vanguard-devotion: #eab308;
   --vanguard-wrath: #ef4444;
   --vanguard-peace: #3b82f6;
+
+  /* Compatibility / Dashboard Variables */
+  --color-bg-panel: var(--bg-surface);
+  --color-accent-purple: #a855f7;
+  --color-accent-gold: var(--vanguard-devotion);
 }
 
 /* Global Elements */
