@@ -24,24 +24,73 @@
         <aside class="guide-sidebar">
             <div class="video-section">
                 <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container video-trigger" id="videoTrigger">
+                    <img src="https://img.youtube.com/vi/QzSjddSdyrE/maxresdefault.jpg" alt="Video Guide"
+                        class="video-thumb">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
             <div class="spell-section">
                 <h2>Liste des Sorts</h2>
-                <div class="spell-list">
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=300001">Aura of Reflection (Red)</a></li>
-                        <li><a href="#" data-wowhead="spell=300002">Aura of Vulnerability (Green)</a></li>
-                        <li><a href="#" data-wowhead="spell=300003">Aura of Haste (Blue)</a></li>
-                        <li><a href="#" data-wowhead="spell=300004">Prismatic Alignment</a></li>
-                        <li><a href="#" data-wowhead="spell=300005">Color Mix</a></li>
-                    </ul>
+                <div class="spell-list accordion">
+                    <!-- General Bellamy -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Amias Bellamy (Tank)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1246162" target="_blank"
+                                        data-wowhead="spell=1246162">Aura of Devotion</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1248644" target="_blank"
+                                        data-wowhead="spell=1248644">Divine Toll (Silence)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1251859" target="_blank"
+                                        data-wowhead="spell=1251859">Shield of the Righteous</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Commander Lightblood -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Venel Lightblood (Tank)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1248983" target="_blank"
+                                        data-wowhead="spell=1248983">Execution Sentence (Soak)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1249047" target="_blank"
+                                        data-wowhead="spell=1249047">Divine Hammer</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1251812" target="_blank"
+                                        data-wowhead="spell=1251812">Final Verdict</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- War Chaplain Senn -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>War Chaplain Senn (Focus)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1248451" target="_blank"
+                                        data-wowhead="spell=1248451">Aura of Peace (Stop DPS)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1248674" target="_blank"
+                                        data-wowhead="spell=1248674">Sacred Shield (Bubble)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1248721" target="_blank"
+                                        data-wowhead="spell=1248721">Tyr's Wrath (Absorb Heal)</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -53,78 +102,102 @@
                 <div class="role-column">
                     <h3>🛡️ Tanks</h3>
                     <ul>
-                        <li><strong>Positionnement :</strong> Formation en Triangle. Gardez les boss à >30m d'écart.
-                        </li>
-                        <li><strong>Rotation :</strong> Tournez dans le sens des aiguilles d'une montre quand l'Aura
-                            change.</li>
+                        <li><strong>Swap :</strong> Taunt swap sur <strong>Jugement</strong> pour éviter le buster
+                            mortel (Final Verdict / Shield of Righteous).</li>
+                        <li><strong>Position :</strong> Déplacez les boss vers les bords après chaque aura.</li>
+                        <li><strong>Focus :</strong> Un tank suit Senn quand elle charge, l'autre garde Bellamy.</li>
                     </ul>
                 </div>
                 <div class="role-column">
                     <h3>⚔️ DPS</h3>
                     <ul>
-                        <li><strong>Cible :</strong> Focus le boss avec l'Aura <span style="color:#00cc66">VERTE</span>
-                            (Vulnérabilité).</li>
-                        <li><strong>Stop Cast :</strong> Quand le boss a l'Aura <span style="color:#ff4444">ROUGE</span>
-                            (Reflect).</li>
+                        <li><strong>PRIO :</strong> Brisez le <strong>Sacred Shield</strong> de Senn dès qu'elle
+                            l'active pour kick son cast.</li>
+                        <li><strong>Aura of Peace :</strong> STOP DPS sur tout boss à l'intérieur du cercle de Senn
+                            (sinon pacify).</li>
+                        <li><strong>Execution Sentence :</strong> Stackez-vous (soak) sur les joueurs ciblés.</li>
                     </ul>
                 </div>
                 <div class="role-column">
                     <h3>💚 Soigneurs</h3>
                     <ul>
-                        <li><strong>Dégâts Lourds :</strong> L'Aura <span style="color:#0070dd">BLEUE</span> cause des
-                            dégâts pulsés sur tout le raid.</li>
+                        <li><strong>Tyr's Wrath :</strong> Soignez intensivement les joueurs avec l'absorb (proche de
+                            Senn).</li>
+                        <li><strong>Silence :</strong> Évitez les boucliers de Bellamy pendant Divine Toll.</li>
+                        <li><strong>Dispel :</strong> Les cercles au sol après l'explosion.</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Mechanics Table -->
+            <!-- Aura Loop -->
             <section class="phase-block">
-                <h2>Le Système d'Aura</h2>
-                <p>Une seule aura est active à la fois. Elle change toutes les 30s.</p>
+                <h2>La Boucle des Auras (100 Énergie)</h2>
+                <p>Le combat est dicté par le boss qui atteint 100 Énergie et active son Aura unique.</p>
 
                 <table class="ability-table">
                     <thead>
                         <tr>
-                            <th style="width: 10%">Couleur</th>
-                            <th style="width: 25%">Effet</th>
-                            <th style="width: 65%">Stratégie</th>
+                            <th style="width: 25%">Aura</th>
+                            <th style="width: 20%">Boss</th>
+                            <th style="width: 55%">Effet & Stratégie</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="background: rgba(255,68,68,0.2); color: #ff4444; font-weight: bold;">ROUGE</td>
-                            <td>Reflective Shield</td>
-                            <td><strong>STOP CAST.</strong> Les DPS Physiques peuvent continuer, mais les Magiques vont
-                                se One-Shot.</td>
+                            <td><strong>Devotion</strong></td>
+                            <td>Bellamy</td>
+                            <td>-75% Dégâts sur les boss. Dodgez les boucliers volants (silence 4s).</td>
                         </tr>
                         <tr>
-                            <td style="background: rgba(0,204,102,0.2); color: #00cc66; font-weight: bold;">VERT</td>
-                            <td>Vulnerability + Healing Redux</td>
-                            <td><strong>BURST TARGET.</strong> Le boss subit +100% Dégâts. Les joueurs subissent -50%
-                                Soins reçus. Utilisez vos Potions de Soin.</td>
+                            <td><strong>Wrath</strong></td>
+                            <td>Lightblood</td>
+                            <td>+100% Dégâts sacrés. <strong>Soaks requis</strong> sur les joueurs marqués. Prévoyez des
+                                CDs.</td>
                         </tr>
                         <tr>
-                            <td style="background: rgba(0,112,221,0.2); color: #0070dd; font-weight: bold;">BLEU</td>
-                            <td>Haste + Pulsing Dmg</td>
-                            <td>Le boss cast 50% plus vite. Le raid subit des dégâts pulsés. Gros heal requis.</td>
+                            <td><strong>Peace</strong></td>
+                            <td>Senn</td>
+                            <td><strong>Pacifie</strong> toute personne attaquant un boss dans le cercle. Tapez les boss
+                                HORS de l'aura.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <!-- Mythic -->
-            <section class="phase-block mechanic-mythic-only">
-                <h2>Mécanique <span class="mythic-badge">MYTHIQUE</span> : Prismatic Alignment</h2>
-                <p>Chaque joueur reçoit une couleur (Rouge, Vert ou Bleu).</p>
+            <!-- Bloodlust -->
+            <section class="phase-block">
+                <h2>Bloodlust & Forbearance</h2>
+                <p>Les boss ont une mécanique d'immunité si vous utilisez la BL sans précaution.</p>
                 <ul>
-                    <li>Vous infligez 0 dégâts aux boss qui ne match pas votre couleur.</li>
-                    <li>Vous subissez 500% de dégâts des mécaniques qui ne match pas votre couleur.</li>
-                    <li><strong>Strat :</strong> Le raid doit se séparer en 3 sous-groupes et tourner avec les boss.
-                    </li>
+                    <li><strong>Option 1 :</strong> Sur le pull. Nécessite de dissiper (Mass Dispel) les boucliers
+                        d'immunité.</li>
+                    <li><strong>Option 2 (Safe) :</strong> Après ~2:30-3:00 min. Attendez que Senn et Bellamy aient le
+                        debuff <strong>Forbearance</strong> après leur rotation d'aura.</li>
+                </ul>
+            </section>
+
+            <!-- Heroic Modifiers -->
+            <section class="phase-block mechanic-heroic">
+                <h2>Mode <span class="heroic-badge">HÉROÏQUE</span></h2>
+                <ul>
+                    <li><strong>Consécration :</strong> Les boss laissent une zone de dégâts au sol après chaque Aura de
+                        100 énergie.</li>
+                    <li><strong>Divine Storm :</strong> Dégâts supplémentaires imprévisibles en mêlée.</li>
+                    <li><strong>Tyr's Wrath Scale :</strong> L'absorption est beaucoup plus punitive, nécessite des
+                        soins dédiés.</li>
                 </ul>
             </section>
         </div>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="videoLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <div id="lightboxVideoContainer"></div>
+        </div>
+    </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 

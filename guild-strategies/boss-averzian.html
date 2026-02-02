@@ -24,39 +24,97 @@
         <aside class="guide-sidebar">
             <div class="video-section">
                 <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container video-trigger" id="videoTrigger">
+                    <img src="https://img.youtube.com/vi/OvdVWjN7DcU/maxresdefault.jpg" alt="Video Guide Guide"
+                        class="video-thumb">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
             <div class="spell-section">
                 <h2>Liste des Sorts</h2>
-                <div class="spell-list">
-                    <h3>Imperator Averzian</h3>
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=1251361">Shadow's Advance</a></li>
-                        <li><a href="#" data-wowhead="spell=1253918">Void Claimed</a></li>
-                        <li><a href="#" data-wowhead="spell=1251583">March of the Endless</a></li>
-                        <li><a href="#" data-wowhead="spell=1249262">Umbral Collapse</a></li>
-                        <li><a href="#" data-wowhead="spell=1249251">Dark Upheaval</a></li>
-                        <li><a href="#" data-wowhead="spell=1265540">Blackening Wounds</a></li>
-                    </ul>
+                <div class="spell-list accordion">
+                    <!-- Boss -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Imperator Averzian</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1251361" target="_blank"
+                                        data-wowhead="spell=1251361">Shadow's Advance</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1253918" target="_blank"
+                                        data-wowhead="spell=1253918">Void Claimed</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1251583" target="_blank"
+                                        data-wowhead="spell=1251583">March of the Endless</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1249262" target="_blank"
+                                        data-wowhead="spell=1249262">Umbral Collapse</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1249251" target="_blank"
+                                        data-wowhead="spell=1249251">Dark Upheaval</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1265540" target="_blank"
+                                        data-wowhead="spell=1265540">Blackening Wounds</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1260712" target="_blank"
+                                        data-wowhead="spell=1260712">Oblivion's Wrath</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1258883" target="_blank"
+                                        data-wowhead="spell=1258883">Void Fall</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1265490" target="_blank"
+                                        data-wowhead="spell=1265490">Imperator's Glory</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <h3>Abyssal Voidshaper</h3>
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=1255749">Gathering Darkness</a></li>
-                        <li><a href="#" data-wowhead="spell=1262036">Void Rupture</a></li>
-                        <li><a href="#" data-wowhead="spell=1249714">Umbral Barrier</a></li>
-                        <li><a href="#" data-wowhead="spell=1260816">Light's End</a></li>
-                    </ul>
+                    <!-- Adds 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Abyssal Voidshaper</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1255749" target="_blank"
+                                        data-wowhead="spell=1255749">Gathering Darkness</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1262036" target="_blank"
+                                        data-wowhead="spell=1262036">Void Rupture</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1249714" target="_blank"
+                                        data-wowhead="spell=1249714">Umbral Barrier</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1260816" target="_blank"
+                                        data-wowhead="spell=1260816">Light's End</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-                    <h3>Shadowguard Stalwart</h3>
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=1255702">Pitch Bulwark</a></li>
-                    </ul>
+                    <!-- Adds 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Shadowguard Stalwart</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1255702" target="_blank"
+                                        data-wowhead="spell=1255702">Pitch Bulwark</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Heroic -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Héroïque</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1270949" target="_blank"
+                                        data-wowhead="spell=1270949">Desolation</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -69,9 +127,9 @@
                     <h3>🛡️ Tanks</h3>
                     <ul>
                         <li><strong>Positionnement :</strong> Gardez le boss au CENTRE, loin des zones capturées et des
-                            adds (Buff Boss si proche).</li>
-                        <li><strong>Group Soak :</strong> Le Tank actif reçoit un cercle. Amenez-le sur un
-                            <em>Voidshaper</em> pour le tuer instantanément.</li>
+                            adds (Buff <em>Imperator's Glory</em> si proche).</li>
+                        <li><strong>Group Soak (x2) :</strong> Le Tank actif reçoit un cercle. <strong>Courez sur un
+                                Voidshaper</strong> pour le tuer instantanément. Cela arrive 2 fois par vague.</li>
                         <li><strong>Swap :</strong> À chaque mécanique de Soak (Shadow's Advance).</li>
                         <li><strong>Blackening Wounds :</strong> Changez si les stacks (Reduc PV Max) sont trop hauts
                             (8-12).</li>
@@ -89,7 +147,11 @@
                 <div class="role-column">
                     <h3>⚔️ DPS</h3>
                     <ul>
-                        <li><strong>Prio Cibles :</strong> Voidshaper (Le survivant du soak) > Petits Adds > Boss.</li>
+                        <li><strong>Stratégie 2/3 :</strong> 2 adds seront tués par les Tanks (Soak). Tuez le 3ème Add
+                            (celui qui survit et capture la zone) rapidement.</li>
+                        <li><strong>Esquive :</strong> Évitez les lignes de <em>Oblivion's Wrath</em> et les zones de
+                            <em>Void Fall</em>.
+                        </li>
                         <li><strong>CC (Héroïque) :</strong> Les petits adds retournent au portail à 35% PV pour se
                             soigner. <strong>Stun/Slow/Grip</strong> loin des portails !</li>
                         <li><strong>Tic-Tac-Toe :</strong> Ne laissez jamais 3 zones adjacentes être capturées (Wipe).
@@ -116,8 +178,11 @@
                         <tr>
                             <td><strong>Shadow's Advance</strong><br><span style="font-size:0.8em; color:#888;">Group
                                     Soak</span></td>
-                            <td>Le tank reçoit un cercle de soak. L'explosion tue l'Add qui est dedans.</td>
-                            <td><strong>Tank :</strong> Courez sur un Add.<br><strong>Raid :</strong> Venez dans le
+                            <td>Le tank reçoit un cercle de soak. L'explosion tue l'Add qui est dedans.
+                                <br><strong>Note:</strong> Il y a 2 soaks successifs.
+                            </td>
+                            <td><strong>Tank :</strong> Courez sur un Add pour le détruire.<br><strong>Raid :</strong>
+                                Venez dans le
                                 cercle pour partager les dégâts.</td>
                         </tr>
                         <tr>
@@ -131,6 +196,11 @@
                             <td>Des petits adds sortent des zones capturées.</td>
                             <td>Packez-les sous le Voidshaper survivant et AoE.</td>
                         </tr>
+                        <tr>
+                            <td><strong>Oblivion's Wrath</strong></td>
+                            <td>Lignes de pics qui partent du boss.</td>
+                            <td>Esquivez les lignes.</td>
+                        </tr>
                         <tr class="mechanic-heroic">
                             <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Add Resilience</strong></td>
                             <td>À 35% PV, les <em>Voidmaws</em> courent vers le portail le plus proche pour se soigner à
@@ -142,6 +212,11 @@
                             <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Shadow Phalanx</strong></td>
                             <td>Les <em>Stalwarts</em> protègent les Voidshapers et repoussent les joueurs à 10m.</td>
                             <td>Les Melees doivent faire attention au Knockback. Tuez les Stalwarts rapidement.</td>
+                        </tr>
+                        <tr class="mechanic-heroic">
+                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Desolation</strong></td>
+                            <td>Une zone de soak apparait sur une zone DÉJÀ capturée.</td>
+                            <td><strong>1 Joueur</strong> doit aller dedans pour soak (sinon dégâts raid massif).</td>
                         </tr>
                         <tr class="mechanic-mythic-only">
                             <td><span class="mythic-badge">MYTHIQUE</span> <strong>Obscurion Endwalker</strong></td>
@@ -194,6 +269,14 @@
             </div>
         </div>
     </main>
+    <!-- Lightbox Modal -->
+    <div id="videoLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <div id="lightboxVideoContainer"></div>
+        </div>
+    </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 

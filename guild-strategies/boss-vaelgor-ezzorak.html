@@ -24,24 +24,75 @@
         <aside class="guide-sidebar">
             <div class="video-section">
                 <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container video-trigger" id="videoTrigger">
+                    <img src="https://img.youtube.com/vi/WN7eQPcdHyE/maxresdefault.jpg" alt="Video Guide"
+                        class="video-thumb">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
             <div class="spell-section">
                 <h2>Liste des Sorts</h2>
-                <div class="spell-list">
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=121111">Earthen Spikes</a></li>
-                        <li><a href="#" data-wowhead="spell=122222">Storm Wind</a></li>
-                        <li><a href="#" data-wowhead="spell=123333">Duality Barrier</a></li>
-                        <li><a href="#" data-wowhead="spell=124444">Teleport Swap</a></li>
-                        <li><a href="#" data-wowhead="spell=125555">Static Link</a></li>
-                    </ul>
+                <div class="spell-list accordion">
+                    <!-- Vaelgor -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Vaelgor (Sol P1)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1262623" target="_blank"
+                                        data-wowhead="spell=1262623">Nullbeam (Tank)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1244672" target="_blank"
+                                        data-wowhead="spell=1244672">Nullzone (Tether)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1244221" target="_blank"
+                                        data-wowhead="spell=1244221">Dread Breath (Frontal)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1265131" target="_blank"
+                                        data-wowhead="spell=1265131">Vaelwing (Buster)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Ezzorak -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Ezzorak (Air P1)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1244917" target="_blank"
+                                        data-wowhead="spell=1244917">Void Howl (Orbes)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1245391" target="_blank"
+                                        data-wowhead="spell=1245391">Gloom (Sphere)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1245645" target="_blank"
+                                        data-wowhead="spell=1245645">Rakfang (Buster)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Communs -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Communs / Inter.</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1249748" target="_blank"
+                                        data-wowhead="spell=1249748">Midnight Flames</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1248847" target="_blank"
+                                        data-wowhead="spell=1248847">Radiant Barrier</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1270189" target="_blank"
+                                        data-wowhead="spell=1270189">Twilight Bond (15m)</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -53,79 +104,94 @@
                 <div class="role-column">
                     <h3>🛡️ Tanks</h3>
                     <ul>
-                        <li><strong>Tank Vaelgor :</strong> Gardez le boss près des bords pour attirer les piques.</li>
-                        <li><strong>Tank Ezzorak :</strong> Tankez-le au centre de la plateforme.</li>
+                        <li><strong>Split :</strong> Séparez les boss (anneau d'or au sol). Plus de 15m d'écart !</li>
+                        <li><strong>Nullbeam (Vaelgor) :</strong> Orientez vers l'extérieur. Prenez ~8 stacks (réduit le
+                            pull du Tether).</li>
+                        <li><strong>Swap :</strong> À 1-2 stacks de Vaelwing / Rakfang.</li>
                     </ul>
                 </div>
                 <div class="role-column">
-                    <h3>⚔️ Assignations DPS</h3>
+                    <h3>⚔️ DPS</h3>
                     <ul>
-                        <li><strong>Groupe 1 (Melee):</strong> Vaelgor (Sol). Beaucoup de mouvement.</li>
-                        <li><strong>Groupe 2 (Distant):</strong> Ezzorak (Air). Restez espacés.</li>
+                        <li><strong>Split :</strong> Divisez le raid en deux groupes égaux (mêlée/distants ou mix).</li>
+                        <li><strong>Void Orbs :</strong> Priorité absolue. Grip, stun, kick et burst.</li>
+                        <li><strong>Tether :</strong> Courez LOIN de la Nullzone pour casser le lien.</li>
                     </ul>
                 </div>
                 <div class="role-column">
-                    <h3>⚠️ CRITIQUE</h3>
+                    <h3>💚 Soigneurs</h3>
                     <ul>
-                        <li>Les boss ne partagent pas leurs PV.</li>
-                        <li>Ils doivent mourir à <strong>15 secondes</strong> d'écart.</li>
-                        <li>Appel standard : "Stop DPS à 5%".</li>
+                        <li><strong>Nullsnap :</strong> Gros dégâts raid quand les tethers cassent.</li>
+                        <li><strong>Dread Breath :</strong> Dispel immédiat de la peur sur la cible.</li>
+                        <li><strong>Gloom :</strong> Remontez les joueurs qui soak la sphère (DoT).</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Mechanics Table -->
+            <!-- Combat Flow -->
             <section class="phase-block">
-                <h2>Détail des Capacités</h2>
+                <h2>Déroulement du Combat</h2>
+                <p>Le combat alterne entre une phase au sol et une intermission. À chaque cycle, les boss échangent leur
+                    état (Vaelgor au sol, Ezzorak en l'air, puis l'inverse).</p>
 
                 <table class="ability-table">
                     <thead>
                         <tr>
-                            <th style="width: 25%">Capacité</th>
+                            <th style="width: 25%">Mécanique</th>
                             <th style="width: 45%">Description</th>
                             <th style="width: 30%">Stratégie</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Earthen Spikes (Vaelgor)</strong></td>
-                            <td>Fait apparaître des piques sous des joueurs aléatoires. Knockup.</td>
-                            <td>Décalez-vous instantanément.</td>
+                            <td><strong>Nullbeam & Tether</strong></td>
+                            <td>Vaelgor tire un rayon sur le Tank, puis crée une zone qui attire tout le monde.</td>
+                            <td>Le Tank "stack" le rayon. Le raid court à l'opposé pour casser les liens.</td>
                         </tr>
                         <tr>
-                            <td><strong>Storm Wind (Ezzorak)</strong></td>
-                            <td>Pousse tous les joueurs hors de la plateforme.</td>
-                            <td>Placez-vous dans les <strong>Wind Drafts</strong> (Cercles Blancs) pour vous enraciner.
+                            <td><strong>Void Howl (Orbes)</strong></td>
+                            <td>Ezzorak pose des cercles sous les joueurs qui invoquent des orbes du vide.</td>
+                            <td>Packez les orbes, contrôlez-les et tuez-les vite.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gloom (Sphère)</strong></td>
+                            <td>Une sphère se déplace vers le mur.</td>
+                            <td><strong>SOAK.</strong> Au moins 5 joueurs doivent se mettre sur son chemin pour la
+                                réduire.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Midnight Flames</strong></td>
+                            <td>À 100 Énergie : Phase de transition. Dégâts massifs sur tout le raid.</td>
+                            <td>Packés dans la <strong>Radiant Barrier</strong> (Bouclier allié). Tuez l'add fuyant.
                             </td>
-                        </tr>
-                        <tr>
-                            <td><strong>DUALITY BARRIER</strong></td>
-                            <td>À 100 Énergie (toutes les 2 mins), les boss s'abritent (bouclier 50M PV).</td>
-                            <td><strong>BLOODLUST / HEROISM</strong> sur la première barrière. Cassez-le ou Wipe.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <!-- Heroic/Mythic -->
-            <section class="phase-block">
-                <h2>Modificateurs de Difficulté</h2>
+            <!-- Heroic Modifiers -->
+            <section class="phase-block mechanic-heroic">
+                <h2>Mode <span class="heroic-badge">HÉROÏQUE</span></h2>
                 <ul>
-                    <li class="mechanic-heroic">
-                        <span class="heroic-badge">HÉROÏQUE</span> <strong>Platform Swap :</strong>
-                        Pendant la barrière, des téléporteurs s'activent. Le Groupe 1 DOIT aller en l'Air, Le Groupe 2
-                        DOIT aller au Sol.
-                        <em>Échec = -50% Dégâts infligés.</em>
-                    </li>
-                    <li class="mechanic-mythic-only">
-                        <span class="mythic-badge">MYTHIQUE</span> <strong>Static Link :</strong>
-                        Lie un joueur du Sol avec un joueur de l'Air. Ils subissent des dégâts partagés.
-                        Les Soigneurs doivent remonter les deux cibles efficacement.
-                    </li>
+                    <li><strong>Gloom Rotation :</strong> Soaker donne un debuff de 1min. Alternez entre deux groupes de
+                        5 soakers.</li>
+                    <li><strong>Nullsnap DoT :</strong> Casser le tether laisse un DoT sur tout le raid. Healers,
+                        prévoyez des CDs.</li>
+                    <li><strong>Rakfang Absorb :</strong> Ezzorak gagne un bouclier d'absorption sur le tank. Ne
+                        dépassez pas 2 stacks.</li>
                 </ul>
             </section>
         </div>
     </main>
+
+    <!-- Lightbox Modal -->
+    <div id="videoLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <div id="lightboxVideoContainer"></div>
+        </div>
+    </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 

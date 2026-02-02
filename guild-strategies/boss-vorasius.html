@@ -24,24 +24,71 @@
         <aside class="guide-sidebar">
             <div class="video-section">
                 <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container video-trigger" id="videoTrigger">
+                    <img src="https://img.youtube.com/vi/4qXsEXUpAVw/maxresdefault.jpg" alt="Video Guide"
+                        class="video-thumb">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
             <div class="spell-section">
                 <h2>Liste des Sorts</h2>
-                <div class="spell-list">
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=440012">Void Breath</a></li>
-                        <li><a href="#" data-wowhead="spell=439322">Structure Weakness</a></li>
-                        <li><a href="#" data-wowhead="spell=438871">Cataclysm</a></li>
-                        <li><a href="#" data-wowhead="spell=441012">Shattering Roar</a></li>
-                        <li><a href="#" data-wowhead="spell=440555">Resonant Echoes</a></li>
-                    </ul>
+                <div class="spell-list accordion">
+                    <!-- Boss -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Vorasius</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1244012" target="_blank"
+                                        data-wowhead="spell=1244012">Smashing Frenzy</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1256855" target="_blank"
+                                        data-wowhead="spell=1256855">Void Breath</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1260052" target="_blank"
+                                        data-wowhead="spell=1260052">Primordial Roar</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1273067" target="_blank"
+                                        data-wowhead="spell=1273067">Aftershock</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1244419" target="_blank"
+                                        data-wowhead="spell=1244419">Overpowering Pulse</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Adds -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Blistercreep (Adds)</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1259184" target="_blank"
+                                        data-wowhead="spell=1259184">Blisterburst</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1272683" target="_blank"
+                                        data-wowhead="spell=1272683">Creep Impact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Mythic -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Mythique</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1272937" target="_blank"
+                                        data-wowhead="spell=1272937">Gathering Void</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -53,37 +100,47 @@
                 <div class="role-column">
                     <h3>🛡️ Tanks</h3>
                     <ul>
-                        <li><strong>Gestion du Souffle :</strong> <a href="#" data-wowhead="spell=440012">Void
-                                Breath</a> cible le Tank Actif.</li>
-                        <li><strong>Stratégie :</strong> Placez le boss pour que le Souffle touche <strong>1
-                                Mur</strong> à la fois. Ne jamais toucher le raid.</li>
-                        <li><strong>Swap :</strong> Après chaque Souffle.</li>
+                        <li><strong>Smash (Soak) :</strong> Le Tank actif doit aller dans la zone d'impact pour soak.
+                            Crée un Mur.</li>
+                        <li><strong>Gestion :</strong> <a href="https://www.wowhead.com/spell=1241844" target="_blank"
+                                data-wowhead="spell=1241844">Smashed</a> (+150%
+                            dégâts physiques) oblige au Swap après chaque Smash.</li>
+                        <li><strong>Note :</strong> Le boss est immobile.</li>
                     </ul>
                 </div>
                 <div class="role-column">
                     <h3>💚 Soigneurs</h3>
                     <ul>
-                        <li><strong>Type de Dégâts :</strong> Les dégâts constants sont faibles. Le Burst est EXTRÊME
-                            quand un mur casse.</li>
-                        <li><strong>Assignation :</strong> Prévoyez <span style="color:#ff7d0a">Revival</span> / <span
-                                style="color:#a335ee">Rewind</span> pour les Cassages de mur #2 et #3.</li>
+                        <li><strong>Soft Enrage :</strong> <a href="https://www.wowhead.com/spell=1260052"
+                                target="_blank" data-wowhead="spell=1260052">Primordial Roar</a>
+                            inflige des dégâts croissants (+Dot permanent).</li>
+                        <li><strong>Explosions :</strong> Chaque <a href="https://www.wowhead.com/spell=1259184"
+                                target="_blank" data-wowhead="spell=1259184">Blisterburst</a> (mort d'un add) fait des
+                            dégâts raid.</li>
+                        <li><strong>Dispell :</strong> Dissipez le débuff magique si un joueur est touché par
+                            l'explosion d'un Blistercreep.</li>
                     </ul>
                 </div>
                 <div class="role-column">
                     <h3>⚔️ DPS</h3>
                     <ul>
-                        <li><strong>Focus Murs :</strong> Les murs ont 40M PV. Les DoTs fonctionnent.</li>
-                        <li><strong>Phase Cœur :</strong> Quand un mur casse -> Le Cœur du Boss est exposé (+200% Dégâts
-                            subis) pendant 15s. FULL BURST.</li>
+                        <li><strong>Murs :</strong> Ne frappez PAS les murs directement.</li>
+                        <li><strong>Adds (Blistercreeps) :</strong> Attendez que les adds soient <strong
+                                style="color:#ff4444">SUR</strong> un mur (CC/Grip) pour les tuer.</li>
+                        <li><strong>Explosion :</strong> Leur mort (<a href="https://www.wowhead.com/spell=1259184"
+                                target="_blank" data-wowhead="spell=1259184">Blisterburst</a>) détruit le mur proche.
+                            (Héroïque : Il
+                            faut 2 Adds).</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Mechanics Table -->
             <section class="phase-block">
-                <h2>Boucle Principale : Le Siège</h2>
-                <p>Le boss gagne de l'énergie. À 100 Énergie, il lance <em>Cataclysm</em> (Wipe). Casser un mur reset
-                    l'Énergie à 0.</p>
+                <h2>Stratégie : Casse-Briques</h2>
+                <p>Le boss crée des Murs avec ses poings. Le raid doit utiliser les Adds pour détruire ces murs avant le
+                    <em>Void Breath</em> qui one-shot tout le monde sauf s'il y a un passage libre.
+                </p>
 
                 <table class="ability-table">
                     <thead>
@@ -95,20 +152,27 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Void Breath</strong></td>
-                            <td>Cône Frontal. Inflige d'énormes dégâts + applique "Structure Weakness" aux Murs (+50%
-                                dégâts subis).</td>
-                            <td>Tank vise le Mur. DPS restez derrière.</td>
+                            <td><strong>Smashing Frenzy</strong></td>
+                            <td>Le boss tape le sol. Inflige des dégâts mortels si non soak par un Tank. Crée un
+                                <strong>Void Crystal (Mur)</strong>.
+                            </td>
+                            <td>Tank : Soak l'impact.<br>Raid : Éloignez-vous (Aftershocks).</td>
                         </tr>
                         <tr>
-                            <td><strong>Shatter (Wall Break)</strong></td>
-                            <td>Quand un mur atteint 0 PV, il explose pour 800k Dégâts d'Ombre au raid.</td>
-                            <td><strong>Remontez les PV</strong> avant de finir un mur.</td>
+                            <td><strong>Blistercreeps (Adds)</strong></td>
+                            <td>Petits adds qui fixent des joueurs. Explosent à la mort.</td>
+                            <td><strong>Kitez-les SUR les murs.</strong><br>Tuez-les pour briser le mur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Void Breath</strong></td>
+                            <td>Rayon qui balaie la salle. La <strong>Main qui brille</strong> indique le départ du
+                                souffle.</td>
+                            <td><strong>Fuyez à l'opposé</strong> de la main brillante (passez par le mur détruit).</td>
                         </tr>
                         <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Void Pools</strong></td>
-                            <td>Les murs brisés laissent une zone de déni permanente.</td>
-                            <td>Chaque cassage réduit l'espace de jeu. Tuez le 4ème mur EN DERNIER.</td>
+                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Résistance</strong></td>
+                            <td>Les murs sont plus solides.</td>
+                            <td>Il faut <strong>2 Adds</strong> pour briser 1 Mur.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -130,29 +194,54 @@
                 <h3>Carte Stratégique</h3>
                 <div
                     style="position: relative; width: 300px; height: 200px; background: #222; margin: 0 auto; border: 2px solid #555;">
-                    <div
-                        style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 80%; height: 20px; background: #00b4d8; text-align: center; color: #000; font-weight: bold;">
-                        MUR 1</div>
-                    <div
-                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 60%; background: #ffd700; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold;">
-                        MUR 2</div>
-                    <div
-                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 60%; background: #9d4edd; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold;">
-                        MUR 3</div>
 
+                    <!-- Boss -->
                     <div
-                        style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: red; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center;">
-                        B</div>
-
-                    <!-- Breath Cone -->
-                    <div
-                        style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 80px solid rgba(255, 0, 0, 0.3);">
+                        style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #800080; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border: 2px solid #a0a;">
+                        BOSS
                     </div>
+
+                    <!-- Wall Left -->
+                    <div
+                        style="position: absolute; left: 30px; top: 80px; width: 20px; height: 80px; background: #00b4d8; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold; border: 1px solid white;">
+                        MUR G
+                    </div>
+
+                    <!-- Wall Right -->
+                    <div
+                        style="position: absolute; right: 30px; top: 80px; width: 20px; height: 80px; background: #ffd700; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold; border: 1px solid white;">
+                        MUR D
+                    </div>
+
+                    <!-- Players -->
+                    <div
+                        style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #aaa; font-size: 12px; text-align: center;">
+                        <span
+                            style="display:inline-block; width:10px; height:10px; background:red; border-radius:50%;"></span>
+                        Groupe
+                    </div>
+
+                    <!-- Mechanic Arrow -->
+                    <div
+                        style="position: absolute; top: 120px; left: 60px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 20px solid #ff4444;">
+                    </div>
+                    <div
+                        style="position: absolute; top: 110px; left: 80px; color: #ff4444; font-size: 10px; font-weight: bold;">
+                        Casser pour passer</div>
+
                 </div>
-                <p><em>Tank (Rond Rouge) visant le souffle sur le Mur du Haut (Bleu).</em></p>
+                <p><em>Le Boss crée 2 murs (Gauche/Droite). Cassez-en un pour traverser et éviter le Souffle.</em></p>
             </div>
         </div>
     </main>
+    <!-- Lightbox Modal -->
+    <div id="videoLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <div id="lightboxVideoContainer"></div>
+        </div>
+    </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 

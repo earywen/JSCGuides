@@ -24,24 +24,57 @@
         <aside class="guide-sidebar">
             <div class="video-section">
                 <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-container video-trigger" id="videoTrigger">
+                    <img src="https://img.youtube.com/vi/y4PVfpsI5EY/maxresdefault.jpg" alt="Video Guide"
+                        class="video-thumb">
+                    <div class="play-button">
+                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
             <div class="spell-section">
                 <h2>Liste des Sorts</h2>
-                <div class="spell-list">
-                    <ul>
-                        <li><a href="#" data-wowhead="spell=378222">Shadow Strike</a></li>
-                        <li><a href="#" data-wowhead="spell=388001">Consuming Shadows</a></li>
-                        <li><a href="#" data-wowhead="spell=389112">Wall of Shadows</a></li>
-                        <li><a href="#" data-wowhead="spell=389445">Shifting Sands</a></li>
-                        <li><a href="#" data-wowhead="spell=387555">Mirror Image</a></li>
-                    </ul>
+                <div class="spell-list accordion">
+                    <!-- Boss -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Salhadaar</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1250803" target="_blank"
+                                        data-wowhead="spell=1250803">Shattering Twilight (Tank)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1271577" target="_blank"
+                                        data-wowhead="spell=1271577">Instability (DoT)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1246175" target="_blank"
+                                        data-wowhead="spell=1246175">Cosmic Unraveling (100e)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1250686" target="_blank"
+                                        data-wowhead="spell=1250686">Twisting Obscurity</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Adds & Mechanics -->
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            <h3>Adds & Mécaniques</h3>
+                            <span class="arrow">▼</span>
+                        </button>
+                        <div class="accordion-content">
+                            <ul>
+                                <li><a href="https://www.wowhead.com/spell=1245960" target="_blank"
+                                        data-wowhead="spell=1245960">Void Orb (Reckless Inf.)</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1254081" target="_blank"
+                                        data-wowhead="spell=1254081">Fractured Projection</a></li>
+                                <li><a href="https://www.wowhead.com/spell=1248697" target="_blank"
+                                        data-wowhead="spell=1248697">Despotic Command</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -53,86 +86,103 @@
                 <div class="role-column">
                     <h3>🛡️ Tanks</h3>
                     <ul>
-                        <li><strong>Mitigation Active :</strong> Utilisez-la pour <em>Shadow Strike</em> (Grosse frappe
-                            physique).</li>
-                        <li><strong>Mouvement :</strong> Le Boss ne bouge PAS pendant la phase <em>Wall Descent</em>.
-                        </li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>💚 Soigneurs</h3>
-                    <ul>
-                        <li><strong>Dot :</strong> <em>Consuming Shadows</em> applique des DoTs aléatoires. Spot heal
-                            nécessaire.</li>
-                        <li><strong>Intermission :</strong> 0 dégâts pendant la Descente du Mur SI les joueurs jouent
-                            correctement. 100% Wipe s'ils échouent.</li>
+                        <li><strong>Shattering Twilight :</strong> Tank Buster. Courez <strong>LOIN</strong> du raid
+                            après l'impact.
+                            Des piques vont sortir de vous.</li>
+                        <li><strong>Instability :</strong> DoT cumulable. Échangez au Clean ou après chaque Shattering
+                            Twilight.</li>
+                        <li><strong>Kiting :</strong> Bougez le boss constamment pour éviter les Orbes du Vide.</li>
                     </ul>
                 </div>
                 <div class="role-column">
                     <h3>⚔️ DPS</h3>
                     <ul>
-                        <li><strong>Priorité :</strong> Orbs > Images > Boss.</li>
-                        <li><strong>Burst :</strong> Burst AoE nécessaire pour les Mirror Images.</li>
+                        <li><strong>Priorité Absolue :</strong> Orbes du Vide > Boss.</li>
+                        <li><strong>Interrupt :</strong> Coupez les <em>Fractured Projection</em> pour les faire depop.
+                        </li>
+                        <li><strong>100 Énergie :</strong> Phase de Burn (+25% Dégâts subis par le boss).</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>💚 Soigneurs</h3>
+                    <ul>
+                        <li><strong>Despotic Command :</strong> Les joueurs ciblés doivent aller au bord. Dispel = Zone
+                            au
+                            sol.</li>
+                        <li><strong>Heroic :</strong> Tuer un Orbe met un DoT sur le raid. Ne tuez pas les deux en même
+                            temps !</li>
                     </ul>
                 </div>
             </section>
 
             <!-- Mechanics Table -->
             <section class="phase-block">
-                <h2>Mécanique Space Invaders (toutes les 1:00)</h2>
-                <p>Le boss se téléporte au fond de la salle. Un mur d'ombres descend.</p>
+                <h2>Phase 1 : Orbes & Images</h2>
+                <p>Le boss invoque des menaces qui convergent vers lui. La gestion de l'espace est clé.</p>
 
                 <table class="ability-table">
                     <thead>
                         <tr>
-                            <th style="width: 25%">Type</th>
+                            <th style="width: 25%">Mécanique</th>
                             <th style="width: 45%">Description</th>
-                            <th style="width: 30%">Solution</th>
+                            <th style="width: 30%">Stratégie</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>The Wall</strong></td>
-                            <td>Une ligne de 5 construits descend. 1 est manquant (Le Gap). Toucher un construit = Mort
-                                Instantanée.</td>
-                            <td>Identifiez le Gap. Courez à travers.</td>
+                            <td><strong>Void Orbs</strong></td>
+                            <td>2 Orbes apparaissent et avancent vers le boss. Si elles le touchent = Wipe.</td>
+                            <td><strong>FOCUS.</strong> <span class="heroic-badge">HM</span> DoT raid à la mort.
+                                Tuez-les une par une.</td>
                         </tr>
-                        <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Shifting Sands</strong></td>
-                            <td>Le Gap bouge Gauche/Droite aléatoirement pendant la descente.</td>
-                            <td>Assignez un signe (Triangle) au joueur le plus intelligent. <strong>Suivez le
-                                    Signe.</strong></td>
+                        <tr>
+                            <td><strong>Fractured Projection</strong></td>
+                            <td>Copies qui incantent. Si le cast passe = Zone de dégâts permanente.</td>
+                            <td><strong>INTERRUPT.</strong> Un kick suffit pour les faire disparaître.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shattering Twilight</strong></td>
+                            <td>Gros coup sur le Tank + Debuff "Time Bomb".</td>
+                            <td>Le Tank visé s'éloigne. Le Off-Tank reprend le boss.</td>
                         </tr>
                     </tbody>
                 </table>
             </section>
 
-            <!-- Mythic -->
-            <section class="phase-block mechanic-mythic-only">
-                <h2><span class="mythic-badge">MYTHIQUE</span> The Crossfire</h2>
-                <p>Deux murs apparaissent. Un du Nord, un de l'Est.</p>
+            <!-- Phase 2 -->
+            <section class="phase-block">
+                <h2>Phase 2 : 100% Énergie (Burn Phase)</h2>
+                <p>Le boss s'arrête de bouger et canalise.</p>
                 <ul>
-                    <li>Vous devez trouver l'<strong>Intersection</strong> des deux zones safe.</li>
-                    <li>Exemple : Gap Nord est Colonne 2. Gap Est est Ligne 3. La Safe Zone est exactement en (2, 3).
-                    </li>
+                    <li><strong>Dégâts augmentés (+25%) :</strong> CLAQUAGE DE CD / HÉROÏSME ICI.</li>
+                    <li><strong>Rotating Beams :</strong> Rayons qui tournent autour du boss. Trouvez l'espace safe et
+                        tournez avec.</li>
+                    <li><strong>Soft Enrage :</strong> À la fin, laisse une énorme zone au sol. L'espace se réduit au
+                        fur et à mesure.</li>
                 </ul>
             </section>
 
-            <div class="visual-mechanic">
-                <h3>Visuel : Le Gap</h3>
-                <div style="background: #111; padding: 20px; display: inline-block;">
-                    <div style="display: flex; gap: 4px;">
-                        <div style="width: 40px; height: 100px; background: #900;">MORT</div>
-                        <div style="width: 40px; height: 100px; background: #900;">MORT</div>
-                        <div
-                            style="width: 40px; height: 100px; border: 2px dashed #0f0; background: rgba(0,255,0,0.1); color: #0f0; writing-mode: vertical-rl; display: flex; justify-content: center; align-items: center;">
-                            SAFE</div>
-                        <div style="width: 40px; height: 100px; background: #900;">MORT</div>
-                    </div>
-                </div>
-            </div>
+            <!-- Heroic -->
+            <section class="phase-block mechanic-heroic">
+                <h2>Mode <span class="heroic-badge">HÉROÏQUE</span></h2>
+                <ul>
+                    <li><strong>Void Orbs :</strong> Explosion raid à la mort. STAGGER les kills (attendez la fin du
+                        DoT).</li>
+                    <li><strong>Shattering Twilight :</strong> Plusieurs joueurs (pas que le Tank) reçoivent les piques.
+                        Ils doivent s'écarter du raid.</li>
+                </ul>
+            </section>
+
         </div>
     </main>
+    <!-- Lightbox Modal -->
+    <div id="videoLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <button class="close-lightbox">&times;</button>
+            <div id="lightboxVideoContainer"></div>
+        </div>
+    </div>
+
     <script type="module" src="./src/main.js"></script>
 </body>
 

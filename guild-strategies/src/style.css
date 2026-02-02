@@ -400,3 +400,181 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
 .spell-list a:hover {
   color: var(--color-accent-gold);
 }
+
+/* Video Lightbox & Trigger Styles */
+.video-trigger {
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s;
+  background: #000;
+}
+
+.video-trigger:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 180, 216, 0.4);
+  border-color: var(--color-accent-blue);
+}
+
+.video-thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.video-trigger:hover .video-thumb {
+  opacity: 1;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.video-trigger:hover .play-button {
+  background: var(--color-accent-blue);
+  border-color: var(--color-accent-blue);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Lightbox Modal */
+.lightbox-overlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-content {
+  width: 80%;
+  max-width: 1200px;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  box-shadow: 0 0 50px rgba(0, 112, 221, 0.2);
+  border: 1px solid #333;
+}
+
+.close-lightbox {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0 10px;
+}
+
+.close-lightbox:hover {
+  color: var(--color-accent-gold);
+}
+
+#lightboxVideoContainer {
+  width: 100%;
+  height: 100%;
+}
+
+#lightboxVideoContainer iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Accordion Styles */
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.accordion-header:hover {
+  color: var(--color-accent-gold);
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  /* Override default H2/H3 border */
+  padding: 0;
+  color: inherit;
+}
+
+.accordion-header .arrow {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  opacity: 0.7;
+}
+
+.accordion-item.active .arrow {
+  transform: rotate(180deg);
+  color: var(--color-accent-gold);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding-left: 0.5rem;
+  /* Indent content slightly */
+}
+
+/* Open state handled by JS via inline style or max-height class if fixed height, 
+   but for dynamic height we usually use JS to set scrollHeight */
+.accordion-item.active .accordion-content {
+  /* This will be set by JS usually, but we can set a safe max for CSS-only fallback 
+     or just rely on JS completely for the animation. */
+  border-bottom: 1px solid transparent;
+  /* Fix margin collapse */
+}
