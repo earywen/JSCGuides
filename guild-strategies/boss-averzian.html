@@ -9,266 +9,306 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">← Retour</a>
-        <h1>Imperator Averzian</h1>
-        <div class="difficulty-switcher">
-            <button class="difficulty-btn" data-mode="normal">Normal</button>
-            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
-            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
-        </div>
-    </header>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">JSCGUIDE</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="boss-averzian.html" class="nav-item active">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
+        </nav>
+    </aside>
 
-    <main class="container boss-page-layout">
-        <!-- SIDEBAR (1/3) -->
-        <aside class="guide-sidebar">
-            <div class="video-section">
-                <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container video-trigger" id="videoTrigger">
-                    <img src="https://img.youtube.com/vi/OvdVWjN7DcU/maxresdefault.jpg" alt="Video Guide Guide"
-                        class="video-thumb">
-                    <div class="play-button">
-                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                    </div>
-                </div>
+    <main class="main-view">
+        <header class="main-header">
+            <h1>Imperator Averzian</h1>
+            <div class="difficulty-switcher">
+                <button class="diff-btn active" data-mode="normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic">Mythique</button>
             </div>
+        </header>
 
-            <div class="spell-section">
-                <h2>Liste des Sorts</h2>
-                <div class="spell-list accordion">
-                    <!-- Boss -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Imperator Averzian</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1251361" target="_blank"
-                                        data-wowhead="spell=1251361">Shadow's Advance</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1253918" target="_blank"
-                                        data-wowhead="spell=1253918">Void Claimed</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1251583" target="_blank"
-                                        data-wowhead="spell=1251583">March of the Endless</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1249262" target="_blank"
-                                        data-wowhead="spell=1249262">Umbral Collapse</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1249251" target="_blank"
-                                        data-wowhead="spell=1249251">Dark Upheaval</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1265540" target="_blank"
-                                        data-wowhead="spell=1265540">Blackening Wounds</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1260712" target="_blank"
-                                        data-wowhead="spell=1260712">Oblivion's Wrath</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1258883" target="_blank"
-                                        data-wowhead="spell=1258883">Void Fall</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1265490" target="_blank"
-                                        data-wowhead="spell=1265490">Imperator's Glory</a></li>
-                            </ul>
-                        </div>
+        <div class="content-area blur-fade">
+            <div class="guide-content">
+                <!-- Top Section: TL;DR + Supplementary -->
+                <div class="strategy-header-grid">
+                    <div class="strategy-column">
+                        <section class="tldr-grid">
+                            <div class="role-column tanks">
+                                <h3>🛡️ Tanks</h3>
+                                <ul>
+                                    <li><strong>Blackening Wounds :</strong> Debuff PV max. Swap à chaque <em>Shadow's
+                                            Advance</em>.</li>
+                                    <li><strong>Positionnement :</strong> Gardez le boss loin des <em>Dark Tears</em>
+                                        (le buff +75% dmg est mortel).</li>
+                                    <li><strong>Umbral Collapse :</strong> Dirigez l'impact sur un <em>Voidshaper</em>
+                                        pour briser son bouclier.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column healers">
+                                <h3>💚 Healers</h3>
+                                <ul>
+                                    <li><strong>Gros Soins :</strong> Lors de l'explosion du soak <em>Umbral
+                                            Collapse</em> (ticking dot de 6s).</li>
+                                    <li><strong>Dark Upheaval :</strong> Dégâts périodiques constants sur tout le raid.
+                                    </li>
+                                    <li><strong>Desolation (Héro) :</strong> Surveillez les joueurs qui soakent les
+                                        zones déjà capturées.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column dps">
+                                <h3>⚔️ DPS</h3>
+                                <ul>
+                                    <li><strong>Règle du 2/3 :</strong> Le raid peut détruire 2 adds via soaks; le 3ème
+                                        capturera <strong>toujours</strong> sa zone.</li>
+                                    <li><strong>Utilité :</strong> Les <strong>DK (Grips)</strong> et stuns sont
+                                        cruciaux pour les <em>Voidmaw</em> à 35% PV.</li>
+                                    <li><strong>Gathering Darkness :</strong> Tuez le Voidshaper avant qu'il n'atteigne
+                                        100 d'énergie (Wipe).</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Phase 1 -->
+                        <section class="phase-block">
+                            <h2>Tactique Globale</h2>
+                            <div class="tactics-box">
+                                <ul>
+                                    <li><strong>Bloodlust :</strong> Au Pull. Blastez le boss avant que la salle ne soit
+                                        pleine.</li>
+                                    <li><strong>Gestion de la Grille :</strong> Le raid peut détruire <strong>2
+                                            adds</strong> par vague via les soaks Tanks. Le 3ème capturera sa zone.</li>
+                                    <li><strong>Priorité :</strong> Bloquez en priorité les zones qui menacent de former
+                                        un alignement de 3 (Tic-Tac-Toe).</li>
+                                </ul>
+                            </div>
+
+                            <h2>Forces de l'Imperator (Adds)</h2>
+                            <p>Averzian ne combat jamais seul. Il invoque ses armées via des **Void Rifts** et des
+                                **Dark Tears**.</p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Ennemi</th>
+                                        <th style="width: 45%">Capacités Clés</th>
+                                        <th style="width: 30%">Stratégie</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Abyssal Voidshaper</strong></td>
+                                        <td><em>Umbral Barrier</em> (99% réduction dégâts).<br><em>Gathering
+                                                Darkness</em>.</td>
+                                        <td>Doit être touché par <strong>Umbral Collapse</strong> pour briser son
+                                            bouclier.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Shadowguard Stalwart</strong></td>
+                                        <td><em>Shadow Phalanx</em> : Repousse les joueurs à 10m.<br><em>Pitch
+                                                Bulwark</em> : Bouclier d'absorption.</td>
+                                        <td><strong>Interrompez</strong> Pitch Bulwark. Gardez vos distances pour le
+                                            knockback.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Voidmaw</strong></td>
+                                        <td><em>Dark Resilience</em> : Se soigne à 100% à 35% PV (Héroïque).</td>
+                                        <td><strong>Stourdissez/Ralentissez</strong> dès 40% PV et tenez-les loin du
+                                            vide.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>Mécanique de Conquête : Shadow's Advance</h2>
+                            <p>Averzian tente de capturer la salle zone par zone (grille de 3x3). Si 3 zones adjacentes
+                                sont capturées, c'est le <strong>March of the Endless</strong> (Wipe).</p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Mécanique</th>
+                                        <th style="width: 45%">Effet</th>
+                                        <th style="width: 30%">Action Requise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Shadow's Advance</strong></td>
+                                        <td>Invoque 3 adds. Seuls 2 peuvent être bloqués par les soaks Tanks.</td>
+                                        <td>Priorisez les zones qui complètent une ligne de 3.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Umbral Collapse</strong></td>
+                                        <td>Dégâts partagés. Brise le bouclier du <em>Voidshaper</em> touché.</td>
+                                        <td><strong>Tout le raid</strong> doit aider le Tank à encaisser l'impact.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Void Claimed (Buff)</strong></td>
+                                        <td>Averzian gagne +75% dmg/-90% dmg subis s'il est proche d'une zone violette.
+                                        </td>
+                                        <td><strong>Tanks :</strong> Ne le laissez jamais approcher d'une zone conquise.
+                                        </td>
+                                    </tr>
+                                    <tr class="mechanic-heroic">
+                                        <td><strong>Desolation</strong></td>
+                                        <td>Bombardement sur les zones DÉJÀ capturées.</td>
+                                        <td><strong>Soak obligatoire</strong> par 1 joueur pour éviter les dégâts raid
+                                            massifs.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <!-- Visuals -->
+                        <section class="visuals-section">
+                            <h2>Visualisation Stratégique</h2>
+                            <div class="schemas-grid">
+                                <!-- Schema 1: Contrôle des Zones -->
+                                <div class="visual-mechanic">
+                                    <h3>Gestion des Adds</h3>
+                                    <div class="averzian-grid">
+                                        <!-- Row 1 -->
+                                        <div class="grid-cell claiming">
+                                            <div class="averzian-add">👾</div>
+                                            <!-- Add survives and claims -->
+                                        </div>
+                                        <div class="grid-cell">
+                                            <div class="averzian-add">👾</div>
+                                            <div class="tank-soak-mechanic" style="animation-delay: 2s;"></div>
+                                        </div>
+                                        <div class="grid-cell">
+                                            <div class="averzian-add">👾</div>
+                                            <div class="tank-soak-mechanic" style="animation-delay: 4s;"></div>
+                                        </div>
+                                        <!-- Row 2 -->
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell boss-cell">💀</div>
+                                        <div class="grid-cell"></div>
+                                        <!-- Row 3 -->
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                    <div class="schema-legend" style="margin-top: 10px;">
+                                        <span><i class="orb-indicator" style="background: #ef4444;"></i> Tank
+                                            Soak</span>
+                                        <span><i class="echo-indicator"
+                                                style="border-color: #7e22ce; background: rgba(88, 28, 135, 0.5);"></i>
+                                            Zone Prise</span>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Soakez 2 adds avec le Tank. Le 3ème capture sa zone.</em>
+                                    </p>
+                                </div>
+
+                                <!-- Schema 2: Desolation (Heroic) -->
+                                <div class="visual-mechanic">
+                                    <h3>Desolation (Héroïque)</h3>
+                                    <div class="averzian-grid">
+                                        <!-- Row 1 -->
+                                        <div class="grid-cell claimed">PRIS</div>
+                                        <div class="grid-cell claimed">
+                                            PRIS
+                                            <div class="desolation-soak"></div>
+                                        </div>
+                                        <div class="grid-cell"></div>
+                                        <!-- Row 2 -->
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell boss-cell">💀</div>
+                                        <div class="grid-cell"></div>
+                                        <!-- Row 3 -->
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                        <div class="grid-cell"></div>
+                                    </div>
+                                    <div class="schema-legend" style="margin-top: 10px;">
+                                        <span><i class="orb-indicator" style="background: rgba(234, 179, 8, 0.8);"></i>
+                                            Desolation</span>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Un joueur doit soaker le cercle jaune qui apparaît sur une zone
+                                            capturée.</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
-                    <!-- Adds 1 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Abyssal Voidshaper</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1255749" target="_blank"
-                                        data-wowhead="spell=1255749">Gathering Darkness</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1262036" target="_blank"
-                                        data-wowhead="spell=1262036">Void Rupture</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1249714" target="_blank"
-                                        data-wowhead="spell=1249714">Umbral Barrier</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1260816" target="_blank"
-                                        data-wowhead="spell=1260816">Light's End</a></li>
-                            </ul>
+                    <aside class="supplementary-info">
+                        <div class="video-section">
+                            <h2>Vidéo Guide</h2>
+                            <div class="video-container video-trigger" id="videoTrigger">
+                                <img src="https://img.youtube.com/vi/OvdVWjN7DcU/maxresdefault.jpg" alt="Video"
+                                    class="video-thumb">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Adds 2 -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Shadowguard Stalwart</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1255702" target="_blank"
-                                        data-wowhead="spell=1255702">Pitch Bulwark</a></li>
-                            </ul>
+                        <div class="spell-section">
+                            <h2>Sorts de l'Encontre</h2>
+                            <div class="spell-list accordion">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Imperator Averzian</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1251361">Shadow's
+                                                Advance</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1249262">Umbral
+                                                Collapse</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1249251">Dark
+                                                Upheaval</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1265540">Blackening
+                                                Wounds</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1253918">Void Claimed</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1260712">Oblivion's
+                                                Wrath</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1251583">March of the
+                                                Endless</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Forces de l'Imperator (Adds)</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1249714">Umbral Barrier
+                                                (Shield)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1255749">Gathering
+                                                Darkness</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1255702">Pitch
+                                                Bulwark</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1264326">Shadow
+                                                Phalanx</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1264164">Dark
+                                                Resilience</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1267205">Hobbled (35%
+                                                HP)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Heroic -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Héroïque</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1270949" target="_blank"
-                                        data-wowhead="spell=1270949">Desolation</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                    </aside>
                 </div>
-            </div>
-        </aside>
-
-        <!-- CONTENT (2/3) -->
-        <div class="guide-content">
-            <!-- TL;DR -->
-            <section class="tldr-grid">
-                <div class="role-column">
-                    <h3>🛡️ Tanks</h3>
-                    <ul>
-                        <li><strong>Positionnement :</strong> Gardez le boss au CENTRE, loin des zones capturées et des
-                            adds (Buff <em>Imperator's Glory</em> si proche).</li>
-                        <li><strong>Group Soak (x2) :</strong> Le Tank actif reçoit un cercle. <strong>Courez sur un
-                                Voidshaper</strong> pour le tuer instantanément. Cela arrive 2 fois par vague.</li>
-                        <li><strong>Swap :</strong> À chaque mécanique de Soak (Shadow's Advance).</li>
-                        <li><strong>Blackening Wounds :</strong> Changez si les stacks (Reduc PV Max) sont trop hauts
-                            (8-12).</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>💚 Soigneurs</h3>
-                    <ul>
-                        <li><strong>Soak Dégâts :</strong> Le Group Soak fait très mal + DoT de 6s sur le raid.</li>
-                        <li><strong>Desolation (Héroïque) :</strong> Un joueur DOIT aller soak le cercle qui apparait
-                            sur une zone déjà capturée.</li>
-                        <li><strong>Spot Heal :</strong> Le Tank prend cher (Saignement + Réduction PV).</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>⚔️ DPS</h3>
-                    <ul>
-                        <li><strong>Stratégie 2/3 :</strong> 2 adds seront tués par les Tanks (Soak). Tuez le 3ème Add
-                            (celui qui survit et capture la zone) rapidement.</li>
-                        <li><strong>Esquive :</strong> Évitez les lignes de <em>Oblivion's Wrath</em> et les zones de
-                            <em>Void Fall</em>.
-                        </li>
-                        <li><strong>CC (Héroïque) :</strong> Les petits adds retournent au portail à 35% PV pour se
-                            soigner. <strong>Stun/Slow/Grip</strong> loin des portails !</li>
-                        <li><strong>Tic-Tac-Toe :</strong> Ne laissez jamais 3 zones adjacentes être capturées (Wipe).
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Phase 1 -->
-            <section class="phase-block">
-                <h2>Mécanique Principale : Le Jeu de Territoire</h2>
-                <p>La salle est une grille de 9 zones. Le boss lance <strong>Shadow's Advance</strong> et invoque 3 Adds
-                    (Voidshapers) sur 3 zones.</p>
-
-                <table class="ability-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%">Capacité</th>
-                            <th style="width: 45%">Description</th>
-                            <th style="width: 30%">Stratégie</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Shadow's Advance</strong><br><span style="font-size:0.8em; color:#888;">Group
-                                    Soak</span></td>
-                            <td>Le tank reçoit un cercle de soak. L'explosion tue l'Add qui est dedans.
-                                <br><strong>Note:</strong> Il y a 2 soaks successifs.
-                            </td>
-                            <td><strong>Tank :</strong> Courez sur un Add pour le détruire.<br><strong>Raid :</strong>
-                                Venez dans le
-                                cercle pour partager les dégâts.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Void Claimed (Territory)</strong></td>
-                            <td>L'Add survivant (le 3ème) capture sa zone définitivement.</td>
-                            <td>Tuez cet Add rapidement après les soaks. Ne laissez pas 3 zones s'aligner (Tic-Tac-Toe =
-                                Wipe).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Small Adds (Voidmaw)</strong></td>
-                            <td>Des petits adds sortent des zones capturées.</td>
-                            <td>Packez-les sous le Voidshaper survivant et AoE.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Oblivion's Wrath</strong></td>
-                            <td>Lignes de pics qui partent du boss.</td>
-                            <td>Esquivez les lignes.</td>
-                        </tr>
-                        <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Add Resilience</strong></td>
-                            <td>À 35% PV, les <em>Voidmaws</em> courent vers le portail le plus proche pour se soigner à
-                                100%.</td>
-                            <td><strong>Hard CC</strong> (Stun, Ring of Peace, Vortex) loin des zones capturées et
-                                tuez-les avant qu'ils ne touchent le violet.</td>
-                        </tr>
-                        <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Shadow Phalanx</strong></td>
-                            <td>Les <em>Stalwarts</em> protègent les Voidshapers et repoussent les joueurs à 10m.</td>
-                            <td>Les Melees doivent faire attention au Knockback. Tuez les Stalwarts rapidement.</td>
-                        </tr>
-                        <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Desolation</strong></td>
-                            <td>Une zone de soak apparait sur une zone DÉJÀ capturée.</td>
-                            <td><strong>1 Joueur</strong> doit aller dedans pour soak (sinon dégâts raid massif).</td>
-                        </tr>
-                        <tr class="mechanic-mythic-only">
-                            <td><span class="mythic-badge">MYTHIQUE</span> <strong>Obscurion Endwalker</strong></td>
-                            <td>Si un <em>Abyssal Voidshaper</em> finit son incantation de <em>Gathering Darkness</em>,
-                                il se transforme en monstre Elite.</td>
-                            <td>C'est un Wipe ou presque. <strong>Soakez impérativement</strong> les adds avec le Tank
-                                pour interrompre la transformation.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Visuals -->
-            <div class="visual-mechanic">
-                <h3>Aide Visuelle : Tic-Tac-Toe</h3>
-                <div
-                    style="display: inline-grid; grid-template-columns: repeat(3, 60px); grid-gap: 5px; background: #333; padding: 5px; margin-top: 1rem;">
-                    <div
-                        style="width: 60px; height: 60px; background: #4a0080; border: 2px solid #a335ee; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem;">
-                        PRIS</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #4a0080; border: 2px solid #a335ee; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.8rem;">
-                        PRIS</div>
-
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #222; border: 2px dashed #00b4d8; display: flex; align-items: center; justify-content: center; color: #00b4d8; font-weight: bold;">
-                        BOSS</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-                    <div
-                        style="width: 60px; height: 60px; background: #222; display: flex; align-items: center; justify-content: center; color: #555;">
-                        libre</div>
-                </div>
-                <p><em>Le but : Évitez d'aligner 3 zones violettes ("PRIS"). Tankez le boss au centre (Bleu), loin du
-                        violet.</em></p>
             </div>
         </div>
     </main>
+
     <!-- Lightbox Modal -->
     <div id="videoLightbox" class="lightbox-overlay">
         <div class="lightbox-content">

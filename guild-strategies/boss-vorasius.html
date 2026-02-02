@@ -9,231 +9,264 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html">← Retour</a>
-        <h1>Vorasius</h1>
-        <div class="difficulty-switcher">
-            <button class="difficulty-btn" data-mode="normal">Normal</button>
-            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
-            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
-        </div>
-    </header>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">JSCGUIDE</div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item active">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
+        </nav>
+    </aside>
 
-    <main class="container boss-page-layout">
-        <!-- SIDEBAR -->
-        <aside class="guide-sidebar">
-            <div class="video-section">
-                <h2>Vidéo Guide (RCP)</h2>
-                <div class="video-container video-trigger" id="videoTrigger">
-                    <img src="https://img.youtube.com/vi/4qXsEXUpAVw/maxresdefault.jpg" alt="Video Guide"
-                        class="video-thumb">
-                    <div class="play-button">
-                        <svg viewBox="0 0 24 24" width="64" height="64" fill="currentColor">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                    </div>
-                </div>
+    <main class="main-view">
+        <header class="main-header">
+            <h1>Vorasius</h1>
+            <div class="difficulty-switcher">
+                <button class="diff-btn" data-mode="normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic">Mythique</button>
             </div>
+        </header>
 
-            <div class="spell-section">
-                <h2>Liste des Sorts</h2>
-                <div class="spell-list accordion">
-                    <!-- Boss -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Vorasius</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1244012" target="_blank"
-                                        data-wowhead="spell=1244012">Smashing Frenzy</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1256855" target="_blank"
-                                        data-wowhead="spell=1256855">Void Breath</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1260052" target="_blank"
-                                        data-wowhead="spell=1260052">Primordial Roar</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1273067" target="_blank"
-                                        data-wowhead="spell=1273067">Aftershock</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1244419" target="_blank"
-                                        data-wowhead="spell=1244419">Overpowering Pulse</a></li>
-                            </ul>
+        <div class="content-area blur-fade">
+            <div class="guide-content">
+                <!-- Top Section -->
+                <div class="strategy-header-grid">
+                    <div class="strategy-column">
+                        <section class="tldr-grid">
+                            <div class="role-column tanks">
+                                <h3>🛡️ Tanks</h3>
+                                <ul>
+                                    <li><strong>Smashed :</strong> Swap à chaque <em>Smashing Frenzy</em>. Le debuff
+                                        +150% dmg physique est mortel.</li>
+                                    <li><strong>Aftershock :</strong> Standez au centre de l'impact après l'explosion
+                                        pour éviter les anneaux.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column healers">
+                                <h3>💚 Healers</h3>
+                                <ul>
+                                    <li><strong>Primordial Roar :</strong> Soft enrage. Le DoT <em>Gathering Void</em>
+                                        stacke à chaque cast.</li>
+                                    <li><strong>Parasite Expulsion :</strong> Gros pic de dégâts raid lors de la sortie
+                                        des adds.</li>
+                                    <li><strong>Dispels :</strong> Retirez le debuff d'augmentation de dégâts sur les
+                                        joueurs touchés par l'explosion des adds.</li>
+                                </ul>
+                            </div>
+                            <div class="role-column dps">
+                                <h3>⚔️ DPS</h3>
+                                <ul>
+                                    <li><strong>Wall Break :</strong> Tuez les <em>Blistercreeps</em>
+                                        <strong>SUR</strong> les murs de cristal (Héro: 2 par mur).
+                                    </li>
+                                    <li><strong>Void Breath :</strong> Regardez quelle main du boss brille pour
+                                        anticiper le côté de départ du balayage.</li>
+                                    <li><strong>Utilité :</strong> Utilisez <strong>Grips / Typhoons / Rings of
+                                            Peace</strong> pour ramener les adds sur les murs.</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Strategy -->
+                        <section class="phase-block">
+                            <h2>Tactique Globale</h2>
+                            <div class="tactics-box">
+                                <ul>
+                                    <li><strong>Bloodlust :</strong> Au Pull. Profitez du calme relatif pour descendre
+                                        le boss.</li>
+                                    <li><strong>Wall Break :</strong> La mécanique clé. Les <em>Blistercreeps</em>
+                                        doivent impérativement mourir <strong>sur</strong> un mur de cristal.</li>
+                                    <li><strong>Anticipation :</strong> Surveillez la main brillante de Vorasius pour
+                                        savoir d'où partira le <em>Void Breath</em>.</li>
+                                </ul>
+                            </div>
+
+                            <h2>Mécanique de Pression : Smashing Frenzy</h2>
+                            <p>Vorasius frappe le sol régulièrement, infligeant des dégâts physiques lourds et
+                                étourdissant le raid pendant 2 secondes.</p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Capacité</th>
+                                        <th style="width: 45%">Effet</th>
+                                        <th style="width: 30%">Action Requise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Primordial Roar</strong></td>
+                                        <td>Knockback + DoT permanent (stackable).</td>
+                                        <td><strong>Soft Enrage :</strong> Le combat devient de plus en plus difficile
+                                            pour les Healers.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Smashing Frenzy</strong></td>
+                                        <td>Slam massif avec aftershocks en anneaux.</td>
+                                        <td><strong>Soak Tank :</strong> Le raid aide à réduire l'impact. Melee safe au
+                                            centre.</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Void Breath</strong></td>
+                                        <td>Balayage laser mortel. Nécessite un mur brisé.</td>
+                                        <td>Vérifiez la <strong>main brillante</strong> du boss pour le côté de départ.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <h2>Gestion des Rejetons : Blisterburst</h2>
+                            <p>Des pustules apparaissent sur le corps de Vorasius, éclatant pour libérer des
+                                <strong>Blistercreeps</strong>.
+                            </p>
+
+                            <table class="ability-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 25%">Ennemi</th>
+                                        <th style="width: 45%">Menace</th>
+                                        <th style="width: 30%">Stratégie</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Blistercreeps</strong></td>
+                                        <td>Indispensables pour briser les murs Cristallins.</td>
+                                        <td><strong>PLACEMENT :</strong> Tuez-les impérativement au pied des murs (2 en
+                                            Héroïque).</td>
+                                    </tr>
+                                    <tr class="mechanic-mythic-only">
+                                        <td><strong>Overpowering
+                                                Pulse</strong></td>
+                                        <td>Pulsations constantes si personne n'est au corps-à-corps.</td>
+                                        <td><strong>Anticipation :</strong> Très punitif lors des knockbacks de Roar.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+
+                        <section class="visuals-section">
+                            <h2>Visualisation Stratégique</h2>
+                            <div class="schemas-grid">
+                                <!-- Schema 1: Destruction des Murs -->
+                                <div class="visual-mechanic">
+                                    <h3>Destruction des Murs</h3>
+                                    <div class="arena-visual rectangular vorasius-arena">
+                                        <div class="boss-icon" style="left: 50%; top: 50%;">💀</div>
+                                        <div class="crystal-wall breaking" style="left: 15%;"></div>
+                                        <div class="crystal-wall" style="left: 85%;"></div>
+
+                                        <!-- Kiting Path -->
+                                        <div class="fixate-add">👾</div>
+
+                                        <div class="schema-legend" style="bottom: 10px;">
+                                            <span><i class="orb-indicator" style="background: #3b82f6;"></i> Mur</span>
+                                            <span><i class="engine-indicator"
+                                                    style="background: none; border: 1px dashed white;"></i> Add</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Kitez les adds sur les murs pour les briser à leur mort.</em>
+                                    </p>
+                                </div>
+
+                                <!-- Schema 2: Évasion Rayon -->
+                                <div class="visual-mechanic">
+                                    <h3>Évasion Rayon du Vide</h3>
+                                    <div class="arena-visual rectangular vorasius-arena">
+                                        <div class="boss-icon" style="left: 50%; top: 50%;">💀</div>
+                                        <div class="crystal-wall broken" style="left: 15%;"></div>
+                                        <div class="crystal-wall" style="left: 85%;"></div>
+
+                                        <!-- Beam -->
+                                        <div class="void-beam"></div>
+                                        <div class="glowing-hand">✋</div>
+
+                                        <!-- Safe Zone -->
+                                        <div class="safe-zone-marker" style="left: 15%; top: 50%;">SAFE</div>
+                                        <div class="player-run">🏃</div>
+
+                                        <div class="schema-legend" style="bottom: 10px;">
+                                            <span><i class="engine-indicator"
+                                                    style="background: linear-gradient(90deg, #581c87, #7e22ce);"></i>
+                                                Rayon</span>
+                                            <span><i class="echo-indicator" style="border-color: #4ade80;"></i>
+                                                Safe</span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                        <em>Quand un mur casse, courez immédiatement derrière lui pour éviter le
+                                            balayage.</em>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <aside class="supplementary-info">
+                        <div class="video-section">
+                            <h2>Vidéo Guide</h2>
+                            <div class="video-container video-trigger" id="videoTrigger">
+                                <img src="https://img.youtube.com/vi/4qXsEXUpAVw/maxresdefault.jpg" alt="Video"
+                                    class="video-thumb">
+                                <div class="play-button">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Adds -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Blistercreep (Adds)</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1259184" target="_blank"
-                                        data-wowhead="spell=1259184">Blisterburst</a></li>
-                                <li><a href="https://www.wowhead.com/spell=1272683" target="_blank"
-                                        data-wowhead="spell=1272683">Creep Impact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Mythic -->
-                    <div class="accordion-item">
-                        <button class="accordion-header">
-                            <h3>Mythique</h3>
-                            <span class="arrow">▼</span>
-                        </button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li><a href="https://www.wowhead.com/spell=1272937" target="_blank"
-                                        data-wowhead="spell=1272937">Gathering Void</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- CONTENT -->
-        <div class="guide-content">
-            <!-- TL;DR -->
-            <section class="tldr-grid">
-                <div class="role-column">
-                    <h3>🛡️ Tanks</h3>
-                    <ul>
-                        <li><strong>Smash (Soak) :</strong> Le Tank actif doit aller dans la zone d'impact pour soak.
-                            Crée un Mur.</li>
-                        <li><strong>Gestion :</strong> <a href="https://www.wowhead.com/spell=1241844" target="_blank"
-                                data-wowhead="spell=1241844">Smashed</a> (+150%
-                            dégâts physiques) oblige au Swap après chaque Smash.</li>
-                        <li><strong>Note :</strong> Le boss est immobile.</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>💚 Soigneurs</h3>
-                    <ul>
-                        <li><strong>Soft Enrage :</strong> <a href="https://www.wowhead.com/spell=1260052"
-                                target="_blank" data-wowhead="spell=1260052">Primordial Roar</a>
-                            inflige des dégâts croissants (+Dot permanent).</li>
-                        <li><strong>Explosions :</strong> Chaque <a href="https://www.wowhead.com/spell=1259184"
-                                target="_blank" data-wowhead="spell=1259184">Blisterburst</a> (mort d'un add) fait des
-                            dégâts raid.</li>
-                        <li><strong>Dispell :</strong> Dissipez le débuff magique si un joueur est touché par
-                            l'explosion d'un Blistercreep.</li>
-                    </ul>
-                </div>
-                <div class="role-column">
-                    <h3>⚔️ DPS</h3>
-                    <ul>
-                        <li><strong>Murs :</strong> Ne frappez PAS les murs directement.</li>
-                        <li><strong>Adds (Blistercreeps) :</strong> Attendez que les adds soient <strong
-                                style="color:#ff4444">SUR</strong> un mur (CC/Grip) pour les tuer.</li>
-                        <li><strong>Explosion :</strong> Leur mort (<a href="https://www.wowhead.com/spell=1259184"
-                                target="_blank" data-wowhead="spell=1259184">Blisterburst</a>) détruit le mur proche.
-                            (Héroïque : Il
-                            faut 2 Adds).</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Mechanics Table -->
-            <section class="phase-block">
-                <h2>Stratégie : Casse-Briques</h2>
-                <p>Le boss crée des Murs avec ses poings. Le raid doit utiliser les Adds pour détruire ces murs avant le
-                    <em>Void Breath</em> qui one-shot tout le monde sauf s'il y a un passage libre.
-                </p>
-
-                <table class="ability-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 25%">Capacité</th>
-                            <th style="width: 45%">Description</th>
-                            <th style="width: 30%">Contre-Mesure</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Smashing Frenzy</strong></td>
-                            <td>Le boss tape le sol. Inflige des dégâts mortels si non soak par un Tank. Crée un
-                                <strong>Void Crystal (Mur)</strong>.
-                            </td>
-                            <td>Tank : Soak l'impact.<br>Raid : Éloignez-vous (Aftershocks).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Blistercreeps (Adds)</strong></td>
-                            <td>Petits adds qui fixent des joueurs. Explosent à la mort.</td>
-                            <td><strong>Kitez-les SUR les murs.</strong><br>Tuez-les pour briser le mur.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Void Breath</strong></td>
-                            <td>Rayon qui balaie la salle. La <strong>Main qui brille</strong> indique le départ du
-                                souffle.</td>
-                            <td><strong>Fuyez à l'opposé</strong> de la main brillante (passez par le mur détruit).</td>
-                        </tr>
-                        <tr class="mechanic-heroic">
-                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Résistance</strong></td>
-                            <td>Les murs sont plus solides.</td>
-                            <td>Il faut <strong>2 Adds</strong> pour briser 1 Mur.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- Mythic -->
-            <section class="phase-block mechanic-mythic-only">
-                <h2>Mécanique <span class="mythic-badge">MYTHIQUE</span> : The Rebuild</h2>
-                <p>Vorasius tente de réparer les murs qui sont sous 50% PV.</p>
-                <ul>
-                    <li><strong>Construction Minions :</strong> De petits adds apparaissent et canalisent vers le mur.
-                    </li>
-                    <li><strong>Stratégie :</strong> CC/Grip les adds loin des murs. S'ils canalisent 5s, le mur
-                        récupère 20% PV.</li>
-                </ul>
-            </section>
-
-            <div class="visual-mechanic">
-                <h3>Carte Stratégique</h3>
-                <div
-                    style="position: relative; width: 300px; height: 200px; background: #222; margin: 0 auto; border: 2px solid #555;">
-
-                    <!-- Boss -->
-                    <div
-                        style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #800080; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; border: 2px solid #a0a;">
-                        BOSS
-                    </div>
-
-                    <!-- Wall Left -->
-                    <div
-                        style="position: absolute; left: 30px; top: 80px; width: 20px; height: 80px; background: #00b4d8; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold; border: 1px solid white;">
-                        MUR G
-                    </div>
-
-                    <!-- Wall Right -->
-                    <div
-                        style="position: absolute; right: 30px; top: 80px; width: 20px; height: 80px; background: #ffd700; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold; border: 1px solid white;">
-                        MUR D
-                    </div>
-
-                    <!-- Players -->
-                    <div
-                        style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: #aaa; font-size: 12px; text-align: center;">
-                        <span
-                            style="display:inline-block; width:10px; height:10px; background:red; border-radius:50%;"></span>
-                        Groupe
-                    </div>
-
-                    <!-- Mechanic Arrow -->
-                    <div
-                        style="position: absolute; top: 120px; left: 60px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-right: 20px solid #ff4444;">
-                    </div>
-                    <div
-                        style="position: absolute; top: 110px; left: 80px; color: #ff4444; font-size: 10px; font-weight: bold;">
-                        Casser pour passer</div>
-
-                </div>
-                <p><em>Le Boss crée 2 murs (Gauche/Droite). Cassez-en un pour traverser et éviter le Souffle.</em></p>
-            </div>
-        </div>
+                        <div class="spell-section">
+                            <h2>Sorts du Boss</h2>
+                            <div class="spell-list accordion">
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Vorasius</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1241692">Smashing
+                                                Frenzy</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1256855">Void Breath</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1260052">Primordial
+                                                Roar</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1272937">Gathering Void
+                                                (DoT)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1273067">Aftershock</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1241844">Smashed
+                                                (Tanks)</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <button class="accordion-header">
+                                        <h3>Adds & Environnement</h3>
+                                        <span class="arrow">▼</span>
+                                    </button>
+                                    <div class="accordion-content">
+                                        <div class="spell-list-container">
+                                            <a href="#" class="spell-link" data-wowhead="spell=1259186">Blisterburst
+                                                (Pustule)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1254199">Parasite
+                                                Expulsion</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1244419">Overpowering
+                                                Pulse</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
     </main>
+
     <!-- Lightbox Modal -->
     <div id="videoLightbox" class="lightbox-overlay">
         <div class="lightbox-content">
@@ -244,5 +277,7 @@
 
     <script type="module" src="./src/main.js"></script>
 </body>
+
+</html>
 
 </html>
