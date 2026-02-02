@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lightblinded Vanguard - Stratégies</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">← Retour</a>
+        <h1>Lightblinded Vanguard</h1>
+        <div class="difficulty-switcher">
+            <button class="difficulty-btn" data-mode="normal">Normal</button>
+            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
+            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
+        </div>
+    </header>
+
+    <main class="container boss-page-layout">
+        <!-- SIDEBAR -->
+        <aside class="guide-sidebar">
+            <div class="video-section">
+                <h2>Vidéo Guide (RCP)</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="spell-section">
+                <h2>Liste des Sorts</h2>
+                <div class="spell-list">
+                    <ul>
+                        <li><a href="#" data-wowhead="spell=300001">Aura of Reflection (Red)</a></li>
+                        <li><a href="#" data-wowhead="spell=300002">Aura of Vulnerability (Green)</a></li>
+                        <li><a href="#" data-wowhead="spell=300003">Aura of Haste (Blue)</a></li>
+                        <li><a href="#" data-wowhead="spell=300004">Prismatic Alignment</a></li>
+                        <li><a href="#" data-wowhead="spell=300005">Color Mix</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="guide-content">
+            <!-- TL;DR -->
+            <section class="tldr-grid">
+                <div class="role-column">
+                    <h3>🛡️ Tanks</h3>
+                    <ul>
+                        <li><strong>Positionnement :</strong> Formation en Triangle. Gardez les boss à >30m d'écart.
+                        </li>
+                        <li><strong>Rotation :</strong> Tournez dans le sens des aiguilles d'une montre quand l'Aura
+                            change.</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>⚔️ DPS</h3>
+                    <ul>
+                        <li><strong>Cible :</strong> Focus le boss avec l'Aura <span style="color:#00cc66">VERTE</span>
+                            (Vulnérabilité).</li>
+                        <li><strong>Stop Cast :</strong> Quand le boss a l'Aura <span style="color:#ff4444">ROUGE</span>
+                            (Reflect).</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>💚 Soigneurs</h3>
+                    <ul>
+                        <li><strong>Dégâts Lourds :</strong> L'Aura <span style="color:#0070dd">BLEUE</span> cause des
+                            dégâts pulsés sur tout le raid.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Mechanics Table -->
+            <section class="phase-block">
+                <h2>Le Système d'Aura</h2>
+                <p>Une seule aura est active à la fois. Elle change toutes les 30s.</p>
+
+                <table class="ability-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%">Couleur</th>
+                            <th style="width: 25%">Effet</th>
+                            <th style="width: 65%">Stratégie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="background: rgba(255,68,68,0.2); color: #ff4444; font-weight: bold;">ROUGE</td>
+                            <td>Reflective Shield</td>
+                            <td><strong>STOP CAST.</strong> Les DPS Physiques peuvent continuer, mais les Magiques vont
+                                se One-Shot.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: rgba(0,204,102,0.2); color: #00cc66; font-weight: bold;">VERT</td>
+                            <td>Vulnerability + Healing Redux</td>
+                            <td><strong>BURST TARGET.</strong> Le boss subit +100% Dégâts. Les joueurs subissent -50%
+                                Soins reçus. Utilisez vos Potions de Soin.</td>
+                        </tr>
+                        <tr>
+                            <td style="background: rgba(0,112,221,0.2); color: #0070dd; font-weight: bold;">BLEU</td>
+                            <td>Haste + Pulsing Dmg</td>
+                            <td>Le boss cast 50% plus vite. Le raid subit des dégâts pulsés. Gros heal requis.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Mythic -->
+            <section class="phase-block mechanic-mythic-only">
+                <h2>Mécanique <span class="mythic-badge">MYTHIQUE</span> : Prismatic Alignment</h2>
+                <p>Chaque joueur reçoit une couleur (Rouge, Vert ou Bleu).</p>
+                <ul>
+                    <li>Vous infligez 0 dégâts aux boss qui ne match pas votre couleur.</li>
+                    <li>Vous subissez 500% de dégâts des mécaniques qui ne match pas votre couleur.</li>
+                    <li><strong>Strat :</strong> Le raid doit se séparer en 3 sous-groupes et tourner avec les boss.
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

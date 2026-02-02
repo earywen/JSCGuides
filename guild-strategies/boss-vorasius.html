@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vorasius - Stratégies</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">← Retour</a>
+        <h1>Vorasius</h1>
+        <div class="difficulty-switcher">
+            <button class="difficulty-btn" data-mode="normal">Normal</button>
+            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
+            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
+        </div>
+    </header>
+
+    <main class="container boss-page-layout">
+        <!-- SIDEBAR -->
+        <aside class="guide-sidebar">
+            <div class="video-section">
+                <h2>Vidéo Guide (RCP)</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="spell-section">
+                <h2>Liste des Sorts</h2>
+                <div class="spell-list">
+                    <ul>
+                        <li><a href="#" data-wowhead="spell=440012">Void Breath</a></li>
+                        <li><a href="#" data-wowhead="spell=439322">Structure Weakness</a></li>
+                        <li><a href="#" data-wowhead="spell=438871">Cataclysm</a></li>
+                        <li><a href="#" data-wowhead="spell=441012">Shattering Roar</a></li>
+                        <li><a href="#" data-wowhead="spell=440555">Resonant Echoes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="guide-content">
+            <!-- TL;DR -->
+            <section class="tldr-grid">
+                <div class="role-column">
+                    <h3>🛡️ Tanks</h3>
+                    <ul>
+                        <li><strong>Gestion du Souffle :</strong> <a href="#" data-wowhead="spell=440012">Void
+                                Breath</a> cible le Tank Actif.</li>
+                        <li><strong>Stratégie :</strong> Placez le boss pour que le Souffle touche <strong>1
+                                Mur</strong> à la fois. Ne jamais toucher le raid.</li>
+                        <li><strong>Swap :</strong> Après chaque Souffle.</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>💚 Soigneurs</h3>
+                    <ul>
+                        <li><strong>Type de Dégâts :</strong> Les dégâts constants sont faibles. Le Burst est EXTRÊME
+                            quand un mur casse.</li>
+                        <li><strong>Assignation :</strong> Prévoyez <span style="color:#ff7d0a">Revival</span> / <span
+                                style="color:#a335ee">Rewind</span> pour les Cassages de mur #2 et #3.</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>⚔️ DPS</h3>
+                    <ul>
+                        <li><strong>Focus Murs :</strong> Les murs ont 40M PV. Les DoTs fonctionnent.</li>
+                        <li><strong>Phase Cœur :</strong> Quand un mur casse -> Le Cœur du Boss est exposé (+200% Dégâts
+                            subis) pendant 15s. FULL BURST.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Mechanics Table -->
+            <section class="phase-block">
+                <h2>Boucle Principale : Le Siège</h2>
+                <p>Le boss gagne de l'énergie. À 100 Énergie, il lance <em>Cataclysm</em> (Wipe). Casser un mur reset
+                    l'Énergie à 0.</p>
+
+                <table class="ability-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Capacité</th>
+                            <th style="width: 45%">Description</th>
+                            <th style="width: 30%">Contre-Mesure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Void Breath</strong></td>
+                            <td>Cône Frontal. Inflige d'énormes dégâts + applique "Structure Weakness" aux Murs (+50%
+                                dégâts subis).</td>
+                            <td>Tank vise le Mur. DPS restez derrière.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Shatter (Wall Break)</strong></td>
+                            <td>Quand un mur atteint 0 PV, il explose pour 800k Dégâts d'Ombre au raid.</td>
+                            <td><strong>Remontez les PV</strong> avant de finir un mur.</td>
+                        </tr>
+                        <tr class="mechanic-heroic">
+                            <td><span class="heroic-badge">HÉROÏQUE</span> <strong>Void Pools</strong></td>
+                            <td>Les murs brisés laissent une zone de déni permanente.</td>
+                            <td>Chaque cassage réduit l'espace de jeu. Tuez le 4ème mur EN DERNIER.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Mythic -->
+            <section class="phase-block mechanic-mythic-only">
+                <h2>Mécanique <span class="mythic-badge">MYTHIQUE</span> : The Rebuild</h2>
+                <p>Vorasius tente de réparer les murs qui sont sous 50% PV.</p>
+                <ul>
+                    <li><strong>Construction Minions :</strong> De petits adds apparaissent et canalisent vers le mur.
+                    </li>
+                    <li><strong>Stratégie :</strong> CC/Grip les adds loin des murs. S'ils canalisent 5s, le mur
+                        récupère 20% PV.</li>
+                </ul>
+            </section>
+
+            <div class="visual-mechanic">
+                <h3>Carte Stratégique</h3>
+                <div
+                    style="position: relative; width: 300px; height: 200px; background: #222; margin: 0 auto; border: 2px solid #555;">
+                    <div
+                        style="position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 80%; height: 20px; background: #00b4d8; text-align: center; color: #000; font-weight: bold;">
+                        MUR 1</div>
+                    <div
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 60%; background: #ffd700; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold;">
+                        MUR 2</div>
+                    <div
+                        style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 20px; height: 60%; background: #9d4edd; display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; color: #000; font-weight: bold;">
+                        MUR 3</div>
+
+                    <div
+                        style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 30px; height: 30px; background: red; border-radius: 50%; color: white; display: flex; align-items: center; justify-content: center;">
+                        B</div>
+
+                    <!-- Breath Cone -->
+                    <div
+                        style="position: absolute; bottom: 70px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 80px solid rgba(255, 0, 0, 0.3);">
+                    </div>
+                </div>
+                <p><em>Tank (Rond Rouge) visant le souffle sur le Mur du Haut (Bleu).</em></p>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

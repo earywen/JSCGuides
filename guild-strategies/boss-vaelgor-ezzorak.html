@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaelgor & Ezzorak - Stratégies</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">← Retour</a>
+        <h1>Vaelgor & Ezzorak</h1>
+        <div class="difficulty-switcher">
+            <button class="difficulty-btn" data-mode="normal">Normal</button>
+            <button class="difficulty-btn" data-mode="heroic">Héroïque</button>
+            <button class="difficulty-btn" data-mode="mythic">Mythique</button>
+        </div>
+    </header>
+
+    <main class="container boss-page-layout">
+        <!-- SIDEBAR -->
+        <aside class="guide-sidebar">
+            <div class="video-section">
+                <h2>Vidéo Guide (RCP)</h2>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=Placeholder"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="spell-section">
+                <h2>Liste des Sorts</h2>
+                <div class="spell-list">
+                    <ul>
+                        <li><a href="#" data-wowhead="spell=121111">Earthen Spikes</a></li>
+                        <li><a href="#" data-wowhead="spell=122222">Storm Wind</a></li>
+                        <li><a href="#" data-wowhead="spell=123333">Duality Barrier</a></li>
+                        <li><a href="#" data-wowhead="spell=124444">Teleport Swap</a></li>
+                        <li><a href="#" data-wowhead="spell=125555">Static Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CONTENT -->
+        <div class="guide-content">
+            <!-- TL;DR -->
+            <section class="tldr-grid">
+                <div class="role-column">
+                    <h3>🛡️ Tanks</h3>
+                    <ul>
+                        <li><strong>Tank Vaelgor :</strong> Gardez le boss près des bords pour attirer les piques.</li>
+                        <li><strong>Tank Ezzorak :</strong> Tankez-le au centre de la plateforme.</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>⚔️ Assignations DPS</h3>
+                    <ul>
+                        <li><strong>Groupe 1 (Melee):</strong> Vaelgor (Sol). Beaucoup de mouvement.</li>
+                        <li><strong>Groupe 2 (Distant):</strong> Ezzorak (Air). Restez espacés.</li>
+                    </ul>
+                </div>
+                <div class="role-column">
+                    <h3>⚠️ CRITIQUE</h3>
+                    <ul>
+                        <li>Les boss ne partagent pas leurs PV.</li>
+                        <li>Ils doivent mourir à <strong>15 secondes</strong> d'écart.</li>
+                        <li>Appel standard : "Stop DPS à 5%".</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Mechanics Table -->
+            <section class="phase-block">
+                <h2>Détail des Capacités</h2>
+
+                <table class="ability-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%">Capacité</th>
+                            <th style="width: 45%">Description</th>
+                            <th style="width: 30%">Stratégie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Earthen Spikes (Vaelgor)</strong></td>
+                            <td>Fait apparaître des piques sous des joueurs aléatoires. Knockup.</td>
+                            <td>Décalez-vous instantanément.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Storm Wind (Ezzorak)</strong></td>
+                            <td>Pousse tous les joueurs hors de la plateforme.</td>
+                            <td>Placez-vous dans les <strong>Wind Drafts</strong> (Cercles Blancs) pour vous enraciner.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>DUALITY BARRIER</strong></td>
+                            <td>À 100 Énergie (toutes les 2 mins), les boss s'abritent (bouclier 50M PV).</td>
+                            <td><strong>BLOODLUST / HEROISM</strong> sur la première barrière. Cassez-le ou Wipe.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Heroic/Mythic -->
+            <section class="phase-block">
+                <h2>Modificateurs de Difficulté</h2>
+                <ul>
+                    <li class="mechanic-heroic">
+                        <span class="heroic-badge">HÉROÏQUE</span> <strong>Platform Swap :</strong>
+                        Pendant la barrière, des téléporteurs s'activent. Le Groupe 1 DOIT aller en l'Air, Le Groupe 2
+                        DOIT aller au Sol.
+                        <em>Échec = -50% Dégâts infligés.</em>
+                    </li>
+                    <li class="mechanic-mythic-only">
+                        <span class="mythic-badge">MYTHIQUE</span> <strong>Static Link :</strong>
+                        Lie un joueur du Sol avec un joueur de l'Air. Ils subissent des dégâts partagés.
+                        Les Soigneurs doivent remonter les deux cibles efficacement.
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

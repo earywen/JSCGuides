@@ -1,0 +1,402 @@
+:root {
+  --color-bg-void: #0b0c15;
+  --color-bg-panel: #151725;
+  --color-bg-table-header: #1f2235;
+  --color-text-main: #e0e0e0;
+  --color-text-muted: #a0a0a0;
+  --color-accent-gold: #ffd700;
+  --color-accent-purple: #9d4edd;
+  --color-accent-blue: #00b4d8;
+  --color-difficulty-normal: #1eff00;
+  --color-difficulty-heroic: #0070dd;
+  --color-difficulty-mythic: #a335ee;
+
+  --font-main: 'Inter', system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bg-void);
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Layout */
+header {
+  background-color: var(--color-bg-panel);
+  padding: 1rem 2rem;
+  border-bottom: 2px solid var(--color-accent-purple);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem 0;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  color: var(--color-accent-gold);
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Difficulty Switcher */
+.difficulty-switcher {
+  display: flex;
+  gap: 0.5rem;
+  background: #000;
+  padding: 0.25rem;
+  border-radius: 8px;
+}
+
+.difficulty-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--color-text-muted);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.difficulty-btn:hover {
+  color: #fff;
+}
+
+.difficulty-btn.active[data-mode="normal"] {
+  background-color: rgba(30, 255, 0, 0.1);
+  color: var(--color-difficulty-normal);
+  border-color: var(--color-difficulty-normal);
+}
+
+.difficulty-btn.active[data-mode="heroic"] {
+  background-color: rgba(0, 112, 221, 0.1);
+  color: var(--color-difficulty-heroic);
+  border-color: var(--color-difficulty-heroic);
+}
+
+.difficulty-btn.active[data-mode="mythic"] {
+  background-color: rgba(163, 53, 238, 0.1);
+  color: var(--color-difficulty-mythic);
+  border-color: var(--color-difficulty-mythic);
+}
+
+/* Visibility Logic */
+/* Visibility Logic */
+.mechanic-heroic,
+.mechanic-mythic-only {
+  display: none;
+}
+
+/* Generic Block Context (Normal Divs) */
+body.mode-heroic .mechanic-heroic {
+  display: block;
+  border-left: 3px solid var(--color-difficulty-heroic);
+  padding-left: 1rem;
+  background: linear-gradient(90deg, rgba(0, 112, 221, 0.05) 0%, transparent 100%);
+}
+
+body.mode-mythic .mechanic-heroic {
+  display: block;
+  border-left: 3px solid var(--color-difficulty-heroic);
+  padding-left: 1rem;
+}
+
+body.mode-mythic .mechanic-mythic-only {
+  display: block;
+  border-left: 3px solid var(--color-difficulty-mythic);
+  padding-left: 1rem;
+  background: linear-gradient(90deg, rgba(163, 53, 238, 0.05) 0%, transparent 100%);
+}
+
+/* TABLE SPECIFIC OVERRIDES */
+/* When .mechanic-heroic is a <TR>, it must be table-row, and not have borders/padding itself */
+
+body.mode-heroic tr.mechanic-heroic {
+  display: table-row;
+  border-left: none;
+  padding-left: 0;
+  background: transparent;
+}
+
+body.mode-mythic tr.mechanic-heroic,
+body.mode-mythic tr.mechanic-mythic-only {
+  display: table-row;
+  border-left: none;
+  padding-left: 0;
+  background: transparent;
+}
+
+/* Style the cells inside the row instead */
+body.mode-heroic tr.mechanic-heroic td,
+body.mode-mythic tr.mechanic-heroic td {
+  background-color: rgba(0, 112, 221, 0.1);
+  border-bottom: 1px solid rgba(0, 112, 221, 0.3);
+}
+
+body.mode-mythic tr.mechanic-mythic-only td {
+  background-color: rgba(163, 53, 238, 0.1);
+  border-bottom: 1px solid rgba(163, 53, 238, 0.3);
+}
+
+/* Add the colored bar to the first cell of the row */
+body.mode-heroic tr.mechanic-heroic td:first-child,
+body.mode-mythic tr.mechanic-heroic td:first-child {
+  border-left: 4px solid var(--color-difficulty-heroic);
+}
+
+body.mode-mythic tr.mechanic-mythic-only td:first-child {
+  border-left: 4px solid var(--color-difficulty-mythic);
+}
+
+/* TL;DR Grid */
+.tldr-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.role-column {
+  background: var(--color-bg-panel);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.role-column h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Detailed Ability Table */
+.ability-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: var(--color-bg-panel);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ability-table th {
+  background: var(--color-bg-table-header);
+  text-align: left;
+  padding: 1rem;
+  color: #fff;
+}
+
+.ability-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+  vertical-align: top;
+}
+
+.ability-icon {
+  width: 32px;
+  height: 32px;
+  background: #333;
+  border: 1px solid #555;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+}
+
+.phase-block {
+  margin-bottom: 3rem;
+}
+
+.mythic-badge {
+  display: inline-block;
+  background: var(--color-difficulty-mythic);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.heroic-badge {
+  display: inline-block;
+  background: var(--color-difficulty-heroic);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* Visual Bricks */
+.visual-mechanic {
+  background: #000;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Dashboard Cards */
+.boss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.boss-card {
+  background-color: var(--color-bg-panel);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, border-color 0.2s;
+  display: block;
+}
+
+.boss-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent-purple);
+}
+
+/* Boss Page Layout (Sidebar 1/3 - Content 2/3) */
+.boss-page-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  /* Fixed sidebar width or 1fr 2fr */
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 1000px) {
+  .boss-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* On mobile, put sidebar (resources) at the bottom? Or top? 
+     Default grid order makes it appear first if it's first in HTML.
+     We might want it second on mobile. */
+  .guide-sidebar {
+    order: 2;
+  }
+}
+
+/* Sidebar Styles */
+.guide-sidebar {
+  background: var(--color-bg-panel);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+  /* Stick below header */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.guide-sidebar h2 {
+  font-size: 1.2rem;
+  color: var(--color-accent-gold);
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+/* Content Area */
+.guide-content {
+  min-width: 0;
+  /* Prevent grid blowout */
+}
+
+/* Re-using components in sidebar context */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.spell-list {
+  max-height: 60vh;
+  /* Allow scrolling within sidebar */
+  overflow-y: auto;
+}
+
+.spell-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spell-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.spell-list li:last-child {
+  border-bottom: none;
+}
+
+.spell-list a {
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.spell-list a:hover {
+  color: var(--color-accent-gold);
+}
