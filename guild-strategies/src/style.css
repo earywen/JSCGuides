@@ -111,6 +111,31 @@ h3 {
   font-weight: 600;
 }
 
+.sidebar-section {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    margin: 24px 12px 8px 12px;
+    font-weight: 600;
+}
+
+.nav-item.coming-soon {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none; /* detailed logic can be handled via js if we want a tooltip, but simple disabled is fine */
+}
+
+/* Coming Soon Badge */
+.nav-item.coming-soon::after {
+    content: "SOON";
+    font-size: 0.6rem;
+    margin-left: auto;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
 /* Main View */
 .main-view {
   flex: 1;
