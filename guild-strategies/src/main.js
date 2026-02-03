@@ -12,7 +12,7 @@ function setDifficulty(mode) {
   document.body.classList.add(`mode-${mode}`);
 
   // Update Buttons
-  document.querySelectorAll('.difficulty-btn').forEach(btn => {
+  document.querySelectorAll('.diff-btn').forEach(btn => {
     if (btn.dataset.mode === mode) {
       btn.classList.add('active');
     } else {
@@ -29,7 +29,7 @@ function initDifficulty() {
   setDifficulty(savedMode);
 
   // Attach Listeners
-  document.querySelectorAll('.difficulty-btn').forEach(btn => {
+  document.querySelectorAll('.diff-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const mode = e.target.dataset.mode;
       setDifficulty(mode);
