@@ -4,8 +4,17 @@ import './style.css'
 const MODES = ['normal', 'heroic', 'mythic'];
 const STORAGE_KEY = 'wow-strat-difficulty';
 
-function setDifficulty(mode) {
+function setDifficulty(mode, triggerAnimate = false) {
   if (!MODES.includes(mode)) return;
+
+  if (triggerAnimate) {
+    const content = document.querySelector('.content-area');
+    if (content) {
+      content.classList.remove('blur-fade');
+      void content.offsetWidth; // Force reflow
+      content.classList.add('blur-fade');
+    }
+  }
 
   // Update Body Class
   document.body.classList.remove(...MODES.map(m => `mode-${m}`));
@@ -37,6 +46,19 @@ function initDifficulty() {
   });
 }
 
+// Sidebar logic
+function initSidebar() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-item').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+}
+
 // Inject Wowhead Tooltip Script
 function initWowhead() {
   const script = document.createElement('script');
@@ -48,7 +70,6 @@ function initWowhead() {
 }
 
 // Video Lightbox Logic
-// Video Lightbox Logic
 function initVideoLightbox() {
   const trigger = document.getElementById('videoTrigger');
   const lightbox = document.getElementById('videoLightbox');
@@ -58,7 +79,6 @@ function initVideoLightbox() {
   if (!trigger || !lightbox) return;
 
   // Extract ID from thumbnail URL
-  // Expected format: https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg
   let videoId = 'OvdVWjN7DcU'; // Default (Averzian)
 
   const img = trigger.querySelector('img');
@@ -71,7 +91,6 @@ function initVideoLightbox() {
 
   const openLightbox = () => {
     lightbox.classList.add('active');
-    // Inject iframe with autoplay
     container.innerHTML = `
             <iframe 
                 src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
@@ -80,29 +99,25 @@ function initVideoLightbox() {
                 allowfullscreen>
             </iframe>
         `;
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    document.body.style.overflow = 'hidden';
   };
 
 
   const closeLightbox = () => {
     lightbox.classList.remove('active');
-    container.innerHTML = ''; // Destroy iframe to stop audio
+    container.innerHTML = '';
     document.body.style.overflow = '';
   };
 
-  // Event Listeners
   trigger.addEventListener('click', openLightbox);
+  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
 
-  closeBtn.addEventListener('click', closeLightbox);
-
-  // Close on background click
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
 
-  // Close on Escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();
@@ -118,7 +133,6 @@ function initAccordion() {
     const header = item.querySelector('.accordion-header');
     const content = item.querySelector('.accordion-content');
 
-    // Open the first one by default
     if (index === 0) {
       item.classList.add('active');
       content.style.maxHeight = content.scrollHeight + 'px';
@@ -126,12 +140,6 @@ function initAccordion() {
 
     header.addEventListener('click', () => {
       const isActive = item.classList.contains('active');
-
-      // Optional: Close others (make it behave like an accordion, not just toggles)
-      // accordions.forEach(other => {
-      //     other.classList.remove('active');
-      //     other.querySelector('.accordion-content').style.maxHeight = null;
-      // });
 
       if (isActive) {
         item.classList.remove('active');
@@ -147,6 +155,7 @@ function initAccordion() {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   initDifficulty();
+  initSidebar();
   initWowhead();
   initVideoLightbox();
   initAccordion();
