@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vaelgor & Ezzorak - Stratégies</title>
     <link rel="stylesheet" href="./src/style.css">
+    <meta name="description"
+        content="Stratégie complète pour Vaelgor & Ezzorak (The Voidspear) : Gestion de la dualité sol/air, rotation des soaks Gloom et phases détaillées pour Normal, Héroïque et Mythique.">
 </head>
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
@@ -22,11 +30,11 @@
             <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel’Danas</div>
-            <a href="#" class="nav-item coming-soon">Belo’ren</a>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
+            <a href="#" class="nav-item coming-soon">Belo'ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
     </aside>
@@ -41,11 +49,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>Vaelgor & Ezzorak</h1>
+            <h1 data-i18n="boss.vaelgor.title">Vaelgor & Ezzorak</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -56,126 +64,172 @@
                     <div class="strategy-column">
                         <section class="tldr-grid">
                             <div class="role-column tanks">
-                                <h3>🛡️ Tanks</h3>
+                                <h3 data-i18n="boss.vaelgor.tldr_tanks">🛡️ Tanks</h3>
                                 <ul>
-                                    <li><strong>Alternatance :</strong> Un boss au sol, l'autre en l'air. Ils swappent
-                                        après l'intermission.</li>
+                                    <li><strong data-i18n="boss.vaelgor.alternatance">Alternatance :</strong> <span
+                                            data-i18n="boss.vaelgor.alternatance_desc">Un boss au sol, l'autre en l'air.
+                                            Ils swappent
+                                            après l'intermission.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1262623"
-                                                data-wowhead="spell=1262623" class="spell-link-inline">Nullbeam</a>
-                                            :</strong> Orientez le rayon loin du raid. Accumulez les stacks
-                                        pour réduire la traction du <em><a href="https://www.wowhead.com/spell=1244672"
-                                                data-wowhead="spell=1244672"
-                                                class="spell-link-inline">Nullzone</a></em>.</li>
-                                    <li><strong>Placement :</strong> Ne restez JAMAIS derrière les dragons (Tail Lash /
-                                        Impale). Gardez-les à >15m.</li>
+                                                data-wowhead="spell=1262623" class="spell-link-inline"
+                                                data-i18n="boss.vaelgor.nullbeam">Nullbeam</a>
+                                            :</strong> <span data-i18n="boss.vaelgor.nullbeam_desc">Orientez le rayon
+                                            loin du raid. Accumulez les stacks
+                                            pour réduire la traction du <em><a
+                                                    href="https://www.wowhead.com/spell=1244672"
+                                                    data-wowhead="spell=1244672"
+                                                    class="spell-link-inline">Nullzone</a></em>.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.placement_tank">Placement :</strong> <span
+                                            data-i18n="boss.vaelgor.placement_tank_desc">Ne restez JAMAIS derrière les
+                                            dragons (Tail Lash /
+                                            Impale). Gardez-les à >15m.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column healers">
-                                <h3>💚 Healers</h3>
+                                <h3 data-i18n="boss.vaelgor.tldr_healers">💚 Healers</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1244413"
-                                                data-wowhead="spell=1244413" class="spell-link-inline">Nullsnap</a>
-                                            :</strong> Prévoyez de gros CDs lors de la rupture des tethers.
-                                        C'est le pic de dégâts majeur.</li>
+                                                data-wowhead="spell=1244413" class="spell-link-inline"
+                                                data-i18n="boss.vaelgor.nullsnap">Nullsnap</a>
+                                            :</strong> <span data-i18n="boss.vaelgor.nullsnap_desc">Prévoyez de gros CDs
+                                            lors de la rupture des tethers.
+                                            C'est le pic de dégâts majeur.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248847"
-                                                data-wowhead="spell=1248847" class="spell-link-inline">Radiant
-                                                Barrier</a> :</strong> Stockez vos CDs pour le <em>Midnight
-                                            Flames</em> (Intermission). Restez dans la zone PNJ.</li>
-                                    <li><strong>Soins Ciblés :</strong> Surveillez les tanks pendant <em><a
-                                                href="https://www.wowhead.com/spell=1262623"
-                                                data-wowhead="spell=1262623" class="spell-link-inline">Nullbeam</a></em>
-                                        et les cibles de <em><a href="https://www.wowhead.com/spell=1244917"
-                                                data-wowhead="spell=1244917" class="spell-link-inline">Void
-                                                Howl</a></em>.</li>
+                                                data-wowhead="spell=1248847" class="spell-link-inline"
+                                                data-i18n="boss.vaelgor.radiant_barrier">Radiant
+                                                Barrier</a> :</strong> <span
+                                            data-i18n="boss.vaelgor.radiant_barrier_desc">Stockez vos CDs pour le
+                                            <em>Midnight
+                                                Flames</em> (Intermission). Restez dans la zone PNJ.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.targeted_heals">Soins Ciblés :</strong> <span
+                                            data-i18n="boss.vaelgor.targeted_heals_desc">Surveillez les tanks pendant
+                                            <em><a href="https://www.wowhead.com/spell=1262623"
+                                                    data-wowhead="spell=1262623"
+                                                    class="spell-link-inline">Nullbeam</a></em>
+                                            et les cibles de <em><a href="https://www.wowhead.com/spell=1244917"
+                                                    data-wowhead="spell=1244917" class="spell-link-inline">Void
+                                                    Howl</a></em>.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
-                                <h3>⚔️ DPS</h3>
+                                <h3 data-i18n="boss.vaelgor.tldr_dps">⚔️ DPS</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1245391"
-                                                data-wowhead="spell=1245391" class="spell-link-inline">Gloom</a> (Héro)
-                                            :</strong> Rotation de 2 groupes de 5 joueurs pour soak les
-                                        sphères. Ne soakez pas deux fois de suite (<a
-                                            href="https://www.wowhead.com/spell=1270852" data-wowhead="spell=1270852"
-                                            class="spell-link-inline">Diminish</a>).</li>
-                                    <li><strong>Void Orbs :</strong> Priorité absolue ! Grips, stuns et nukes immédiats
-                                        sur ces adds.</li>
-                                    <li><strong>HP Balance :</strong> Les boss doivent mourir ensemble (max 10%
-                                        d'écart). Focus le dragon au sol.</li>
+                                                data-wowhead="spell=1245391" class="spell-link-inline"
+                                                data-i18n="boss.vaelgor.gloom">Gloom</a> (Héro)
+                                            :</strong> <span data-i18n="boss.vaelgor.gloom_desc">Rotation de 2 groupes
+                                            de 5 joueurs pour soak les
+                                            sphères. Ne soakez pas deux fois de suite (<a
+                                                href="https://www.wowhead.com/spell=1270852"
+                                                data-wowhead="spell=1270852"
+                                                class="spell-link-inline">Diminish</a>).</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.void_orbs">Void Orbs :</strong> <span
+                                            data-i18n="boss.vaelgor.void_orbs_desc">Priorité absolue ! Grips, stuns et
+                                            nukes immédiats
+                                            sur ces adds.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.hp_balance">HP Balance :</strong> <span
+                                            data-i18n="boss.vaelgor.hp_balance_desc">Les boss doivent mourir ensemble
+                                            (max 10%
+                                            d'écart). Focus le dragon au sol.</span></li>
                                 </ul>
                             </div>
                         </section>
 
                         <!-- Strategy -->
                         <section class="phase-block">
-                            <h2>Tactique Globale</h2>
+                            <h2 data-i18n="boss.vaelgor.global_tactics">Tactique Globale</h2>
                             <div class="tactics-box">
                                 <ul>
-                                    <li><strong>Bloodlust :</strong> À la fin du combat ou lors du swap de phases si le
-                                        raid est en difficulté.</li>
-                                    <li><strong>Séparation :</strong> Maintenez impérativement les deux boss à plus de
-                                        15 mètres l'un de l'autre pour éviter le buff de dégâts.</li>
-                                    <li><strong>Rotation <a href="https://www.wowhead.com/spell=1245391"
-                                                data-wowhead="spell=1245391" class="spell-link-inline">Gloom</a>
-                                            :</strong> Respectez strictement la rotation des 2
-                                        groupes (5 joueurs chacun) pour soak les zones de <em><a
+                                    <li><strong data-i18n="boss.vaelgor.bloodlust_tactics">Bloodlust :</strong> <span
+                                            data-i18n="boss.vaelgor.bloodlust_tactics_desc">À la fin du combat ou lors
+                                            du swap de phases si le
+                                            raid est en difficulté.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.separation">Séparation :</strong> <span
+                                            data-i18n="boss.vaelgor.separation_desc">Maintenez impérativement les deux
+                                            boss à plus de
+                                            15 mètres l'un de l'autre pour éviter le buff de dégâts.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.gloom_rotation">Rotation <a
                                                 href="https://www.wowhead.com/spell=1245391"
-                                                data-wowhead="spell=1245391" class="spell-link-inline">Gloom</a></em>.
+                                                data-wowhead="spell=1245391"
+                                                class="spell-link-inline">Gloom</a></strong>
+                                        : <span data-i18n="boss.vaelgor.gloom_rotation_desc">Respectez strictement la
+                                            rotation des 2
+                                            groupes (5 joueurs chacun) pour soak les zones de <em><a
+                                                    href="https://www.wowhead.com/spell=1245391"
+                                                    data-wowhead="spell=1245391"
+                                                    class="spell-link-inline">Gloom</a></em>.</span>
                                     </li>
                                 </ul>
                             </div>
 
-                            <h2>Dualité du Vide : Sol et Air</h2>
-                            <p>Vaelgor et Ezzorak alternent entre phase de combat actif et phase de soutien aérien.</p>
+                            <h2 data-i18n="boss.vaelgor.duality_title">Dualité du Vide : Sol et Air</h2>
+                            <p data-i18n="boss.vaelgor.duality_desc">Vaelgor et Ezzorak alternent entre phase de combat
+                                actif et phase de soutien aérien.</p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Phase</th>
-                                            <th style="width: 45%">Capacités Clés</th>
-                                            <th style="width: 30%">Action Requise</th>
+                                            <th class="col-mechanic" data-i18n="boss.salhadaar.phase">Phase</th>
+                                            <th class="col-effect" data-i18n="boss.averzian.key_abilities">Capacités
+                                                Clés</th>
+                                            <th class="col-action" data-i18n="boss.vorasius.action_required">Action
+                                                Requise</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Phase 1 (Sol/L'air)</strong></td>
-                                            <td>Un dragon est au sol (mécaniques lourdes), l'autre plane (moins actif).
+                                            <td><strong data-i18n="boss.vaelgor.phase_1">Phase 1 (Sol/L'air)</strong>
                                             </td>
-                                            <td><strong>Focus Grounded :</strong> Swappez de cible après chaque
-                                                intermission.</td>
+                                            <td data-i18n="boss.vaelgor.phase_1_desc">Un dragon est au sol (mécaniques
+                                                lourdes), l'autre plane (moins actif).
+                                            </td>
+                                            <td><strong data-i18n="boss.vaelgor.phase_1_strat">Focus Grounded : Swappez
+                                                    de cible après chaque
+                                                    intermission.</strong></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Intermission</strong></td>
-                                            <td>À 100 Énergie, les deux s'envolent (<em><a
+                                            <td><strong data-i18n="boss.vaelgor.intermission">Intermission</strong></td>
+                                            <td><span data-i18n="boss.vaelgor.intermission_desc">À 100 Énergie, les deux
+                                                    s'envolent (</span><em><a
                                                         href="https://www.wowhead.com/spell=1249748"
                                                         data-wowhead="spell=1249748" class="spell-link-inline">Midnight
                                                         Flames</a></em>).</td>
-                                            <td><strong>Stack <a href="https://www.wowhead.com/spell=1248847"
+                                            <td><strong data-i18n="boss.vaelgor.intermission_strat">Stack <a
+                                                        href="https://www.wowhead.com/spell=1248847"
                                                         data-wowhead="spell=1248847" class="spell-link-inline">Radiant
-                                                        Barrier</a> :</strong> Tuez l'add de fixate à l'intérieur
-                                                de la zone protective PNJ.</td>
+                                                        Barrier</a> : Tuez l'add de fixate à l'intérieur
+                                                    de la zone protective PNJ.</strong></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Tethering</strong></td>
-                                            <td>Les dragons partagent leurs PV mais doivent rester séparés.</td>
-                                            <td><strong>Distance :</strong> Gardez les Dragons à >15m pour éviter
-                                                <em>Twilight Fury</em>.
+                                            <td><strong data-i18n="boss.vaelgor.tethering">Tethering</strong></td>
+                                            <td data-i18n="boss.vaelgor.tethering_desc">Les dragons partagent leurs PV
+                                                mais doivent rester séparés.</td>
+                                            <td><strong data-i18n="boss.vaelgor.tethering_strat">Distance : Gardez les
+                                                    Dragons à >15m pour éviter
+                                                    <em>Twilight Fury</em>.</strong>
                                             </td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <h2 class="mechanic-heroic">Soutien Intensif</h2>
-                            <p>Le dragon en phase de soutien lance ses sorts plus fréquemment.</p>
+                            <h2 class="mechanic-heroic" data-i18n="boss.vaelgor.heroic_support_title">Soutien Intensif
+                            </h2>
+                            <p data-i18n="boss.vaelgor.heroic_support_desc">Le dragon en phase de soutien lance ses
+                                sorts plus fréquemment.</p>
                             <ul>
                                 <li><strong><a href="https://www.wowhead.com/spell=1245391" data-wowhead="spell=1245391"
-                                            class="spell-link-inline">Gloom</a>touched :</strong> Débuff cumulatif
-                                    infligeant des dégâts d'ombre
-                                    constants.</li>
-                                <li><strong>Lightbound Vanguard :</strong> Invoquent des zones de lumière à soaker pour
-                                    réduire les dégâts pris.</li>
+                                            class="spell-link-inline"
+                                            data-i18n="boss.vaelgor.gloomtouched">Gloom</a>touched :</strong> <span
+                                        data-i18n="boss.vaelgor.gloomtouched_desc">Débuff cumulatif
+                                        infligeant des dégâts d'ombre
+                                        constants.</span></li>
+                                <li><strong data-i18n="boss.vaelgor.lightbound_vanguard">Lightbound Vanguard :</strong>
+                                    <span data-i18n="boss.vaelgor.lightbound_vanguard_desc">Invoquent des zones de
+                                        lumière à soaker pour
+                                        réduire les dégâts pris.</span>
+                                </li>
                             </ul>
                         </section>
 
@@ -184,7 +238,7 @@
                             <div class="schemas-grid">
                                 <!-- Schema 1: Placement de Base -->
                                 <div class="visual-mechanic">
-                                    <h3>Positionnement & Ligne de Raid</h3>
+                                    <h3 data-i18n="boss.vaelgor.placement_base">Positionnement & Ligne de Raid</h3>
                                     <div class="arena-visual rectangular">
                                         <div class="boss-dragon" style="left: 15%; top: 50%;">🐲</div>
                                         <div class="boss-dragon" style="left: 85%; top: 50%;">🐉</div>
@@ -205,16 +259,16 @@
                                                 (>15m)</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Gardez les boss aux extrémités. Raid aligné au centre.</em>
                                     </p>
                                 </div>
 
                                 <!-- Schema 2: Rotation <a href="https://www.wowhead.com/spell=1245391" data-wowhead="spell=1245391" class="spell-link-inline">Gloom</a> HM -->
                                 <div class="visual-mechanic">
-                                    <h3>Rotation HM : <a href="https://www.wowhead.com/spell=1245391"
-                                            data-wowhead="spell=1245391" class="spell-link-inline">Gloom</a> Sphere</h3>
+                                    <h3 data-i18n="boss.vaelgor.rotation_hm">Rotation HM : <a
+                                            href="https://www.wowhead.com/spell=1245391" data-wowhead="spell=1245391"
+                                            class="spell-link-inline">Gloom</a> Sphere</h3>
                                     <div class="arena-visual rectangular">
                                         <div class="gloom-sphere"></div>
 
@@ -237,8 +291,7 @@
                                                 actifs</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Alternez les deux groupes de 5 pour le debuff (60s).</em>
                                     </p>
                                 </div>
@@ -249,10 +302,11 @@
 
                     <aside class="supplementary-info">
                         <div class="video-section">
-                            <h2>Vidéo Guide</h2>
+                            <h2 data-i18n="boss.vaelgor.video_guide">Vidéo Guide</h2>
                             <div class="video-container video-trigger" id="videoTrigger">
-                                <img src="https://img.youtube.com/vi/WN7eQPcdHyE/maxresdefault.jpg" alt="Video"
-                                    class="video-thumb">
+                                <img src="https://img.youtube.com/vi/WN7eQPcdHyE/maxresdefault.jpg"
+                                    alt="Video Guide Vaelgor & Ezzorak" class="video-thumb" width="1280" height="720"
+                                    loading="lazy">
                                 <div class="play-button">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                         <path d="M8 5v14l11-7z" />
@@ -262,7 +316,7 @@
                         </div>
 
                         <div class="spell-section">
-                            <h2>Sorts des Dragons</h2>
+                            <h2 data-i18n="boss.vaelgor.spells_dragons">Sorts des Dragons</h2>
                             <div class="spell-list accordion">
                                 <div class="accordion-item">
                                     <button class="accordion-header">
@@ -305,7 +359,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-header">
-                                        <h3>Mythique</h3>
+                                        <h3 data-i18n="boss.vaelgor.mythic">Mythique</h3>
                                         <span class="arrow">▼</span>
                                     </button>
                                     <div class="accordion-content">

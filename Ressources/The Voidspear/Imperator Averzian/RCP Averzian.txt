@@ -1,0 +1,43 @@
+{
+"type": "thought",
+"content": "A transcript of the video is available. I will now present it in a readable format for the user."
+}Certainly! Here is the transcript of the video:
+
+00:00 - Hey, we pullin’?
+00:02 - What’s up, I’m Gympro and this is the Ready Check Pull boss guide to Imperator Averzian on Normal and Heroic.
+00:07 - Big thank you to our supporters on Patreon. Members get early access to our videos before anyone else as well as full talk through videos for every boss.
+00:15 - So if you’re interested in that, check out the Patreon link below.
+00:16 - Imperator Averzian is the first boss of the Voidspire. It has a mix of single target, cleave, and AOE damage and this is a bloodlust on pull fight.
+00:24 - The easiest way to explain this fight is to start with the main idea first.
+00:27 - The boss is in a room that has nine zones. And every so often the boss casts Shadow’s Advance, which summons three adds, one each on one of the random zones around the room.
+00:35 - The tank will get a group soak that has to be put on one of the adds to destroy it and stop it from claiming that zone.
+00:41 - Then you do the same thing a second time. Tank gets a group soak, brings it to one of the Abyssal Voidshapers to stop it from claiming that zone.
+00:47 - There’s always one Abyssal Voidshaper left over from each set.
+00:50 - The better and luckier you are at group soaking the adds, the longer you’ll have to kill the boss.
+00:54 - If there’s ever three adjacent adds up at the end of the tank soaks, you’re dead.
+00:58 - Now, let’s go through the fight.
+00:59 - You’ll start by tanking the boss around the middle of the room. After a few seconds the boss will cast Shadow’s Advance which spawns three big void circles on the ground that explode after a few seconds, basically one-shotting anyone inside of them.
+01:10 - This is what spawns the three Abyssal Voidshaper adds that are casting on random zones.
+01:14 - Shortly after, the current tank will get a group soak that needs to be soaked by several other players on top of one of the three adds.
+01:21 - When the soak explodes, everyone takes a big hit and has a ticking dot on them for six seconds. This will also destroy the Voidshaper add that’s inside of it, cancelling its cast.
+01:29 - The second tank will then instantly get the second group soak that needs to go on the second add. And this also needs several players in it to split the damage and destroy the add.
+01:37 - After the two adds are dead, the last add will finish casting, claiming that zone for the boss, becoming attackable and spawn several little Voidmaw adds through any claimed zones that are up.
+01:46 - Now during testing, missing an add with a soak wasn’t the end of the world, but it significantly reduced our available time on the boss since we’d hit three adjacent claimed zones much faster.
+01:54 - Once the third Voidshaper add becomes attackable, round up all the little adds and cleave them on top of the big add away from any portals and away from the boss.
+02:02 - On normal, the adds have some abilities, but they’re not that important, just make sure to interrupt and kill them quickly.
+02:08 - On heroic, the Voidshaper adds are slowly gaining energy and will wipe the raid if it gets to full energy, so if you see an Obscurean Endwalker, you took way too long to kill the Voidshaper.
+02:17 - Also on heroic, when the little Voidmaw adds get to 35% HP they try to walk back to their portal to fully heal. This is why we kill them away from the portal and use grips, stuns and slows to keep them in place.
+02:27 - If Averzian ever gets too close to a claimed zone or any adds, he gains a buff that increases his damage by 75% and reduces his damage taken by 90%.
+02:37 - So make sure the boss is always kept away from basically everything.
+02:39 - The boss also has a few other abilities. The tanks will be taunt-swapping on the group soak, but they also have Blackened Wounds to deal with.
+02:44 - It’s a stacking 4% health reduction, so if this gets to like 8 to 12 stacks, you might need to taunt-swap again.
+02:51 - There’s some spiked lines that shoot out from the boss after a few seconds. These are pretty easy to see, so just side-step when they come up.
+02:57 - On heroic, every once in a while the boss will cast Desolation, which puts a soak circle on one of the claimed zones.
+03:02 - This needs to be soaked by one player or else it does a big hit to the entire raid and puts a dot on everyone.
+03:07 - This could easily wipe the raid, so make sure at least one person is in the soak whenever it happens.
+03:12 - And lastly, if you see a bunch of adds marching throughout the boss room, you just let three claimed zones happen and you’re dead.
+03:17 - And that’s pretty much it. Here’s a quick recap for you to review or screenshot for later.
+03:22 - You can find all of our recaps over at the Ready Check Pull Discord.
+03:25 - Big thank you to our supporters on Patreon for making these videos possible. Don’t forget, this expansion we’re putting way more resources into our Patreon.
+03:31 - So if you’re interested in extended heroic walkthroughs, mythic walkthroughs, and a bunch more, check out the links in the description.
+03:38 - Peace.

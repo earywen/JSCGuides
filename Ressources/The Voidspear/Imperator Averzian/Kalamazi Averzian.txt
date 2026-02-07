@@ -1,0 +1,47 @@
+This video by **Kalamazi** focuses specifically on the first boss of the raid, **Imperator of Verzian**, from the Midnight Beta. It provides a detailed look at the mechanics during testing, followed by a full kill of the boss.
+
+Here is the detailed breakdown of the guide portion of the video:
+
+### **Imperator of Verzian (Heroic Difficulty)**
+
+**Timestamp:** [[00:00](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=0)]
+
+* **Concept:** The encounter is essentially a deadly game of **Tic-Tac-Toe**. The room is divided into a 3x3 grid (9 distinct zones/quadrants).
+* **Goal:** You must prevent the boss from claiming three zones in a row (horizontally, vertically, or diagonally). If he forms a line of three, the raid wipes.
+
+### **Key Mechanics**
+
+**1. The Board & Adds**
+
+* **[[00:44](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=44)]** The boss will periodically summon three adds (**Abyssal Void Shapers**) in different quadrants of the room simultaneously.
+* **[[00:59](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=59)]** The raid cannot kill all three adds. You must strategically choose which adds to kill to prevent the boss from forming a "winning" line on the board.
+
+**2. Soaking & Killing Adds**
+
+* **[[01:21](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=81)]** The boss casts a **Soak** mechanic on players. These players must run to the location of the Void Shapers you want to eliminate.
+* **[[01:32](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=92)]** Soaking the mechanic on top of an add kills it instantly and removes it from the board.
+* **[[01:53](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=113)]** You generally get two soaks per wave, meaning you can remove two adds, but one will always survive.
+
+**3. Claiming Zones**
+
+* **[[01:57](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=117)]** The surviving add that was *not* soaked will "Rupture," leaving a permanent mark (void zone/pool) on that quadrant of the board.
+* **[[02:44](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=164)]** This zone is now "claimed" by the boss. If he claims a sequence of zones that forms a line of three, he wins.
+
+**4. Wipe Mechanic (Enrage)**
+
+* **[[05:06](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=306)]** The fight acts as a "soft enrage." As the fight progresses, space runs out.
+* **[[06:01](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=361)]** Eventually, if the boss manages to form a line of three—or if the raid runs out of safe moves to block him—he triggers the **March of the Endless**.
+* **[[06:28](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=388)]** This summons an unstoppable wave of adds from the end of the room that instantly kills the entire raid.
+
+### **Gameplay & Raid Comms**
+
+**Timestamp:** [[07:01](http://www.youtube.com/watch?v=KhEx2ZJoxbA&t=421)]
+
+* The second half of the video features the raw gameplay of the kill. The commentary shifts from a guide format to casual raid communication and observations about the beta environment, such as:
+* Discussing UI and nameplate addons (Plater) bugging out due to the range.
+* Noting that the boss feels slightly undertuned or "empty" mechanically for a heroic boss, aside from the main gimmick.
+* Confirming that Death Knights are useful for gripping adds.
+
+
+
+**Summary:** The fight is a puzzle boss where the raid leader must look at the 3x3 grid and call out which two adds to kill to ensure the surviving third add does not complete a line for the boss.

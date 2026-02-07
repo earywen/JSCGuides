@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lightblinded Vanguard - Stratégies</title>
     <link rel="stylesheet" href="./src/style.css">
+    <meta name="description"
+        content="Stratégie complète pour Lightblinded Vanguard (The Voidspear) : Gestion des trois commandants, rotation des auras et phases détaillées pour Normal, Héroïque et Mythique.">
 </head>
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
-            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor &amp; Ezzorak</a>
             <a href="boss-lightblinded.html" class="nav-item active">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel’Danas</div>
-            <a href="#" class="nav-item coming-soon">Belo’ren</a>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
+            <a href="#" class="nav-item coming-soon">Belo'ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
     </aside>
@@ -41,11 +49,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>Lightblinded Vanguard</h1>
+            <h1 data-i18n="boss.lightblinded.title">Lightblinded Vanguard</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -56,86 +64,120 @@
                     <div class="strategy-column">
                         <section class="tldr-grid">
                             <div class="role-column tanks">
-                                <h3>🛡️ Tanks</h3>
+                                <h3 data-i18n="boss.lightblinded.tldr_tanks">🛡️ Tanks</h3>
                                 <ul>
-                                    <li><strong>Taunt Swap :</strong> Swappez de cible immédiatement sur le
-                                        <em><a href="https://www.wowhead.com/spell=1246736" data-wowhead="spell=1246736"
-                                                class="spell-link-inline">Judgment</a></em> (Bellamy ou Lightblood) pour
-                                        éviter le one-shot du <em>Final
-                                            Verdict</em>.
+                                    <li><strong data-i18n="boss.lightblinded.taunt_swap">Taunt Swap :</strong> <span
+                                            data-i18n="boss.lightblinded.taunt_swap_desc">Swappez de cible immédiatement
+                                            sur le
+                                            <em><a href="https://www.wowhead.com/spell=1246736"
+                                                    data-wowhead="spell=1246736"
+                                                    class="spell-link-inline">Judgment</a></em> (Bellamy ou Lightblood)
+                                            pour
+                                            éviter le one-shot du <em>Final
+                                                Verdict</em>.</span>
                                     </li>
-                                    <li><strong>Placement :</strong> Gardez les boss en bordure de salle. Sortez-les des
-                                        zones de <em>Consecration</em> (Héro).</li>
+                                    <li><strong data-i18n="boss.lightblinded.placement">Placement :</strong> <span
+                                            data-i18n="boss.lightblinded.placement_desc">Gardez les boss en bordure de
+                                            salle. Sortez-les des
+                                            zones de <em>Consecration</em> (Héro).</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1246162"
-                                                data-wowhead="spell=1246162" class="spell-link-inline">Aura of
-                                                Devotion</a> :</strong> Si Bellamy cast son aura, sortez les deux
-                                        autres boss de la zone (75% DR).</li>
+                                                data-wowhead="spell=1246162" class="spell-link-inline"
+                                                data-i18n="boss.lightblinded.aura_devotion">Aura of
+                                                Devotion</a> :</strong> <span
+                                            data-i18n="boss.lightblinded.aura_devotion_desc">Si Bellamy cast son aura,
+                                            sortez les deux
+                                            autres boss de la zone (75% DR).</span></li>
                                 </ul>
                             </div>
                             <div class="role-column healers">
-                                <h3>💚 Healers</h3>
+                                <h3 data-i18n="boss.lightblinded.tldr_healers">💚 Healers</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248721"
-                                                data-wowhead="spell=1248721" class="spell-link-inline">Tyr's Wrath</a>
-                                            :</strong> Soin d'urgence massif requis sur les cibles
-                                        (absorbe de soins). Utilisez vos CDs ici.</li>
+                                                data-wowhead="spell=1248721" class="spell-link-inline"
+                                                data-i18n="boss.lightblinded.tyrs_wrath">Tyr's Wrath</a>
+                                            :</strong> <span data-i18n="boss.lightblinded.tyrs_wrath_desc">Soin
+                                            d'urgence massif requis sur les cibles
+                                            (absorbe de soins). Utilisez vos CDs ici.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248451"
-                                                data-wowhead="spell=1248451" class="spell-link-inline">Aura of Peace</a>
-                                            :</strong> Ne soignez/tapez pas Senn dans son aura bleue
-                                        sous peine d'être pacifié.</li>
+                                                data-wowhead="spell=1248451" class="spell-link-inline"
+                                                data-i18n="boss.lightblinded.aura_peace">Aura of Peace</a>
+                                            :</strong> <span data-i18n="boss.lightblinded.aura_peace_desc">Ne
+                                            soignez/tapez pas Senn dans son aura bleue
+                                            sous peine d'être pacifié.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248983"
-                                                data-wowhead="spell=1248983" class="spell-link-inline">Execution
-                                                Sentence</a> :</strong> Prévoyez des CDs de raid pour les
-                                        split-soaks (Marteau de Lightblood).</li>
+                                                data-wowhead="spell=1248983" class="spell-link-inline"
+                                                data-i18n="boss.lightblinded.execution_sentence">Execution
+                                                Sentence</a> :</strong> <span
+                                            data-i18n="boss.lightblinded.execution_sentence_desc">Prévoyez des CDs de
+                                            raid pour les
+                                            split-soaks (Marteau de Lightblood).</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
-                                <h3>⚔️ DPS</h3>
+                                <h3 data-i18n="boss.lightblinded.tldr_dps">⚔️ DPS</h3>
                                 <ul>
-                                    <li><strong>Focus Senn :</strong> Tuez le soigneur (Senn) en priorité. Break son
-                                        <em><a href="https://www.wowhead.com/spell=1248674" data-wowhead="spell=1248674"
-                                                class="spell-link-inline">Sacred Shield</a></em> pour interrupt le cast.
+                                    <li><strong data-i18n="boss.lightblinded.focus_senn">Focus Senn :</strong> <span
+                                            data-i18n="boss.lightblinded.focus_senn_desc">Tuez le soigneur (Senn) en
+                                            priorité. Break son
+                                            <em><a href="https://www.wowhead.com/spell=1248674"
+                                                    data-wowhead="spell=1248674" class="spell-link-inline">Sacred
+                                                    Shield</a></em> pour interrupt le cast.</span>
                                     </li>
-                                    <li><strong>Aura/Dodge :</strong> Esquivez les boucliers de Bellamy (<a
-                                            href="https://www.wowhead.com/spell=1248644" data-wowhead="spell=1248644"
-                                            class="spell-link-inline">Divine Toll</a>)
-                                        qui infligent un silence de 5s.</li>
-                                    <li><strong>Bloodlust :</strong> Attendez la <em>Forbearance</em> (2:30-3:00) pour
-                                        éviter que les boss ne deviennent immunisés.</li>
+                                    <li><strong data-i18n="boss.lightblinded.aura_dodge">Aura/Dodge :</strong> <span
+                                            data-i18n="boss.lightblinded.aura_dodge_desc">Esquivez les boucliers de
+                                            Bellamy (<a href="https://www.wowhead.com/spell=1248644"
+                                                data-wowhead="spell=1248644" class="spell-link-inline">Divine Toll</a>)
+                                            qui infligent un silence de 5s.</span></li>
+                                    <li><strong data-i18n="boss.lightblinded.bloodlust_dps">Bloodlust :</strong> <span
+                                            data-i18n="boss.lightblinded.bloodlust_dps_desc">Attendez la
+                                            <em>Forbearance</em> (2:30-3:00) pour
+                                            éviter que les boss ne deviennent immunisés.</span></li>
                                 </ul>
                             </div>
                         </section>
 
                         <!-- Strategy -->
                         <section class="phase-block">
-                            <h2>Tactique Globale</h2>
+                            <h2 data-i18n="boss.lightblinded.global_tactics">Tactique Globale</h2>
                             <div class="tactics-box">
                                 <ul>
-                                    <li><strong>Bloodlust :</strong> Attendez la <em>Forbearance</em> (vers 2m30-3m)
-                                        pour éviter que les boss ne deviennent immunisés.</li>
-                                    <li><strong>Priorité Cible :</strong> Tuez <strong>War Chaplain Senn</strong> en
-                                        premier. Ses soins et boucliers sont les plus dangereux.</li>
+                                    <li><strong data-i18n="boss.lightblinded.bloodlust_global">Bloodlust :</strong>
+                                        <span data-i18n="boss.lightblinded.bloodlust_global_desc">Attendez la
+                                            <em>Forbearance</em> (vers 2m30-3m)
+                                            pour éviter que les boss ne deviennent immunisés.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.lightblinded.target_priority">Priorité Cible :</strong>
+                                        <span data-i18n="boss.lightblinded.target_priority_desc">Tuez <strong>War
+                                                Chaplain Senn</strong> en
+                                            premier. Ses soins et boucliers sont les plus dangereux.</span>
+                                    </li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248674"
-                                                data-wowhead="spell=1248674" class="spell-link-inline">Sacred Shield</a>
-                                            :</strong> Détruisez le bouclier de Senn immédiatement
-                                        pour pouvoir interrompre son cast de <em><a
-                                                href="https://www.wowhead.com/spell=1258514"
-                                                data-wowhead="spell=1258514" class="spell-link-inline">Blinding
-                                                Light</a></em>.</li>
+                                                data-wowhead="spell=1248674" class="spell-link-inline"
+                                                data-i18n="boss.lightblinded.sacred_shield">Sacred Shield</a>
+                                            :</strong> <span data-i18n="boss.lightblinded.sacred_shield_desc">Détruisez
+                                            le bouclier de Senn immédiatement
+                                            pour pouvoir interrompre son cast de <em><a
+                                                    href="https://www.wowhead.com/spell=1258514"
+                                                    data-wowhead="spell=1258514" class="spell-link-inline">Blinding
+                                                    Light</a></em>.</span></li>
                                 </ul>
                             </div>
 
-                            <h2>Les Trois Commandants</h2>
-                            <p>L'encontre se compose de trois commandants aux capacités synergiques. La gestion des
+                            <h2 data-i18n="boss.lightblinded.three_commanders">Les Trois Commandants</h2>
+                            <p data-i18n="boss.lightblinded.three_commanders_desc">L'encontre se compose de trois
+                                commandants aux capacités synergiques. La gestion des
                                 Auras est la clé du combat.</p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Commandant</th>
-                                            <th style="width: 45%">Capacités Clés</th>
-                                            <th style="width: 30%">Contre-mesure</th>
+                                            <th class="col-mechanic" data-i18n="boss.lightblinded.commander">Commandant
+                                            </th>
+                                            <th class="col-effect" data-i18n="boss.lightblinded.key_abilities">Capacités
+                                                Clés</th>
+                                            <th class="col-action" data-i18n="boss.lightblinded.countermeasure">
+                                                Contre-mesure</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -147,10 +189,10 @@
                                                         href="https://www.wowhead.com/spell=1248451"
                                                         data-wowhead="spell=1248451" class="spell-link-inline">Aura of
                                                         Peace</a></em>.</td>
-                                            <td><strong>Action :</strong> Nuke le shield, interrupt <em><a
-                                                        href="https://www.wowhead.com/spell=1258514"
+                                            <td><strong data-i18n="boss.lightblinded.senn_action">Action : Nuke le
+                                                    shield, interrupt <a href="https://www.wowhead.com/spell=1258514"
                                                         data-wowhead="spell=1258514" class="spell-link-inline">Blinding
-                                                        Light</a></em>.
+                                                        Light</a>.</strong>
                                             </td>
                                         </tr>
                                         <tr>
@@ -161,9 +203,10 @@
                                                         href="https://www.wowhead.com/spell=1246736"
                                                         data-wowhead="spell=1246736"
                                                         class="spell-link-inline">Judgment</a></em>.</td>
-                                            <td><strong>Management :</strong> Split-soakez les zones oranges, esquivez
-                                                les
-                                                marteaux.</td>
+                                            <td><strong data-i18n="boss.lightblinded.lightblood_management">Management :
+                                                    Split-soakez les zones oranges, esquivez
+                                                    les
+                                                    marteaux.</strong></td>
                                         </tr>
                                         <tr>
                                             <td><strong>General Bellamy</strong></td>
@@ -173,21 +216,27 @@
                                                         href="https://www.wowhead.com/spell=1248644"
                                                         data-wowhead="spell=1248644" class="spell-link-inline">Divine
                                                         Toll</a></em> (Silencing shields).</td>
-                                            <td><strong>Dodge :</strong> Surveillez Bellamy et esquivez les boucliers
-                                                volants.</td>
+                                            <td><strong data-i18n="boss.lightblinded.bellamy_dodge">Dodge : Surveillez
+                                                    Bellamy et esquivez les boucliers
+                                                    volants.</strong></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <h2 class="mechanic-heroic">Zèle Sacré</h2>
-                            <p>En mode héroïque, les boss laissent des zones de consécration et utilisent leurs auras
+                            <h2 class="mechanic-heroic" data-i18n="boss.lightblinded.holy_zeal">Zèle Sacré</h2>
+                            <p data-i18n="boss.lightblinded.holy_zeal_desc">En mode héroïque, les boss laissent des
+                                zones de consécration et utilisent leurs auras
                                 plus violemment.</p>
                             <ul>
-                                <li><strong>Consecration :</strong> Chaque boss drop une zone de feu sacré après sa
-                                    phase d'Aura.</li>
-                                <li><strong>Zealous Spirit :</strong> Un boss aléatoire gagne +30% de dégâts. Switch de
-                                    focus nécessaire.</li>
+                                <li><strong data-i18n="boss.lightblinded.consecration">Consecration :</strong> <span
+                                        data-i18n="boss.lightblinded.consecration_desc">Chaque boss drop une zone de feu
+                                        sacré après sa
+                                        phase d'Aura.</span></li>
+                                <li><strong data-i18n="boss.lightblinded.zealous_spirit">Zealous Spirit :</strong> <span
+                                        data-i18n="boss.lightblinded.zealous_spirit_desc">Un boss aléatoire gagne +30%
+                                        de dégâts. Switch de
+                                        focus nécessaire.</span></li>
                             </ul>
                         </section>
 
@@ -196,7 +245,7 @@
                             <div class="schemas-grid">
                                 <!-- Schema 1: Gestion des Auras -->
                                 <div class="visual-mechanic">
-                                    <h3>Gestion des Auras (DR 75%)</h3>
+                                    <h3 data-i18n="boss.lightblinded.auras_management">Gestion des Auras (DR 75%)</h3>
                                     <div class="arena-visual rectangular">
                                         <!-- Bellamy (Isolated) -->
                                         <div class="boss-aura devotion" style="left: 25%; top: 50%;"></div>
@@ -219,15 +268,14 @@
                                                     style="background: rgba(239, 68, 68, 0.2);"></i> Aura Dégâts</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Isolez Bellamy pour éviter que son aura ne buff les autres boss.</em>
                                     </p>
                                 </div>
 
                                 <!-- Schema 2: Rotation des Soaks -->
                                 <div class="visual-mechanic">
-                                    <h3>Split Soaks (Wrath)</h3>
+                                    <h3 data-i18n="boss.lightblinded.split_soaks">Split Soaks (Wrath)</h3>
                                     <div class="arena-visual rectangular">
                                         <div class="boss-icon" style="left: 50%; top: 50%;">⚔️</div>
                                         <div class="boss-aura wrath" style="left: 50%; top: 50%;"></div>
@@ -257,8 +305,7 @@
                                                 Groupe</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>3 groupes assignés (5 joueurs min.) pour intercepter les zones de
                                             Wrath.</em>
                                     </p>
@@ -269,10 +316,11 @@
 
                     <aside class="supplementary-info">
                         <div class="video-section">
-                            <h2>Vidéo Guide</h2>
+                            <h2 data-i18n="boss.lightblinded.video_guide">Vidéo Guide</h2>
                             <div class="video-container video-trigger" id="videoTrigger">
-                                <img src="https://img.youtube.com/vi/QzSjddSdyrE/maxresdefault.jpg" alt="Video"
-                                    class="video-thumb">
+                                <img src="https://img.youtube.com/vi/QzSjddSdyrE/maxresdefault.jpg"
+                                    alt="Video Guide Lightblinded Vanguard" class="video-thumb" width="1280"
+                                    height="720" loading="lazy">
                                 <div class="play-button">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                         <path d="M8 5v14l11-7z" />
@@ -282,7 +330,7 @@
                         </div>
 
                         <div class="spell-section">
-                            <h2>Sorts du Trio</h2>
+                            <h2 data-i18n="boss.lightblinded.spells_trio">Sorts du Trio</h2>
                             <div class="spell-list accordion">
                                 <div class="accordion-item">
                                     <button class="accordion-header">

@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fallen-King Salhadaar - Stratégies</title>
     <link rel="stylesheet" href="./src/style.css">
+    <meta name="description"
+        content="Stratégie complète pour Fallen-King Salhadaar (The Voidspear) : Gestion des orbes, placement et phases détaillées pour Normal, Héroïque et Mythique.">
 </head>
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item active">Salhadaar</a>
-            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor &amp; Ezzorak</a>
             <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel’Danas</div>
-            <a href="#" class="nav-item coming-soon">Belo’ren</a>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
+            <a href="#" class="nav-item coming-soon">Belo'ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
     </aside>
@@ -41,11 +49,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>Fallen-King Salhadaar</h1>
+            <h1 data-i18n="boss.salhadaar.title">Salhadaar</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -56,83 +64,124 @@
                     <div class="strategy-column">
                         <section class="tldr-grid">
                             <div class="role-column tanks">
-                                <h3>🛡️ Tanks</h3>
+                                <h3 data-i18n="boss.salhadaar.tldr_tanks">🛡️ Tanks</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1250803"
-                                                data-wowhead="spell=1250803" class="spell-link-inline">Shattering
-                                                Twilight</a> :</strong> L'impact fait apparaître des pics.
-                                        Éloignez-vous du raid AVANT l'impact.</li>
-                                    <li><strong>Kiting :</strong> Déplacez le boss loin des orbes de <em>Concentrated
-                                            Void</em> pour donner du temps aux DPS.</li>
+                                                data-wowhead="spell=1250803" class="spell-link-inline"
+                                                data-i18n="boss.salhadaar.shattering_twilight">Shattering
+                                                Twilight</a> :</strong> <span
+                                            data-i18n="boss.salhadaar.shattering_twilight_desc">L'impact fait apparaître
+                                            des pics.
+                                            Éloignez-vous du raid AVANT l'impact.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.kiting">Kiting :</strong> <span
+                                            data-i18n="boss.salhadaar.kiting_desc">Déplacez le boss loin des orbes de
+                                            <em>Concentrated
+                                                Void</em> pour donner du temps aux DPS.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1271577"
-                                                data-wowhead="spell=1271577" class="spell-link-inline">Instability</a>
-                                            :</strong> Swap à chaque <em><a href="https://www.wowhead.com/spell=1250803"
-                                                data-wowhead="spell=1250803" class="spell-link-inline">Shattering
-                                                Twilight</a></em> ou
-                                        quand le dot devient trop lourd.</li>
+                                                data-wowhead="spell=1271577" class="spell-link-inline"
+                                                data-i18n="boss.salhadaar.instability">Instability</a>
+                                            :</strong> <span data-i18n="boss.salhadaar.instability_desc">Swap à chaque
+                                            <em><a href="https://www.wowhead.com/spell=1250803"
+                                                    data-wowhead="spell=1250803" class="spell-link-inline">Shattering
+                                                    Twilight</a></em> ou
+                                            quand le dot devient trop lourd.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column healers">
-                                <h3>💚 Healers</h3>
+                                <h3 data-i18n="boss.salhadaar.tldr_healers">💚 Healers</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1246175"
-                                                data-wowhead="spell=1246175" class="spell-link-inline">Cosmic
-                                                Unraveling</a> :</strong> Phase de burn (20s). Soins de zone massifs
-                                        requis pendant les rayons.</li>
+                                                data-wowhead="spell=1246175" class="spell-link-inline"
+                                                data-i18n="boss.salhadaar.cosmic_unraveling">Cosmic
+                                                Unraveling</a> :</strong> <span
+                                            data-i18n="boss.salhadaar.cosmic_unraveling_desc">Phase de burn (20s). Soins
+                                            de zone massifs
+                                            requis pendant les rayons.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248697"
-                                                data-wowhead="spell=1248697" class="spell-link-inline">Despotic
-                                                Command</a> :</strong> Dispelez les joueurs UNIQUEMENT lorsqu'ils
-                                        sont au bord de la salle.</li>
-                                    <li><strong>Heal Absorb :</strong> Soignez intensivement le joueur après le dispel
-                                        pour vider l'absorb.</li>
-                                    <li><strong>Orb DOT (Héroïques) :</strong> Ne tuez pas les orbes en même temps !
-                                        Laissez le DOT expirer.</li>
+                                                data-wowhead="spell=1248697" class="spell-link-inline"
+                                                data-i18n="boss.salhadaar.despotic_command">Despotic
+                                                Command</a> :</strong> <span
+                                            data-i18n="boss.salhadaar.despotic_command_desc">Dispelez les joueurs
+                                            UNIQUEMENT lorsqu'ils
+                                            sont au bord de la salle.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.heal_absorb">Heal Absorb :</strong> <span
+                                            data-i18n="boss.salhadaar.heal_absorb_desc">Soignez intensivement le joueur
+                                            après le dispel
+                                            pour vider l'absorb.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.orb_dot">Orb DOT (Héroïques) :</strong> <span
+                                            data-i18n="boss.salhadaar.orb_dot_desc">Ne tuez pas les orbes en même temps
+                                            !
+                                            Laissez le DOT expirer.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
-                                <h3>⚔️ DPS</h3>
+                                <h3 data-i18n="boss.salhadaar.tldr_dps">⚔️ DPS</h3>
                                 <ul>
-                                    <li><strong>Focus Orbes (Héro) :</strong> Tuez les orbes UNE PAR UNE. Ne les tuez
-                                        jamais simultanément.</li>
-                                    <li><strong>Bloodlust :</strong> Utilisez la BL pendant l'<em>Unbound Phase</em>
-                                        (+25% dégâts subis par le boss).</li>
+                                    <li><strong data-i18n="boss.salhadaar.focus_orbs">Focus Orbes (Héro) :</strong>
+                                        <span data-i18n="boss.salhadaar.focus_orbs_desc">Tuez les orbes UNE PAR UNE. Ne
+                                            les tuez
+                                            jamais simultanément.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.salhadaar.bloodlust_dps">Bloodlust :</strong> <span
+                                            data-i18n="boss.salhadaar.bloodlust_dps_desc">Utilisez la BL pendant
+                                            l'<em>Unbound Phase</em>
+                                            (+25% dégâts subis par le boss).</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248697"
-                                                data-wowhead="spell=1248697" class="spell-link-inline">Despotic
-                                                Command</a> :</strong> Si vous avez le cercle rose, courez
-                                        IMMÉDIATEMENT au bord de la salle.</li>
-                                    <li><strong>Fractured Images :</strong> Priorité ABSOLUE aux interruptions pour
-                                        éviter de remplir la salle de vide.</li>
+                                                data-wowhead="spell=1248697" class="spell-link-inline"
+                                                data-i18n="boss.salhadaar.despotic_dps">Despotic
+                                                Command</a> :</strong> <span
+                                            data-i18n="boss.salhadaar.despotic_dps_desc">Si vous avez le cercle rose,
+                                            courez
+                                            IMMÉDIATEMENT au bord de la salle.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.fractured_images">Fractured Images :</strong>
+                                        <span data-i18n="boss.salhadaar.fractured_images_desc">Priorité ABSOLUE aux
+                                            interruptions pour
+                                            éviter de remplir la salle de vide.</span>
+                                    </li>
                                 </ul>
                             </div>
                         </section>
 
                         <!-- Strategy -->
                         <section class="phase-block">
-                            <h2>Tactique Globale</h2>
+                            <h2 data-i18n="boss.salhadaar.global_tactics">Tactique Globale</h2>
                             <div class="tactics-box">
                                 <ul>
-                                    <li><strong>Bloodlust :</strong> Phase <em>Unbound</em>. Le boss subit +25% de
-                                        dégâts, c'est le moment d'envoyer tout le burst.</li>
-                                    <li><strong>Gestion des Orbes :</strong> Ne tuez jamais plusieurs orbes
-                                        simultanément (Héro). Attendez que le DOT raid expire.</li>
-                                    <li><strong>Zones de Vide :</strong> Si vous avez un cercle (<em>Despotic
-                                            Command</em>), posez-le sur les bords pour garder le centre propre.</li>
-                                    <li><strong>Positionnement :</strong> Tanks, orientez les <em>Shattering
-                                            Twilight</em> vers les bords pour ne pas encombrer le centre.</li>
+                                    <li><strong data-i18n="boss.salhadaar.bloodlust_global">Bloodlust :</strong> <span
+                                            data-i18n="boss.salhadaar.bloodlust_global_desc">Phase <em>Unbound</em>. Le
+                                            boss subit +25% de
+                                            dégâts, c'est le moment d'envoyer tout le burst.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.orb_management">Gestion des Orbes :</strong>
+                                        <span data-i18n="boss.salhadaar.orb_management_desc">Ne tuez jamais plusieurs
+                                            orbes
+                                            simultanément (Héro). Attendez que le DOT raid expire.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.salhadaar.void_zones">Zones de Vide :</strong> <span
+                                            data-i18n="boss.salhadaar.void_zones_desc">Si vous avez un cercle
+                                            (<em>Despotic
+                                                Command</em>), posez-le sur les bords pour garder le centre
+                                            propre.</span></li>
+                                    <li><strong data-i18n="boss.salhadaar.positioning">Positionnement :</strong> <span
+                                            data-i18n="boss.salhadaar.positioning_desc">Tanks, orientez les
+                                            <em>Shattering
+                                                Twilight</em> vers les bords pour ne pas encombrer le centre.</span>
+                                    </li>
                                 </ul>
                             </div>
 
-                            <h2>Le Vide Déchaîné : Unbound</h2>
-                            <p>Salhadaar gagne de l'énergie passivement. À 100 Énergie, il entre en **Cosmic
+                            <h2 data-i18n="boss.salhadaar.unbound_title">Le Vide Déchaîné : Unbound</h2>
+                            <p data-i18n="boss.salhadaar.unbound_desc">Salhadaar gagne de l'énergie passivement. À 100
+                                Énergie, il entre en **Cosmic
                                 Unraveling**.</p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Phase</th>
-                                            <th style="width: 45%">Description</th>
-                                            <th style="width: 30%">Stratégie</th>
+                                            <th class="col-mechanic" data-i18n="boss.salhadaar.phase">Phase</th>
+                                            <th class="col-effect" data-i18n="boss.salhadaar.description">Description
+                                            </th>
+                                            <th class="col-action" data-i18n="boss.salhadaar.strategy">Stratégie</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -160,14 +209,15 @@
                                 </table>
                             </div>
 
-                            <h2>Sorts et Dangers</h2>
+                            <h2 data-i18n="boss.salhadaar.spells_dangers_title">Sorts et Dangers</h2>
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Capacité</th>
-                                            <th style="width: 45%">Effet</th>
-                                            <th style="width: 30%">Contre-mesure</th>
+                                            <th class="col-mechanic" data-i18n="boss.salhadaar.capacity">Capacité</th>
+                                            <th class="col-effect" data-i18n="boss.salhadaar.effect">Effet</th>
+                                            <th class="col-action" data-i18n="boss.salhadaar.countermeasure">
+                                                Contre-mesure</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -233,11 +283,11 @@
                         </section>
 
                         <section class="visuals-section">
-                            <h2>Visualisation Stratégique</h2>
+                            <h2 data-i18n="boss.salhadaar.placement_title">Visualisation Stratégique</h2>
                             <div class="schemas-grid">
                                 <!-- Schema 1: Placement -->
                                 <div class="visual-mechanic">
-                                    <h3>Placement & Flux d'Orbes</h3>
+                                    <h3 data-i18n="boss.salhadaar.placement_mechanic">Placement & Flux d'Orbes</h3>
                                     <div class="arena-visual circular">
                                         <!-- Boss -->
                                         <div class="boss-token king">👑</div>
@@ -269,15 +319,14 @@
                                             <span><i class="orb-indicator"></i> Orbes</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Positionnement central requis.</em>
                                     </p>
                                 </div>
 
                                 <!-- Schema 2: Dispel -->
                                 <div class="visual-mechanic">
-                                    <h3>Gestion du Dispel (Command)</h3>
+                                    <h3 data-i18n="boss.salhadaar.dispel_mechanic">Gestion du Dispel (Command)</h3>
                                     <div class="arena-visual circular dispel-visual">
                                         <div class="boss-token">👑</div>
                                         <div class="movement-arrow"></div>
@@ -295,8 +344,7 @@
                                                     style="background: rgba(224, 36, 94, 0.4);"></i> Vide</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Courez au bord dès le cercle rose.</em>
                                     </p>
                                 </div>
@@ -306,10 +354,11 @@
 
                     <aside class="supplementary-info">
                         <div class="video-section">
-                            <h2>Vidéo Guide</h2>
+                            <h2 data-i18n="boss.salhadaar.video_guide">Vidéo Guide</h2>
                             <div class="video-container video-trigger" id="videoTrigger">
-                                <img src="https://img.youtube.com/vi/y4PVfpsI5EY/maxresdefault.jpg" alt="Video"
-                                    class="video-thumb">
+                                <img src="https://img.youtube.com/vi/y4PVfpsI5EY/maxresdefault.jpg"
+                                    alt="Video Guide Salhadaar" class="video-thumb" width="1280" height="720"
+                                    loading="lazy">
                                 <div class="play-button">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                         <path d="M8 5v14l11-7z" />
@@ -319,7 +368,7 @@
                         </div>
 
                         <div class="spell-section">
-                            <h2>Sorts du Boss</h2>
+                            <h2 data-i18n="boss.salhadaar.spells_boss">Sorts du Boss</h2>
                             <div class="spell-list accordion">
                                 <div class="accordion-item">
                                     <button class="accordion-header">
@@ -345,7 +394,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-header">
-                                        <h3>Effets Nocifs</h3>
+                                        <h3 data-i18n="boss.salhadaar.harmful_effects">Effets Nocifs</h3>
                                         <span class="arrow">▼</span>
                                     </button>
                                     <div class="accordion-content">

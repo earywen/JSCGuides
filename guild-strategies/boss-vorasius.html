@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vorasius - Stratégies</title>
     <link rel="stylesheet" href="./src/style.css">
+    <meta name="description"
+        content="Stratégie complète pour Vorasius (The Voidspear) : Gestion des murs, kiting des adds et phases détaillées pour Normal, Héroïque et Mythique.">
 </head>
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item active">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
@@ -22,10 +30,10 @@
             <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel’Danas</div>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel’Danas</div>
             <a href="#" class="nav-item coming-soon">Belo’ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
@@ -41,11 +49,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>Vorasius</h1>
+            <h1 data-i18n="boss.vorasius.title">Vorasius</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -56,82 +64,108 @@
                     <div class="strategy-column">
                         <section class="tldr-grid">
                             <div class="role-column tanks">
-                                <h3>🛡️ Tanks</h3>
+                                <h3 data-i18n="boss.vorasius.tldr_tanks">🛡️ Tanks</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1241844"
-                                                data-wowhead="spell=1241844" class="spell-link-inline">Smashed</a>
-                                            :</strong> Swap à chaque <em><a href="https://www.wowhead.com/spell=1241692"
-                                                data-wowhead="spell=1241692" class="spell-link-inline">Smashing
-                                                Frenzy</a></em>. Le debuff
-                                        +150% dmg physique est mortel.</li>
+                                                data-wowhead="spell=1241844" class="spell-link-inline"
+                                                data-i18n="boss.vorasius.smashed">Smashed</a>
+                                            :</strong> <span data-i18n="boss.vorasius.smashed_desc">Swap à chaque <em><a
+                                                    href="https://www.wowhead.com/spell=1241692"
+                                                    data-wowhead="spell=1241692" class="spell-link-inline">Smashing
+                                                    Frenzy</a></em>. Le debuff
+                                            +150% dmg physique est mortel.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1273067"
-                                                data-wowhead="spell=1273067" class="spell-link-inline">Aftershock</a>
-                                            :</strong> Standez au centre de l'impact après l'explosion
-                                        pour éviter les anneaux.</li>
+                                                data-wowhead="spell=1273067" class="spell-link-inline"
+                                                data-i18n="boss.vorasius.aftershock">Aftershock</a>
+                                            :</strong> <span data-i18n="boss.vorasius.aftershock_desc">Standez au centre
+                                            de l'impact après l'explosion
+                                            pour éviter les anneaux.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column healers">
-                                <h3>💚 Healers</h3>
+                                <h3 data-i18n="boss.vorasius.tldr_healers">💚 Healers</h3>
                                 <ul>
                                     <li><strong><a href="https://www.wowhead.com/spell=1260052"
-                                                data-wowhead="spell=1260052" class="spell-link-inline">Primordial
-                                                Roar</a> :</strong> Soft enrage. Le DoT <em><a
-                                                href="https://www.wowhead.com/spell=1272937"
-                                                data-wowhead="spell=1272937" class="spell-link-inline">Gathering
-                                                Void</a></em>
-                                        stacke à chaque cast.</li>
+                                                data-wowhead="spell=1260052" class="spell-link-inline"
+                                                data-i18n="boss.vorasius.primordial_roar">Primordial
+                                                Roar</a> :</strong> <span
+                                            data-i18n="boss.vorasius.primordial_roar_desc">Soft enrage. Le DoT <em><a
+                                                    href="https://www.wowhead.com/spell=1272937"
+                                                    data-wowhead="spell=1272937" class="spell-link-inline">Gathering
+                                                    Void</a></em>
+                                            stacke à chaque cast.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1254199"
-                                                data-wowhead="spell=1254199" class="spell-link-inline">Parasite
-                                                Expulsion</a> :</strong> Gros pic de dégâts raid lors de la sortie
-                                        des adds.</li>
-                                    <li><strong>Dispels :</strong> Retirez le debuff d'augmentation de dégâts sur les
-                                        joueurs touchés par l'explosion des adds.</li>
+                                                data-wowhead="spell=1254199" class="spell-link-inline"
+                                                data-i18n="boss.vorasius.parasite_expulsion">Parasite
+                                                Expulsion</a> :</strong> <span
+                                            data-i18n="boss.vorasius.parasite_expulsion_desc">Gros pic de dégâts raid
+                                            lors de la sortie
+                                            des adds.</span></li>
+                                    <li><strong data-i18n="boss.vorasius.dispels">Dispels :</strong> <span
+                                            data-i18n="boss.vorasius.dispels_desc">Retirez le debuff d'augmentation de
+                                            dégâts sur les
+                                            joueurs touchés par l'explosion des adds.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
-                                <h3>⚔️ DPS</h3>
+                                <h3 data-i18n="boss.vorasius.tldr_dps">⚔️ DPS</h3>
                                 <ul>
-                                    <li><strong>Wall Break :</strong> Tuez les <em>Blistercreeps</em>
-                                        <strong>SUR</strong> les murs de cristal (Héro: 2 par mur).
+                                    <li><strong data-i18n="boss.vorasius.wall_break">Wall Break :</strong> <span
+                                            data-i18n="boss.vorasius.wall_break_desc">Tuez les <em>Blistercreeps</em>
+                                            <strong>SUR</strong> les murs de cristal (Héro: 2 par mur).</span>
                                     </li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1256855"
-                                                data-wowhead="spell=1256855" class="spell-link-inline">Void Breath</a>
-                                            :</strong> Regardez quelle main du boss brille pour
-                                        anticiper le côté de départ du balayage.</li>
-                                    <li><strong>Utilité :</strong> Utilisez <strong>Grips / Typhoons / Rings of
-                                            Peace</strong> pour ramener les adds sur les murs.</li>
+                                                data-wowhead="spell=1256855" class="spell-link-inline"
+                                                data-i18n="boss.vorasius.void_breath">Void Breath</a>
+                                            :</strong> <span data-i18n="boss.vorasius.void_breath_desc">Regardez quelle
+                                            main du boss brille pour
+                                            anticiper le côté de départ du balayage.</span></li>
+                                    <li><strong data-i18n="boss.vorasius.utility">Utilité :</strong> <span
+                                            data-i18n="boss.vorasius.utility_desc">Utilisez <strong>Grips / Typhoons /
+                                                Rings of
+                                                Peace</strong> pour ramener les adds sur les murs.</span></li>
                                 </ul>
                             </div>
                         </section>
 
                         <!-- Strategy -->
                         <section class="phase-block">
-                            <h2>Tactique Globale</h2>
+                            <h2 data-i18n="boss.vorasius.global_tactics">Tactique Globale</h2>
                             <div class="tactics-box">
                                 <ul>
-                                    <li><strong>Bloodlust :</strong> Au Pull. Profitez du calme relatif pour descendre
-                                        le boss.</li>
-                                    <li><strong>Wall Break :</strong> La mécanique clé. Les <em>Blistercreeps</em>
-                                        doivent impérativement mourir <strong>sur</strong> un mur de cristal.</li>
-                                    <li><strong>Anticipation :</strong> Surveillez la main brillante de Vorasius pour
-                                        savoir d'où partira le <em><a href="https://www.wowhead.com/spell=1256855"
-                                                data-wowhead="spell=1256855" class="spell-link-inline">Void
-                                                Breath</a></em>.</li>
+                                    <li><strong data-i18n="boss.vorasius.bloodlust">Bloodlust :</strong> <span
+                                            data-i18n="boss.vorasius.bloodlust_desc">Au Pull. Profitez du calme relatif
+                                            pour descendre
+                                            le boss.</span></li>
+                                    <li><strong data-i18n="boss.vorasius.wall_break_tactics">Wall Break :</strong> <span
+                                            data-i18n="boss.vorasius.wall_break_tactics_desc">La mécanique clé. Les
+                                            <em>Blistercreeps</em>
+                                            doivent impérativement mourir <strong>sur</strong> un mur de cristal.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.vorasius.anticipation">Anticipation :</strong> <span
+                                            data-i18n="boss.vorasius.anticipation_desc">Surveillez la main brillante de
+                                            Vorasius pour
+                                            savoir d'où partira le <em><a href="https://www.wowhead.com/spell=1256855"
+                                                    data-wowhead="spell=1256855" class="spell-link-inline">Void
+                                                    Breath</a></em>.</span></li>
                                 </ul>
                             </div>
 
-                            <h2>Mécanique de Pression : <a href="https://www.wowhead.com/spell=1241692"
-                                    data-wowhead="spell=1241692" class="spell-link-inline">Smashing Frenzy</a></h2>
-                            <p>Vorasius frappe le sol régulièrement, infligeant des dégâts physiques lourds et
+                            <h2 data-i18n="boss.vorasius.pression_title">Mécanique de Pression : <a
+                                    href="https://www.wowhead.com/spell=1241692" data-wowhead="spell=1241692"
+                                    class="spell-link-inline">Smashing Frenzy</a></h2>
+                            <p data-i18n="boss.vorasius.pression_desc">Vorasius frappe le sol régulièrement, infligeant
+                                des dégâts physiques lourds et
                                 étourdissant le raid pendant 2 secondes.</p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Capacité</th>
-                                            <th style="width: 45%">Effet</th>
-                                            <th style="width: 30%">Action Requise</th>
+                                            <th class="col-ability" data-i18n="boss.vorasius.capacity">Capacité</th>
+                                            <th class="col-effect" data-i18n="boss.vorasius.effect">Effet</th>
+                                            <th class="col-action" data-i18n="boss.vorasius.action_required">Action
+                                                Requise</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -167,9 +201,11 @@
                                 </table>
                             </div>
 
-                            <h2>Gestion des Rejetons : <a href="https://www.wowhead.com/spell=1259186"
-                                    data-wowhead="spell=1259186" class="spell-link-inline">Blisterburst</a></h2>
-                            <p>Des pustules apparaissent sur le corps de Vorasius, éclatant pour libérer des
+                            <h2 data-i18n="boss.vorasius.spawns_title">Gestion des Rejetons : <a
+                                    href="https://www.wowhead.com/spell=1259186" data-wowhead="spell=1259186"
+                                    class="spell-link-inline">Blisterburst</a></h2>
+                            <p data-i18n="boss.vorasius.spawns_desc">Des pustules apparaissent sur le corps de Vorasius,
+                                éclatant pour libérer des
                                 <strong>Blistercreeps</strong>.
                             </p>
 
@@ -177,9 +213,9 @@
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Ennemi</th>
-                                            <th style="width: 45%">Menace</th>
-                                            <th style="width: 30%">Stratégie</th>
+                                            <th class="col-enemy" data-i18n="boss.averzian.enemy">Ennemi</th>
+                                            <th class="col-ability" data-i18n="boss.vorasius.threat">Menace</th>
+                                            <th class="col-strategy" data-i18n="boss.averzian.strategy">Stratégie</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -224,8 +260,7 @@
                                                     style="background: none; border: 1px dashed white;"></i> Add</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Kitez les adds sur les murs pour les briser à leur mort.</em>
                                     </p>
                                 </div>
@@ -254,8 +289,7 @@
                                                 Safe</span>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+                                    <p class="citation-text">
                                         <em>Quand un mur casse, courez immédiatement derrière lui pour éviter le
                                             balayage.</em>
                                     </p>
@@ -266,10 +300,11 @@
 
                     <aside class="supplementary-info">
                         <div class="video-section">
-                            <h2>Vidéo Guide</h2>
+                            <h2 data-i18n="boss.vorasius.video_guide">Vidéo Guide</h2>
                             <div class="video-container video-trigger" id="videoTrigger">
-                                <img src="https://img.youtube.com/vi/4qXsEXUpAVw/maxresdefault.jpg" alt="Video"
-                                    class="video-thumb">
+                                <img src="https://img.youtube.com/vi/4qXsEXUpAVw/maxresdefault.jpg"
+                                    alt="Video Guide Vorasius" class="video-thumb" width="1280" height="720"
+                                    loading="lazy">
                                 <div class="play-button">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                         <path d="M8 5v14l11-7z" />
@@ -279,7 +314,7 @@
                         </div>
 
                         <div class="spell-section">
-                            <h2>Sorts du Boss</h2>
+                            <h2 data-i18n="boss.vorasius.spells_boss">Sorts du Boss</h2>
                             <div class="spell-list accordion">
                                 <div class="accordion-item">
                                     <button class="accordion-header">
@@ -303,7 +338,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-header">
-                                        <h3>Adds & Environnement</h3>
+                                        <h3 data-i18n="boss.vorasius.spells_adds">Adds & Environnement</h3>
                                         <span class="arrow">▼</span>
                                     </button>
                                     <div class="accordion-content">

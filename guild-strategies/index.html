@@ -10,22 +10,28 @@
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item active">Dashboard</a>
+            <a href="index.html" class="nav-item active" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
-            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor & Ezzorak</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor &amp; Ezzorak</a>
             <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel’Danas</div>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
             <a href="#" class="nav-item coming-soon">Belo’ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
@@ -41,11 +47,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>JSC GUIDES Dashboard</h1>
+            <h1 data-i18n="app.title">JSCGuides - Stratégies de Raid</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -55,8 +61,7 @@
 
                 <h2 style="margin-bottom: 24px;">Boss & Stratégies</h2>
 
-                <h3
-                    style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; margin-top: 32px; text-transform: uppercase;">
+                <h3 class="section-title">
                     The Voidspear</h3>
                 <div class="boss-grid">
                     <a href="boss-averzian.html" class="boss-card">
@@ -99,9 +104,9 @@
                         </div>
                     </a>
 
-                    <div class="boss-card" style="opacity: 0.5; cursor: not-allowed;">
+                    <div class="boss-card boss-card-unavailable">
                         <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Coming+Soon" alt="Alleria Windrunner"
-                            class="boss-card-img">
+                            class="boss-card-img" width="300" height="150" loading="lazy">
                         <div class="boss-card-info">
                             <h3>Alleria Windrunner</h3>
                             <p>Coming Soon</p>
@@ -109,8 +114,7 @@
                     </div>
                 </div>
 
-                <h3
-                    style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; margin-top: 48px; text-transform: uppercase;">
+                <h3 class="section-title-large">
                     The Dreamrift</h3>
                 <div class="boss-grid">
                     <a href="boss-chimaerus.html" class="boss-card">
@@ -122,21 +126,20 @@
                     </a>
                 </div>
 
-                <h3
-                    style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; margin-top: 48px; text-transform: uppercase;">
+                <h3 class="section-title-large">
                     March on Quel’Danas</h3>
                 <div class="boss-grid">
-                    <div class="boss-card" style="opacity: 0.5; cursor: not-allowed;">
+                    <div class="boss-card boss-card-unavailable">
                         <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Coming+Soon" alt="Belo'ren"
-                            class="boss-card-img">
+                            class="boss-card-img" width="300" height="150" loading="lazy">
                         <div class="boss-card-info">
                             <h3>Belo’ren</h3>
                             <p>Coming Soon</p>
                         </div>
                     </div>
-                    <div class="boss-card" style="opacity: 0.5; cursor: not-allowed;">
+                    <div class="boss-card boss-card-unavailable">
                         <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Coming+Soon" alt="Midnight Falls"
-                            class="boss-card-img">
+                            class="boss-card-img" width="300" height="150" loading="lazy">
                         <div class="boss-card-info">
                             <h3>Midnight Falls</h3>
                             <p>Coming Soon</p>
@@ -146,8 +149,7 @@
             </div>
         </div>
     </main>
-    <footer
-        style="position: fixed; bottom: 10px; right: 10px; opacity: 0.5; font-size: 0.8rem; color: var(--text-muted);">
+    <footer class="footer-info">
         v2.1 - Deployment Check
     </footer>
 

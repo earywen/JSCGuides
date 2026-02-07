@@ -6,15 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chimaerus - Stratégies</title>
     <link rel="stylesheet" href="./src/style.css">
+    <meta name="description"
+        content="Stratégie complète pour Chimaerus (The Dreamrift) : Gestion de l'Aln, rotation des groupes et phases détaillées pour Normal, Héroïque et Mythique.">
 </head>
 
 <body>
     <aside class="dashboard-sidebar">
-        <div class="sidebar-brand">JSCGUIDE</div>
+        <div class="sidebar-brand">
+            <span>JSCGUIDE</span>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item">Dashboard</a>
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
 
-            <div class="sidebar-section">The Voidspear</div>
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
             <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
             <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
             <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
@@ -22,10 +30,10 @@
             <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
             <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
 
-            <div class="sidebar-section">The Dreamrift</div>
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
             <a href="boss-chimaerus.html" class="nav-item active">Chimaerus</a>
 
-            <div class="sidebar-section">March on Quel'Danas</div>
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
             <a href="#" class="nav-item coming-soon">Belo'ren</a>
             <a href="#" class="nav-item coming-soon">Midnight Falls</a>
         </nav>
@@ -41,11 +49,11 @@
                     <line x1="3" y1="18" x2="21" y2="18"></line>
                 </svg>
             </button>
-            <h1>Chimaerus</h1>
+            <h1 data-i18n="boss.chimaerus.title">Chimaerus</h1>
             <div class="difficulty-switcher">
-                <button class="diff-btn" data-mode="normal">Normal</button>
-                <button class="diff-btn" data-mode="heroic">Héroïque</button>
-                <button class="diff-btn" data-mode="mythic">Mythique</button>
+                <button class="diff-btn" data-mode="normal" data-i18n="common.normal">Normal</button>
+                <button class="diff-btn" data-mode="heroic" data-i18n="common.heroic">Héroïque</button>
+                <button class="diff-btn" data-mode="mythic" data-i18n="common.mythic">Mythique</button>
             </div>
         </header>
 
@@ -56,169 +64,229 @@
                     <div class="strategy-column">
                         <section class="tldr-grid">
                             <div class="role-column tanks">
-                                <h3>🛡️ Tanks</h3>
+                                <h3 data-i18n="boss.chimaerus.tanks">🛡️ Tanks</h3>
                                 <ul>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1262305"
+                                    <li><strong data-i18n="boss.chimaerus.alndust_upheaval"><a
+                                                href="https://www.wowhead.com/spell=1262305"
                                                 data-wowhead="spell=1262305" class="spell-link-inline">Alndust
-                                                Upheaval</a> :</strong> Soak groupé sur le Tank ! Split le raid en
-                                        2 groupes alternés (G1+G3 puis G2+G4).</li>
-                                    <li><strong>Colossal Horror :</strong> Tankez les adds dans l'Aln. Attention aux
-                                        <em><a href="https://www.wowhead.com/spell=1262020" data-wowhead="spell=1262020"
-                                                class="spell-link-inline">Colossal Strikes</a></em>.
+                                                Upheaval</a> :</strong> <span
+                                            data-i18n="boss.chimaerus.alndust_desc">Soak groupé sur le Tank ! Split le
+                                            raid en
+                                            2 groupes alternés (G1+G3 puis G2+G4).</span></li>
+                                    <li><strong data-i18n="boss.chimaerus.colossal_horror">Colossal Horror :</strong>
+                                        <span data-i18n="boss.chimaerus.colossal_horror_desc">Tankez les adds dans
+                                            l'Aln. Attention aux
+                                            <em><a href="https://www.wowhead.com/spell=1262020"
+                                                    data-wowhead="spell=1262020" class="spell-link-inline">Colossal
+                                                    Strikes</a></em>.</span>
                                     </li>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1252863"
+                                    <li><strong data-i18n="boss.chimaerus.insatiable"><a
+                                                href="https://www.wowhead.com/spell=1252863"
                                                 data-wowhead="spell=1252863" class="spell-link-inline">Insatiable</a>
-                                            :</strong> Éloignez toujours le boss des manifestations
-                                        (sinon il les mange).</li>
+                                            :</strong> <span data-i18n="boss.chimaerus.insatiable_desc">Éloignez
+                                            toujours le boss des manifestations
+                                            (sinon il les mange).</span></li>
                                 </ul>
                             </div>
                             <div class="role-column healers">
-                                <h3>💚 Healers</h3>
+                                <h3 data-i18n="boss.chimaerus.healers">💚 Healers</h3>
                                 <ul>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1250953"
+                                    <li><strong data-i18n="boss.chimaerus.rift_sickness"><a
+                                                href="https://www.wowhead.com/spell=1250953"
                                                 data-wowhead="spell=1250953" class="spell-link-inline">Rift Sickness</a>
-                                            :</strong> Absorbe les prochains X soins par stack. Plus
-                                        d'adds = plus de stacks !</li>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1246621"
+                                            :</strong> <span data-i18n="boss.chimaerus.rift_sickness_desc">Absorbe les
+                                            prochains X soins par stack. Plus
+                                            d'adds = plus de stacks !</span></li>
+                                    <li><strong data-i18n="boss.chimaerus.caustic_phlegm"><a
+                                                href="https://www.wowhead.com/spell=1246621"
                                                 data-wowhead="spell=1246621" class="spell-link-inline">Caustic
-                                                Phlegm</a> (P2) :</strong> DoT raid-wide pendant 12s. Préparez vos
-                                        CDs.</li>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1257087"
+                                                Phlegm</a> (P2) :</strong> <span
+                                            data-i18n="boss.chimaerus.caustic_phlegm_desc">DoT raid-wide pendant 12s.
+                                            Préparez vos
+                                            CDs.</span></li>
+                                    <li><strong data-i18n="boss.chimaerus.consuming_miasma"><a
+                                                href="https://www.wowhead.com/spell=1257087"
                                                 data-wowhead="spell=1257087" class="spell-link-inline">Consuming
-                                                Miasma</a> (Héro) :</strong> Dispel stratégique pour cleaner les
-                                        pools d'Alndust.</li>
+                                                Miasma</a> (Héro) :</strong> <span
+                                            data-i18n="boss.chimaerus.consuming_miasma_desc">Dispel stratégique pour
+                                            cleaner les
+                                            pools d'Alndust.</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
-                                <h3>⚔️ DPS</h3>
+                                <h3 data-i18n="boss.chimaerus.dps">⚔️ DPS</h3>
                                 <ul>
-                                    <li><strong>Priorité Adds :</strong> Cassez les <em><a
-                                                href="https://www.wowhead.com/spell=1245727"
-                                                data-wowhead="spell=1245727"
-                                                class="spell-link-inline">Alnshroud</a></em> dans l'Aln, puis
-                                        finissez les adds dans Reality avant qu'ils n'atteignent le boss.</li>
-                                    <li><strong>Interrupts :</strong> <em><a
-                                                href="https://www.wowhead.com/spell=1249017"
-                                                data-wowhead="spell=1249017" class="spell-link-inline">Fearsome
-                                                Cry</a></em> (fear) et <em>Essence
-                                            Bolt</em> sur les Haunting Essence.</li>
-                                    <li><strong>Stacking :</strong> Tuez les adds groupés pour minimiser les pools
-                                        d'Alndust.</li>
+                                    <li><strong data-i18n="boss.chimaerus.adds_priority">Priorité Adds :</strong> <span
+                                            data-i18n="boss.chimaerus.adds_priority_desc">Cassez les <em><a
+                                                    href="https://www.wowhead.com/spell=1245727"
+                                                    data-wowhead="spell=1245727"
+                                                    class="spell-link-inline">Alnshroud</a></em> dans l'Aln, puis
+                                            finissez les adds dans Reality avant qu'ils n'atteignent le boss.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.chimaerus.interrupts">Interrupts :</strong> <span
+                                            data-i18n="boss.chimaerus.interrupts_desc"><em><a
+                                                    href="https://www.wowhead.com/spell=1249017"
+                                                    data-wowhead="spell=1249017" class="spell-link-inline">Fearsome
+                                                    Cry</a></em> (fear) et <em>Essence
+                                                Bolt</em> sur les Haunting Essence.</span></li>
+                                    <li><strong data-i18n="boss.chimaerus.stacking">Stacking :</strong> <span
+                                            data-i18n="boss.chimaerus.stacking_desc">Tuez les adds groupés pour
+                                            minimiser les pools
+                                            d'Alndust.</span></li>
                                 </ul>
                             </div>
                         </section>
 
                         <!-- Strategy -->
                         <section class="phase-block">
-                            <h2>Tactique Globale</h2>
+                            <h2 data-i18n="boss.chimaerus.global_tactics">Tactique Globale</h2>
                             <div class="tactics-box">
                                 <ul>
-                                    <li><strong>Bloodlust :</strong> Au Pull, Phase 1. Maximisez les dégâts sur le boss
-                                        pendant que les adds sont gérables.</li>
-                                    <li><strong>Rotation des Soaks :</strong> Groupes 1+3 prennent le premier
-                                        <em><a href="https://www.wowhead.com/spell=1262305" data-wowhead="spell=1262305"
-                                                class="spell-link-inline">Alndust Upheaval</a></em>, puis G2+4 le
-                                        suivant. Alternez à chaque Phase 1.
+                                    <li><strong data-i18n="boss.chimaerus.bloodlust_global">Bloodlust :</strong> <span
+                                            data-i18n="boss.chimaerus.bloodlust_global_desc">Au Pull, Phase 1. Maximisez
+                                            les dégâts sur le boss
+                                            pendant que les adds sont gérables.</span></li>
+                                    <li><strong data-i18n="boss.chimaerus.soak_rotation">Rotation des Soaks :</strong>
+                                        <span data-i18n="boss.chimaerus.soak_rotation_desc">Groupes 1+3 prennent le
+                                            premier
+                                            <em><a href="https://www.wowhead.com/spell=1262305"
+                                                    data-wowhead="spell=1262305" class="spell-link-inline">Alndust
+                                                    Upheaval</a></em>, puis G2+4 le
+                                            suivant. Alternez à chaque Phase 1.</span>
                                     </li>
-                                    <li><strong>Stacking des Adds :</strong> Tuez les manifestations au même endroit
-                                        pour limiter les pools d'<em><a href="https://www.wowhead.com/spell=1245919"
-                                                data-wowhead="spell=1245919" class="spell-link-inline">Alndust
-                                                Essence</a></em>.</li>
-                                    <li><strong>Consume Timer :</strong> Tous les adds DOIVENT être morts avant que le
-                                        boss atteigne 100 énergie.</li>
+                                    <li><strong data-i18n="boss.chimaerus.adds_stacking">Stacking des Adds :</strong>
+                                        <span data-i18n="boss.chimaerus.adds_stacking_desc">Tuez les manifestations au
+                                            même endroit
+                                            pour limiter les pools d'<em><a href="https://www.wowhead.com/spell=1245919"
+                                                    data-wowhead="spell=1245919" class="spell-link-inline">Alndust
+                                                    Essence</a></em>.</span>
+                                    </li>
+                                    <li><strong data-i18n="boss.chimaerus.consume_timer">Consume Timer :</strong> <span
+                                            data-i18n="boss.chimaerus.consume_timer_desc">Tous les adds DOIVENT être
+                                            morts avant que le
+                                            boss atteigne 100 énergie.</span></li>
                                 </ul>
                             </div>
 
-                            <h2>Phase 1 : <a href="https://www.wowhead.com/spell=1252863" data-wowhead="spell=1252863"
+                            <h2 data-i18n="boss.chimaerus.phase_1_title">Phase 1 : <a
+                                    href="https://www.wowhead.com/spell=1252863" data-wowhead="spell=1252863"
                                     class="spell-link-inline">Insatiable</a> Hunger</h2>
-                            <p>Chimaerus invoque des <strong>Manifestations</strong> dans le royaume de l'Aln. Seuls les
+                            <p data-i18n="boss.chimaerus.phase_1_desc">Chimaerus invoque des
+                                <strong>Manifestations</strong> dans le royaume de l'Aln. Seuls les
                                 joueurs
-                                avec <em>Alnsight</em> (obtenu via le soak) peuvent les attaquer.</p>
+                                avec <em>Alnsight</em> (obtenu via le soak) peuvent les attaquer.
+                            </p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Mécanique</th>
-                                            <th style="width: 45%">Effet</th>
-                                            <th style="width: 30%">Action Requise</th>
+                                            <th class="col-mechanic" data-i18n="boss.chimaerus.mechanic">Mécanique</th>
+                                            <th class="col-effect" data-i18n="boss.chimaerus.effect">Effet</th>
+                                            <th class="col-action" data-i18n="boss.chimaerus.action_required">Action
+                                                Requise</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td><strong><a href="https://www.wowhead.com/spell=1262305"
-                                                        data-wowhead="spell=1262305" class="spell-link-inline">Alndust
+                                                        data-wowhead="spell=1262305" class="spell-link-inline"
+                                                        data-i18n="boss.chimaerus.alndust_upheaval">Alndust
                                                         Upheaval</a></strong></td>
-                                            <td>Soak sur le Tank. Dégâts partagés, donne <em>Alnsight</em> (40s).</td>
-                                            <td><strong>Soak groupé :</strong> ~10 joueurs pour split les dégâts.</td>
+                                            <td data-i18n="boss.chimaerus.alndust_upheaval_table">Soak sur le Tank.
+                                                Dégâts partagés, donne <em>Alnsight</em> (40s).</td>
+                                            <td><strong data-i18n="boss.chimaerus.alndust_upheaval_action">Soak groupé :
+                                                    ~10 joueurs pour split les dégâts.</strong></td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1258610"
+                                            <td><strong data-i18n="boss.chimaerus.rift_emergence"><a
+                                                        href="https://www.wowhead.com/spell=1258610"
                                                         data-wowhead="spell=1258610" class="spell-link-inline">Rift
                                                         Emergence</a></strong></td>
-                                            <td>Hurlement qui fait spawn des manifestations + dégâts raid.</td>
-                                            <td>Préparez-vous à tuer les adds immédiatement.</td>
+                                            <td data-i18n="boss.chimaerus.rift_emergence_effect">Hurlement qui fait
+                                                spawn des manifestations + dégâts raid.</td>
+                                            <td data-i18n="boss.chimaerus.rift_emergence_action">Préparez-vous à tuer
+                                                les adds immédiatement.</td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1245396"
+                                            <td><strong data-i18n="boss.chimaerus.consume"><a
+                                                        href="https://www.wowhead.com/spell=1245396"
                                                         data-wowhead="spell=1245396"
                                                         class="spell-link-inline">Consume</a></strong></td>
-                                            <td>À 100 énergie : knockback + mange tous les adds restants.</td>
-                                            <td><strong>Tous les adds doivent être morts !</strong> Sinon +100%
-                                                dmg/stack.
+                                            <td data-i18n="boss.chimaerus.consume_effect">À 100 énergie : knockback +
+                                                mange tous les adds restants.</td>
+                                            <td><strong data-i18n="boss.chimaerus.consume_action">Tous les adds doivent
+                                                    être morts ! Sinon +100%
+                                                    dmg/stack.</strong>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1272726"
+                                            <td><strong data-i18n="boss.chimaerus.rending_tear"><a
+                                                        href="https://www.wowhead.com/spell=1272726"
                                                         data-wowhead="spell=1272726" class="spell-link-inline">Rending
                                                         Tear</a></strong></td>
-                                            <td>Cône frontal + bleed 6s.</td>
-                                            <td>Évitez d'être devant le boss (sauf tanks).</td>
+                                            <td data-i18n="boss.chimaerus.rending_tear_effect">Cône frontal + bleed 6s.
+                                            </td>
+                                            <td data-i18n="boss.chimaerus.rending_tear_action">Évitez d'être devant le
+                                                boss (sauf tanks).</td>
                                         </tr>
                                         <tr class="mechanic-heroic">
-                                            <td><strong><a href="https://www.wowhead.com/spell=1257087"
+                                            <td><strong data-i18n="boss.chimaerus.consuming_miasma_table"><a
+                                                        href="https://www.wowhead.com/spell=1257087"
                                                         data-wowhead="spell=1257087" class="spell-link-inline">Consuming
                                                         Miasma</a></strong></td>
-                                            <td>DoT 1min sur joueurs ciblés. Au dispel : clear les pools.</td>
-                                            <td><strong>Dispel stratégique</strong> dans les zones d'Alndust.</td>
+                                            <td data-i18n="boss.chimaerus.consuming_miasma_effect">DoT 1min sur joueurs
+                                                ciblés. Au dispel : clear les pools.</td>
+                                            <td><strong data-i18n="boss.chimaerus.consuming_miasma_action">Dispel
+                                                    stratégique dans les zones d'Alndust.</strong></td>
                                         </tr>
                                         <tr class="mechanic-mythic-only">
-                                            <td><strong><a href="https://www.wowhead.com/spell=1264756"
+                                            <td><strong data-i18n="boss.chimaerus.rift_madness"><a
+                                                        href="https://www.wowhead.com/spell=1264756"
                                                         data-wowhead="spell=1264756" class="spell-link-inline">Rift
                                                         Madness</a></strong></td>
-                                            <td>Joueurs dans l'Aln doivent être "ground" par quelqu'un dans Reality.
+                                            <td data-i18n="boss.chimaerus.rift_madness_effect">Joueurs dans l'Aln
+                                                doivent être "ground" par quelqu'un dans Reality.
                                             </td>
-                                            <td><strong>Swap de realms :</strong> Tenez-vous sous les joueurs affectés.
+                                            <td><strong data-i18n="boss.chimaerus.rift_madness_action">Swap de realms :
+                                                    Tenez-vous sous les joueurs affectés.</strong>
                                             </td>
                                         </tr>
                                         <tr class="mechanic-mythic-only">
-                                            <td><strong><a href="https://www.wowhead.com/spell=1267201"
+                                            <td><strong data-i18n="boss.chimaerus.dissonance"><a
+                                                        href="https://www.wowhead.com/spell=1267201"
                                                         data-wowhead="spell=1267201"
                                                         class="spell-link-inline">Dissonance</a></strong></td>
-                                            <td>Dégâts à tous les joueurs du realm opposé à 8m.</td>
-                                            <td>Gardez 8m de distance entre realms.</td>
+                                            <td data-i18n="boss.chimaerus.dissonance_effect">Dégâts à tous les joueurs
+                                                du realm opposé à 8m.</td>
+                                            <td data-i18n="boss.chimaerus.dissonance_action">Gardez 8m de distance entre
+                                                realms.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <h2>Manifestations (Adds)</h2>
-                            <p>Les adds spawn dans l'<strong>Aln</strong> avec un bouclier. Une fois le bouclier brisé,
+                            <h2 data-i18n="boss.chimaerus.manifestations_title">Manifestations (Adds)</h2>
+                            <p data-i18n="boss.chimaerus.manifestations_desc">Les adds spawn dans l'<strong>Aln</strong>
+                                avec un bouclier. Une fois le bouclier brisé,
                                 ils tombent dans <strong>Reality</strong> et marchent vers le boss.</p>
 
                             <div class="table-responsive">
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Ennemi</th>
-                                            <th style="width: 45%">Capacités Clés</th>
-                                            <th style="width: 30%">Stratégie</th>
+                                            <th class="col-enemy" data-i18n="boss.chimaerus.enemy">Ennemi</th>
+                                            <th class="col-ability" data-i18n="boss.chimaerus.key_abilities">Capacités
+                                                Clés</th>
+                                            <th class="col-strategy" data-i18n="boss.chimaerus.strategy">Stratégie</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong>Colossal Horror</strong></td>
-                                            <td><em><a href="https://www.wowhead.com/spell=1249207"
+                                            <td><strong data-i18n="boss.chimaerus.colossal_horror">Colossal
+                                                    Horror</strong></td>
+                                            <td data-i18n="boss.chimaerus.colossal_horror_effect"><em><a
+                                                        href="https://www.wowhead.com/spell=1249207"
                                                         data-wowhead="spell=1249207"
                                                         class="spell-link-inline">Discordant
                                                         Roar</a></em> (+10% dmg/cast). <em><a
@@ -226,37 +294,43 @@
                                                         data-wowhead="spell=1262020" class="spell-link-inline">Colossal
                                                         Strikes</a></em>
                                                 (physique + nature).</td>
-                                            <td><strong>Priorité haute.</strong> Tank l'add, kill fast. Le Roar stacke !
+                                            <td><strong data-i18n="boss.chimaerus.colossal_horror_action">Priorité
+                                                    haute. Tank l'add, kill fast. Le Roar stacke !</strong>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Haunting Essence</strong></td>
-                                            <td><em><a href="https://www.wowhead.com/spell=1249017"
+                                            <td><strong data-i18n="boss.chimaerus.haunting_essence">Haunting
+                                                    Essence</strong></td>
+                                            <td data-i18n="boss.chimaerus.haunting_essence_effect"><em><a
+                                                        href="https://www.wowhead.com/spell=1249017"
                                                         data-wowhead="spell=1249017" class="spell-link-inline">Fearsome
                                                         Cry</a></em> (fear 3s). <em><a
                                                         href="https://www.wowhead.com/spell=1261997"
                                                         data-wowhead="spell=1261997" class="spell-link-inline">Essence
                                                         Bolt</a></em> (dégâts random).</td>
-                                            <td><strong>Interrompez</strong> <a
-                                                    href="https://www.wowhead.com/spell=1249017"
-                                                    data-wowhead="spell=1249017" class="spell-link-inline">Fearsome
-                                                    Cry</a>
-                                                et <a href="https://www.wowhead.com/spell=1261997"
-                                                    data-wowhead="spell=1261997" class="spell-link-inline">Essence
-                                                    Bolt</a>
-                                                !</td>
+                                            <td><strong data-i18n="boss.chimaerus.haunting_essence_action">Interrompez
+                                                    <a href="https://www.wowhead.com/spell=1249017"
+                                                        data-wowhead="spell=1249017" class="spell-link-inline">Fearsome
+                                                        Cry</a>
+                                                    et <a href="https://www.wowhead.com/spell=1261997"
+                                                        data-wowhead="spell=1261997" class="spell-link-inline">Essence
+                                                        Bolt</a>
+                                                    !</strong></td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Swarming Shade</strong></td>
-                                            <td>Petits adds faibles.</td>
-                                            <td>Cleave/AoE. Groupez-les pour les tuer ensemble.</td>
+                                            <td><strong data-i18n="boss.chimaerus.swarming_shade">Swarming
+                                                    Shade</strong></td>
+                                            <td data-i18n="boss.chimaerus.swarming_shade_effect">Petits adds faibles.
+                                            </td>
+                                            <td data-i18n="boss.chimaerus.swarming_shade_action">Cleave/AoE. Groupez-les
+                                                pour les tuer ensemble.</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <h2>Phase 2 : To The Skies</h2>
-                            <p>Le boss s'envole et bombarde le raid avec <em><a
+                            <h2 data-i18n="boss.chimaerus.phase_2_title">Phase 2 : To The Skies</h2>
+                            <p data-i18n="boss.chimaerus.phase_2_desc">Le boss s'envole et bombarde le raid avec <em><a
                                         href="https://www.wowhead.com/spell=1245486" data-wowhead="spell=1245486"
                                         class="spell-link-inline">Corrupted Devastation</a></em>. Les souffles
                                 sont <strong>baitables</strong> !</p>
@@ -265,48 +339,63 @@
                                 <table class="ability-table">
                                     <thead>
                                         <tr>
-                                            <th style="width: 25%">Mécanique</th>
-                                            <th style="width: 45%">Effet</th>
-                                            <th style="width: 30%">Action Requise</th>
+                                            <th class="col-mechanic">Mécanique</th>
+                                            <th class="col-effect">Effet</th>
+                                            <th class="col-action">Action Requise</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1245486"
+                                            <td><strong data-i18n="boss.chimaerus.corrupted_devastation"><a
+                                                        href="https://www.wowhead.com/spell=1245486"
                                                         data-wowhead="spell=1245486" class="spell-link-inline">Corrupted
                                                         Devastation</a></strong></td>
-                                            <td>Souffle en ligne sur les joueurs. Laisse des pools + spawn des adds.
+                                            <td data-i18n="boss.chimaerus.corrupted_devastation_effect">Souffle en ligne
+                                                sur les joueurs. Laisse des pools + spawn des adds.
                                             </td>
-                                            <td><strong>Baitez les lignes !</strong> Stackez-vous pour les superposer.
+                                            <td><strong data-i18n="boss.chimaerus.corrupted_devastation_action">Baitez
+                                                    les lignes ! Stackez-vous pour les superposer.</strong>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1245919"
+                                            <td><strong data-i18n="boss.chimaerus.alndust_essence"><a
+                                                        href="https://www.wowhead.com/spell=1245919"
                                                         data-wowhead="spell=1245919" class="spell-link-inline">Alndust
                                                         Essence</a> (Pools)</strong></td>
-                                            <td>Zones au sol : slow 50% + DoT.</td>
-                                            <td>Évitez. Utilisez les Miasma dispels pour cleaner.</td>
+                                            <td data-i18n="boss.chimaerus.alndust_essence_effect">Zones au sol : slow
+                                                50% + DoT.</td>
+                                            <td data-i18n="boss.chimaerus.alndust_essence_action">Évitez. Utilisez les
+                                                Miasma dispels pour cleaner.</td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1246621"
+                                            <td><strong data-i18n="boss.chimaerus.caustic_phlegm"><a
+                                                        href="https://www.wowhead.com/spell=1246621"
                                                         data-wowhead="spell=1246621" class="spell-link-inline">Caustic
                                                         Phlegm</a></strong></td>
-                                            <td>DoT raid-wide 12s (Nature).</td>
-                                            <td><strong>Healing CD</strong> recommandé.</td>
+                                            <td data-i18n="boss.chimaerus.caustic_phlegm_desc">DoT raid-wide 12s
+                                                (Nature).</td>
+                                            <td><strong data-i18n="boss.chimaerus.healers">Healing CD</strong>
+                                                recommandé.</td>
                                         </tr>
                                         <tr>
-                                            <td><strong><a href="https://www.wowhead.com/spell=1245406"
+                                            <td><strong data-i18n="boss.chimaerus.ravenous_dive"><a
+                                                        href="https://www.wowhead.com/spell=1245406"
                                                         data-wowhead="spell=1245406" class="spell-link-inline">Ravenous
                                                         Dive</a></strong></td>
-                                            <td>Le boss atterrit, knockback + mange les adds restants.</td>
-                                            <td>Tuez TOUS les adds avant la dive !</td>
+                                            <td data-i18n="boss.chimaerus.ravenous_dive_effect">Le boss atterrit,
+                                                knockback + mange les adds restants.</td>
+                                            <td data-i18n="boss.chimaerus.ravenous_dive_action">Tuez TOUS les adds avant
+                                                la dive !</td>
                                         </tr>
                                         <tr class="mechanic-heroic">
-                                            <td><strong><a href="https://www.wowhead.com/spell=1245406"
+                                            <td><strong data-i18n="boss.chimaerus.ravenous_dive_heroic"><a
+                                                        href="https://www.wowhead.com/spell=1245406"
                                                         data-wowhead="spell=1245406" class="spell-link-inline">Ravenous
                                                         Dive</a> (Héro)</strong></td>
-                                            <td>Ne consomme plus les pools d'Alndust automatiquement.</td>
-                                            <td>Gérez les pools manuellement via dispels.</td>
+                                            <td data-i18n="boss.chimaerus.ravenous_dive_heroic_effect">Ne consomme plus
+                                                les pools d'Alndust automatiquement.</td>
+                                            <td data-i18n="boss.chimaerus.ravenous_dive_heroic_action">Gérez les pools
+                                                manuellement via dispels.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -319,7 +408,7 @@
                             <div class="schemas-grid">
                                 <!-- Schema 1: Realm Alternance -->
                                 <div class="visual-mechanic">
-                                    <h3>Rotation des Groupes (Phase 1)</h3>
+                                    <h3 data-i18n="boss.chimaerus.group_rotation">Rotation des Groupes (Phase 1)</h3>
                                     <div class="chimaerus-group-visual">
                                         <div class="realm-container">
                                             <div class="realm-label">Reality</div>
@@ -339,15 +428,15 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-                                        <em>G1+G3 soak le 1er Upheaval → passent dans l'Aln pour kill les adds.</em>
+                                    <p class="citation-text">
+                                        <em data-i18n="boss.chimaerus.group_rotation_desc">G1+G3 soak le 1er Upheaval →
+                                            passent dans l'Aln pour kill les adds.</em>
                                     </p>
                                 </div>
 
                                 <!-- Schema 2: Phase 2 Baiting -->
                                 <div class="visual-mechanic">
-                                    <h3>Baiting Phase 2 (Breath Lines)</h3>
+                                    <h3 data-i18n="boss.chimaerus.baiting_phase_2">Baiting Phase 2 (Breath Lines)</h3>
                                     <div class="chimaerus-breath-visual">
                                         <div class="arena-oval">
                                             <div class="breath-line line1"></div>
@@ -356,9 +445,9 @@
                                             <div class="safe-zone-text">SAFE</div>
                                         </div>
                                     </div>
-                                    <p
-                                        style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-                                        <em>Stackez-vous pour bait les souffles au même endroit → plus d'espace
+                                    <p class="citation-text">
+                                        <em data-i18n="boss.chimaerus.baiting_phase_2_desc">Stackez-vous pour bait les
+                                            souffles au même endroit → plus d'espace
                                             safe.</em>
                                     </p>
                                 </div>
@@ -368,10 +457,11 @@
 
                     <aside class="supplementary-info">
                         <div class="video-section">
-                            <h2>Vidéo Guide</h2>
+                            <h2 data-i18n="boss.chimaerus.video_guide">Vidéo Guide</h2>
                             <div class="video-container video-trigger" id="videoTrigger">
-                                <img src="https://img.youtube.com/vi/Luz49ZW9UPE/maxresdefault.jpg" alt="Video"
-                                    class="video-thumb">
+                                <img src="https://img.youtube.com/vi/Luz49ZW9UPE/maxresdefault.jpg"
+                                    alt="Video Guide Chimaerus" class="video-thumb" width="1280" height="720"
+                                    loading="lazy">
                                 <div class="play-button">
                                     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                         <path d="M8 5v14l11-7z" />
@@ -381,7 +471,7 @@
                         </div>
 
                         <div class="spell-section">
-                            <h2>Sorts de l'Encontre</h2>
+                            <h2 data-i18n="boss.chimaerus.encounter_spells">Sorts de l'Encontre</h2>
                             <div class="spell-list accordion">
                                 <div class="accordion-item">
                                     <button class="accordion-header">
@@ -410,7 +500,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-header">
-                                        <h3>Heroic / Mythic</h3>
+                                        <h3 data-i18n="boss.chimaerus.heroic_mythic">Heroic / Mythic</h3>
                                         <span class="arrow">▼</span>
                                     </button>
                                     <div class="accordion-content">
@@ -424,7 +514,7 @@
                                 </div>
                                 <div class="accordion-item">
                                     <button class="accordion-header">
-                                        <h3>Manifestations (Adds)</h3>
+                                        <h3 data-i18n="boss.chimaerus.manifestations_adds">Manifestations (Adds)</h3>
                                         <span class="arrow">▼</span>
                                     </button>
                                     <div class="accordion-content">

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap');
+
 :root {
   /* Colors - Anthracite Hierarchy */
   --bg-deep: #0a0a0a;
@@ -27,6 +29,7 @@
   /* Layout & Motion */
   --sidebar-width: 260px;
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Rajdhani', sans-serif;
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --transition-snappy: 0.15s var(--ease-standard);
 
@@ -65,7 +68,50 @@ h2,
 h3 {
   margin: 0;
   color: var(--text-heading);
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title-large {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  margin-top: 48px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.boss-card-unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer-info {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.citation-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* Dashboard Sidebar */
@@ -85,6 +131,32 @@ h3 {
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-brand .lang-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.sidebar-brand .lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+  opacity: 0.5;
+}
+
+.sidebar-brand .lang-btn:hover,
+.sidebar-brand .lang-btn.active {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent);
 }
 
 .sidebar-nav {
@@ -641,6 +713,30 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
 .lightbox-overlay.active {
   display: flex;
   opacity: 1;
+}
+
+.col-mechanic {
+  width: 25%;
+}
+
+.col-effect {
+  width: 45%;
+}
+
+.col-action {
+  width: 30%;
+}
+
+.col-enemy {
+  width: 25%;
+}
+
+.col-ability {
+  width: 45%;
+}
+
+.col-strategy {
+  width: 30%;
 }
 
 .lightbox-content {

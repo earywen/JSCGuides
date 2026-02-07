@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+import i18next from './i18n.js';
 
 // Logic to handle difficulty switching
 const MODES = ['normal', 'heroic', 'mythic'];
@@ -218,4 +219,42 @@ document.addEventListener('DOMContentLoaded', () => {
   initWowhead();
   initVideoLightbox();
   initAccordion();
+  initLangSwitcher();
+
+  // i18n Initialization
+  i18next.on('languageChanged', () => {
+    updateContent();
+  });
+
+  i18next.on('initialized', () => {
+    updateContent();
+  });
 });
+
+function updateContent() {
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const options = element.getAttribute('data-i18n-options'); // For future interpolation
+    element.innerHTML = i18next.t(key, options ? JSON.parse(options) : {});
+  });
+
+  // Update Buttons Active State
+  const currentLang = i18next.language;
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.dataset.lang === currentLang || (currentLang && currentLang.startsWith(btn.dataset.lang))) {
+      btn.classList.add('active');
+    } else {
+      btn.classList.remove('active');
+    }
+  });
+}
+
+// Language Switcher Logic
+function initLangSwitcher() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.dataset.lang;
+      i18next.changeLanguage(lang);
+    });
+  });
+}
