@@ -126,8 +126,8 @@ h3 {
 }
 
 .sidebar-brand {
-  padding: 24px;
-  font-size: 1.25rem;
+  padding: 16px 20px;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--accent);
   letter-spacing: -0.5px;
@@ -139,7 +139,7 @@ h3 {
 .sidebar-brand .brand-flex {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .sidebar-logo {
