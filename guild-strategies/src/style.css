@@ -2315,13 +2315,22 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
     top: 0;
     z-index: 90;
     /* Below sidebar (100) */
-    padding: 0 16px;
-    height: 60px;
+    padding: 8px 16px;
+    height: auto;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   /* Typography */
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    flex-grow: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Optical center adjustment since hamburger is on left */
+    padding-right: 40px;
   }
 
   h2 {
@@ -2411,6 +2420,21 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
   .visual-grid-aid {
     display: none;
     /* Hide visual aid on mobile if too wide */
+  }
+
+  /* Compact various elements */
+  .difficulty-switcher {
+    width: 100%;
+    order: 3;
+    justify-content: center;
+  }
+
+  .difficulty-switcher .diff-btn {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    flex: 1;
+    /* Equal width buttons */
+    text-align: center;
   }
 }
 
