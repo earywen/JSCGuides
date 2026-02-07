@@ -33,6 +33,14 @@
 
     <main class="main-view">
         <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <h1>Vorasius</h1>
             <div class="difficulty-switcher">
                 <button class="diff-btn" data-mode="normal">Normal</button>
@@ -117,41 +125,47 @@
                             <p>Vorasius frappe le sol régulièrement, infligeant des dégâts physiques lourds et
                                 étourdissant le raid pendant 2 secondes.</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Capacité</th>
-                                        <th style="width: 45%">Effet</th>
-                                        <th style="width: 30%">Action Requise</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1260052"
-                                                    data-wowhead="spell=1260052" class="spell-link-inline">Primordial
-                                                    Roar</a></strong></td>
-                                        <td>Knockback + DoT permanent (stackable).</td>
-                                        <td><strong>Soft Enrage :</strong> Le combat devient de plus en plus difficile
-                                            pour les Healers.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1241692"
-                                                    data-wowhead="spell=1241692" class="spell-link-inline">Smashing
-                                                    Frenzy</a></strong></td>
-                                        <td>Slam massif avec aftershocks en anneaux.</td>
-                                        <td><strong>Soak Tank :</strong> Le raid aide à réduire l'impact. Melee safe au
-                                            centre.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1256855"
-                                                    data-wowhead="spell=1256855" class="spell-link-inline">Void
-                                                    Breath</a></strong></td>
-                                        <td>Balayage laser mortel. Nécessite un mur brisé.</td>
-                                        <td>Vérifiez la <strong>main brillante</strong> du boss pour le côté de départ.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Capacité</th>
+                                            <th style="width: 45%">Effet</th>
+                                            <th style="width: 30%">Action Requise</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1260052"
+                                                        data-wowhead="spell=1260052"
+                                                        class="spell-link-inline">Primordial
+                                                        Roar</a></strong></td>
+                                            <td>Knockback + DoT permanent (stackable).</td>
+                                            <td><strong>Soft Enrage :</strong> Le combat devient de plus en plus
+                                                difficile
+                                                pour les Healers.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1241692"
+                                                        data-wowhead="spell=1241692" class="spell-link-inline">Smashing
+                                                        Frenzy</a></strong></td>
+                                            <td>Slam massif avec aftershocks en anneaux.</td>
+                                            <td><strong>Soak Tank :</strong> Le raid aide à réduire l'impact. Melee safe
+                                                au
+                                                centre.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1256855"
+                                                        data-wowhead="spell=1256855" class="spell-link-inline">Void
+                                                        Breath</a></strong></td>
+                                            <td>Balayage laser mortel. Nécessite un mur brisé.</td>
+                                            <td>Vérifiez la <strong>main brillante</strong> du boss pour le côté de
+                                                départ.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <h2>Gestion des Rejetons : <a href="https://www.wowhead.com/spell=1259186"
                                     data-wowhead="spell=1259186" class="spell-link-inline">Blisterburst</a></h2>
@@ -159,30 +173,34 @@
                                 <strong>Blistercreeps</strong>.
                             </p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Ennemi</th>
-                                        <th style="width: 45%">Menace</th>
-                                        <th style="width: 30%">Stratégie</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Blistercreeps</strong></td>
-                                        <td>Indispensables pour briser les murs Cristallins.</td>
-                                        <td><strong>PLACEMENT :</strong> Tuez-les impérativement au pied des murs (2 en
-                                            Héroïque).</td>
-                                    </tr>
-                                    <tr class="mechanic-mythic-only">
-                                        <td><strong>Overpowering
-                                                Pulse</strong></td>
-                                        <td>Pulsations constantes si personne n'est au corps-à-corps.</td>
-                                        <td><strong>Anticipation :</strong> Très punitif lors des knockbacks de Roar.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Ennemi</th>
+                                            <th style="width: 45%">Menace</th>
+                                            <th style="width: 30%">Stratégie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Blistercreeps</strong></td>
+                                            <td>Indispensables pour briser les murs Cristallins.</td>
+                                            <td><strong>PLACEMENT :</strong> Tuez-les impérativement au pied des murs (2
+                                                en
+                                                Héroïque).</td>
+                                        </tr>
+                                        <tr class="mechanic-mythic-only">
+                                            <td><strong>Overpowering
+                                                    Pulse</strong></td>
+                                            <td>Pulsations constantes si personne n'est au corps-à-corps.</td>
+                                            <td><strong>Anticipation :</strong> Très punitif lors des knockbacks de
+                                                Roar.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
 
 

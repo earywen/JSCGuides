@@ -33,6 +33,14 @@
 
     <main class="main-view">
         <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <h1>Fallen-King Salhadaar</h1>
             <div class="difficulty-switcher">
                 <button class="diff-btn" data-mode="normal">Normal</button>
@@ -118,95 +126,110 @@
                             <p>Salhadaar gagne de l'énergie passivement. À 100 Énergie, il entre en **Cosmic
                                 Unraveling**.</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Phase</th>
-                                        <th style="width: 45%">Description</th>
-                                        <th style="width: 30%">Stratégie</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Phase Normale</strong></td>
-                                        <td>Attire des orbes de <em>Concentrated Void</em> vers lui depuis les bords.
-                                        </td>
-                                        <td><strong>Interceptez/Tuez</strong> (Une par une en Héroïque). Priorité aux
-                                            orbes les plus proches.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Unbound Phase</strong></td>
-                                        <td>À 100 énergie, le boss subit <strong>+25% dégâts</strong> pendant 20 sec.
-                                        </td>
-                                        <td><strong>Phase de Burst (BL) :</strong> Évitez les rayons rotatifs
-                                            (<em><a href="https://www.wowhead.com/spell=1260015"
-                                                    data-wowhead="spell=1260015" class="spell-link-inline">Uncontainable
-                                                    Cosmos</a></em>).</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Phase</th>
+                                            <th style="width: 45%">Description</th>
+                                            <th style="width: 30%">Stratégie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Phase Normale</strong></td>
+                                            <td>Attire des orbes de <em>Concentrated Void</em> vers lui depuis les
+                                                bords.
+                                            </td>
+                                            <td><strong>Interceptez/Tuez</strong> (Une par une en Héroïque). Priorité
+                                                aux
+                                                orbes les plus proches.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Unbound Phase</strong></td>
+                                            <td>À 100 énergie, le boss subit <strong>+25% dégâts</strong> pendant 20
+                                                sec.
+                                            </td>
+                                            <td><strong>Phase de Burst (BL) :</strong> Évitez les rayons rotatifs
+                                                (<em><a href="https://www.wowhead.com/spell=1260015"
+                                                        data-wowhead="spell=1260015"
+                                                        class="spell-link-inline">Uncontainable
+                                                        Cosmos</a></em>).</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <h2>Sorts et Dangers</h2>
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Capacité</th>
-                                        <th style="width: 45%">Effet</th>
-                                        <th style="width: 30%">Contre-mesure</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1250803"
-                                                    data-wowhead="spell=1250803" class="spell-link-inline">Shattering
-                                                    Twilight</a></strong></td>
-                                        <td>Huerle une étoile noire + pointes au sol (<em><a
-                                                    href="https://www.wowhead.com/spell=1251213"
-                                                    data-wowhead="spell=1251213" class="spell-link-inline">Twilight
-                                                    Spikes</a></em>).</td>
-                                        <td>Sortez vite des zones d'impact et des lignes de pointes.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1260015"
-                                                    data-wowhead="spell=1260015" class="spell-link-inline">Uncontainable
-                                                    Cosmos</a></strong></td>
-                                        <td>Rayons d'énergie cosmique partant du boss dans plusieurs directions.</td>
-                                        <td>Évitez le contact direct avec les rayons.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1248697"
-                                                    data-wowhead="spell=1248697" class="spell-link-inline">Despotic
-                                                    Command</a></strong></td>
-                                        <td>Cercle rose sur un joueur. Laisse une zone de vide + heal absorb au dispel.
-                                        </td>
-                                        <td><strong>Bords de salle :</strong> Courez au bord avant le dispel. Healers,
-                                            videz l'absorb.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1250686"
-                                                    data-wowhead="spell=1250686" class="spell-link-inline">Twisting
-                                                    Obscurity</a></strong></td>
-                                        <td>Éclairs de ténèbres qui sautent entre tous les joueurs.</td>
-                                        <td>Restez packés pour faciliter les soins de zone.</td>
-                                    </tr>
-                                    <tr class="mechanic-heroic">
-                                        <td><strong>Echoing Star</strong></td>
-                                        <td>La <em><a href="https://www.wowhead.com/spell=1250803"
-                                                    data-wowhead="spell=1250803" class="spell-link-inline">Shattering
-                                                    Twilight</a></em> rebondit sur plusieurs joueurs.</td>
-                                        <td>Dispersion maximale lors de l'incantation.</td>
-                                    </tr>
-                                    <tr class="mechanic-mythic-only">
-                                        <td><strong>Fracturer Projection</strong></td>
-                                        <td>Le boss se divise en images qui incantent <em><a
-                                                    href="https://www.wowhead.com/spell=1254081"
-                                                    data-wowhead="spell=1254081" class="spell-link-inline">Unstable
-                                                    Nexus</a></em>.</td>
-                                        <td><strong>Interrompez</strong> les images. Brisez les <em>Nexus Shields</em>
-                                            en priorité.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Capacité</th>
+                                            <th style="width: 45%">Effet</th>
+                                            <th style="width: 30%">Contre-mesure</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1250803"
+                                                        data-wowhead="spell=1250803"
+                                                        class="spell-link-inline">Shattering
+                                                        Twilight</a></strong></td>
+                                            <td>Huerle une étoile noire + pointes au sol (<em><a
+                                                        href="https://www.wowhead.com/spell=1251213"
+                                                        data-wowhead="spell=1251213" class="spell-link-inline">Twilight
+                                                        Spikes</a></em>).</td>
+                                            <td>Sortez vite des zones d'impact et des lignes de pointes.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1260015"
+                                                        data-wowhead="spell=1260015"
+                                                        class="spell-link-inline">Uncontainable
+                                                        Cosmos</a></strong></td>
+                                            <td>Rayons d'énergie cosmique partant du boss dans plusieurs directions.
+                                            </td>
+                                            <td>Évitez le contact direct avec les rayons.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1248697"
+                                                        data-wowhead="spell=1248697" class="spell-link-inline">Despotic
+                                                        Command</a></strong></td>
+                                            <td>Cercle rose sur un joueur. Laisse une zone de vide + heal absorb au
+                                                dispel.
+                                            </td>
+                                            <td><strong>Bords de salle :</strong> Courez au bord avant le dispel.
+                                                Healers,
+                                                videz l'absorb.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1250686"
+                                                        data-wowhead="spell=1250686" class="spell-link-inline">Twisting
+                                                        Obscurity</a></strong></td>
+                                            <td>Éclairs de ténèbres qui sautent entre tous les joueurs.</td>
+                                            <td>Restez packés pour faciliter les soins de zone.</td>
+                                        </tr>
+                                        <tr class="mechanic-heroic">
+                                            <td><strong>Echoing Star</strong></td>
+                                            <td>La <em><a href="https://www.wowhead.com/spell=1250803"
+                                                        data-wowhead="spell=1250803"
+                                                        class="spell-link-inline">Shattering
+                                                        Twilight</a></em> rebondit sur plusieurs joueurs.</td>
+                                            <td>Dispersion maximale lors de l'incantation.</td>
+                                        </tr>
+                                        <tr class="mechanic-mythic-only">
+                                            <td><strong>Fracturer Projection</strong></td>
+                                            <td>Le boss se divise en images qui incantent <em><a
+                                                        href="https://www.wowhead.com/spell=1254081"
+                                                        data-wowhead="spell=1254081" class="spell-link-inline">Unstable
+                                                        Nexus</a></em>.</td>
+                                            <td><strong>Interrompez</strong> les images. Brisez les <em>Nexus
+                                                    Shields</em>
+                                                en priorité.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
 
                         <section class="visuals-section">

@@ -59,6 +59,64 @@ function initSidebar() {
   });
 }
 
+// Mobile Menu Logic
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const sidebar = document.querySelector('.dashboard-sidebar');
+
+  if (!menuBtn || !sidebar) return;
+
+  // Create overlay if it doesn't exist
+  let overlay = document.querySelector('.sidebar-backdrop');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'sidebar-backdrop';
+    document.body.appendChild(overlay);
+  }
+
+  const toggleMenu = () => {
+    const isActive = sidebar.classList.contains('active');
+    if (isActive) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  };
+
+  const openMenu = () => {
+    sidebar.classList.add('active');
+    overlay.classList.add('active');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  const closeMenu = () => {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close when clicking a link
+  sidebar.querySelectorAll('.nav-item').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+      closeMenu();
+    }
+  });
+}
+
 // Inject Wowhead Tooltip Script
 function initWowhead() {
   const script = document.createElement('script');
@@ -156,6 +214,7 @@ function initAccordion() {
 document.addEventListener('DOMContentLoaded', () => {
   initDifficulty();
   initSidebar();
+  initMobileMenu();
   initWowhead();
   initVideoLightbox();
   initAccordion();

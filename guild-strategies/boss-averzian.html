@@ -33,6 +33,14 @@
 
     <main class="main-view">
         <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <h1>Imperator Averzian</h1>
             <div class="difficulty-switcher">
                 <button class="diff-btn active" data-mode="normal">Normal</button>
@@ -108,47 +116,51 @@
                             <p>Averzian ne combat jamais seul. Il invoque ses armées via des **Void Rifts** et des
                                 **Dark Tears**.</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Ennemi</th>
-                                        <th style="width: 45%">Capacités Clés</th>
-                                        <th style="width: 30%">Stratégie</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Abyssal Voidshaper</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1249714"
-                                                    data-wowhead="spell=1249714" class="spell-link-inline">Umbral
-                                                    Barrier</a></em> (99% réduction dégâts).<br><em>Gathering
-                                                Darkness</em>.</td>
-                                        <td>Doit être touché par <strong><a href="https://www.wowhead.com/spell=1249262"
-                                                    data-wowhead="spell=1249262" class="spell-link-inline">Umbral
-                                                    Collapse</a></strong> pour briser son
-                                            bouclier.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Shadowguard Stalwart</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1264326"
-                                                    data-wowhead="spell=1264326" class="spell-link-inline">Shadow
-                                                    Phalanx</a></em> : Repousse les joueurs à 10m.<br><em>Pitch
-                                                Bulwark</em> : Bouclier d'absorption.</td>
-                                        <td><strong>Interrompez</strong> <a href="https://www.wowhead.com/spell=1255702"
-                                                data-wowhead="spell=1255702" class="spell-link-inline">Pitch
-                                                Bulwark</a>. Gardez vos distances pour le
-                                            knockback.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Voidmaw</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1264164"
-                                                    data-wowhead="spell=1264164" class="spell-link-inline">Dark
-                                                    Resilience</a></em> : Se soigne à 100% à 35% PV (Héroïque).</td>
-                                        <td><strong>Stourdissez/Ralentissez</strong> dès 40% PV et tenez-les loin du
-                                            vide.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Ennemi</th>
+                                            <th style="width: 45%">Capacités Clés</th>
+                                            <th style="width: 30%">Stratégie</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Abyssal Voidshaper</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1249714"
+                                                        data-wowhead="spell=1249714" class="spell-link-inline">Umbral
+                                                        Barrier</a></em> (99% réduction dégâts).<br><em>Gathering
+                                                    Darkness</em>.</td>
+                                            <td>Doit être touché par <strong><a
+                                                        href="https://www.wowhead.com/spell=1249262"
+                                                        data-wowhead="spell=1249262" class="spell-link-inline">Umbral
+                                                        Collapse</a></strong> pour briser son
+                                                bouclier.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Shadowguard Stalwart</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1264326"
+                                                        data-wowhead="spell=1264326" class="spell-link-inline">Shadow
+                                                        Phalanx</a></em> : Repousse les joueurs à 10m.<br><em>Pitch
+                                                    Bulwark</em> : Bouclier d'absorption.</td>
+                                            <td><strong>Interrompez</strong> <a
+                                                    href="https://www.wowhead.com/spell=1255702"
+                                                    data-wowhead="spell=1255702" class="spell-link-inline">Pitch
+                                                    Bulwark</a>. Gardez vos distances pour le
+                                                knockback.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Voidmaw</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1264164"
+                                                        data-wowhead="spell=1264164" class="spell-link-inline">Dark
+                                                        Resilience</a></em> : Se soigne à 100% à 35% PV (Héroïque).</td>
+                                            <td><strong>Stourdissez/Ralentissez</strong> dès 40% PV et tenez-les loin du
+                                                vide.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <h2>Mécanique de Conquête : <a href="https://www.wowhead.com/spell=1251361"
                                     data-wowhead="spell=1251361" class="spell-link-inline">Shadow's Advance</a></h2>
@@ -157,46 +169,52 @@
                                         data-wowhead="spell=1251583" class="spell-link-inline">March of the
                                         Endless</a></strong> (Wipe).</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Mécanique</th>
-                                        <th style="width: 45%">Effet</th>
-                                        <th style="width: 30%">Action Requise</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1251361"
-                                                    data-wowhead="spell=1251361" class="spell-link-inline">Shadow's
-                                                    Advance</a></strong></td>
-                                        <td>Invoque 3 adds. Seuls 2 peuvent être bloqués par les soaks Tanks.</td>
-                                        <td>Priorisez les zones qui complètent une ligne de 3.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1249262"
-                                                    data-wowhead="spell=1249262" class="spell-link-inline">Umbral
-                                                    Collapse</a></strong></td>
-                                        <td>Dégâts partagés. Brise le bouclier du <em>Voidshaper</em> touché.</td>
-                                        <td><strong>Tout le raid</strong> doit aider le Tank à encaisser l'impact.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong><a href="https://www.wowhead.com/spell=1253918"
-                                                    data-wowhead="spell=1253918" class="spell-link-inline">Void
-                                                    Claimed</a> (Buff)</strong></td>
-                                        <td>Averzian gagne +75% dmg/-90% dmg subis s'il est proche d'une zone violette.
-                                        </td>
-                                        <td><strong>Tanks :</strong> Ne le laissez jamais approcher d'une zone conquise.
-                                        </td>
-                                    </tr>
-                                    <tr class="mechanic-heroic">
-                                        <td><strong>Desolation</strong></td>
-                                        <td>Bombardement sur les zones DÉJÀ capturées.</td>
-                                        <td><strong>Soak obligatoire</strong> par 1 joueur pour éviter les dégâts raid
-                                            massifs.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Mécanique</th>
+                                            <th style="width: 45%">Effet</th>
+                                            <th style="width: 30%">Action Requise</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1251361"
+                                                        data-wowhead="spell=1251361" class="spell-link-inline">Shadow's
+                                                        Advance</a></strong></td>
+                                            <td>Invoque 3 adds. Seuls 2 peuvent être bloqués par les soaks Tanks.</td>
+                                            <td>Priorisez les zones qui complètent une ligne de 3.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1249262"
+                                                        data-wowhead="spell=1249262" class="spell-link-inline">Umbral
+                                                        Collapse</a></strong></td>
+                                            <td>Dégâts partagés. Brise le bouclier du <em>Voidshaper</em> touché.</td>
+                                            <td><strong>Tout le raid</strong> doit aider le Tank à encaisser l'impact.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1253918"
+                                                        data-wowhead="spell=1253918" class="spell-link-inline">Void
+                                                        Claimed</a> (Buff)</strong></td>
+                                            <td>Averzian gagne +75% dmg/-90% dmg subis s'il est proche d'une zone
+                                                violette.
+                                            </td>
+                                            <td><strong>Tanks :</strong> Ne le laissez jamais approcher d'une zone
+                                                conquise.
+                                            </td>
+                                        </tr>
+                                        <tr class="mechanic-heroic">
+                                            <td><strong>Desolation</strong></td>
+                                            <td>Bombardement sur les zones DÉJÀ capturées.</td>
+                                            <td><strong>Soak obligatoire</strong> par 1 joueur pour éviter les dégâts
+                                                raid
+                                                massifs.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </section>
 
                         <!-- Visuals -->

@@ -39,6 +39,10 @@
   --color-bg-panel: var(--bg-surface);
   --color-accent-purple: #a855f7;
   --color-accent-gold: var(--vanguard-devotion);
+
+  /* Mobile Variables */
+  --mobile-breakpoint: 768px;
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 20px);
 }
 
 /* Global Elements */
@@ -2142,7 +2146,165 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
 
 .realm-box.reality {
   background: rgba(30, 255, 0, 0.1);
-  border: 2px solid var(--diff-normal);
+  border: 1px solid var(--diff-normal);
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS OVERRIDES
+   ========================================= */
+
+/* Mobile Menu Button - Hidden by default */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-heading);
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Table Responsive Wrapper */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table-responsive .ability-table {
+  margin: 0;
+  /* Remove margin from table when wrapped */
+  border: none;
+  /* Remove border from table when wrapped (wrapper has it) */
+  border-radius: 0;
+}
+
+@media (max-width: 768px) {
+
+  /* Global Layout */
+  body {
+    flex-direction: column;
+    height: auto;
+    /* Allow scrolling */
+    overflow: auto;
+  }
+
+  .main-view {
+    height: auto;
+    overflow: visible;
+  }
+
+  .content-area {
+    padding: 16px;
+    height: auto;
+    overflow: visible;
+  }
+
+  /* Header */
+  .main-header {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    /* Below sidebar (100) */
+    padding: 0 16px;
+    height: 60px;
+  }
+
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Sidebar - Drawer */
+  .dashboard-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    /* High z-index */
+  }
+
+  .dashboard-sidebar.active {
+    transform: translateX(0);
+  }
+
+  /* Sidebar Backdrop */
+  .sidebar-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 900;
+    /* Below sidebar */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .sidebar-backdrop.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Grid Adjustments */
+  .tldr-grid {
+    grid-template-columns: 1fr;
+    /* Stack vertically */
+    gap: 16px;
+  }
+
+  .boss-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /* Smaller cards */
+    gap: 12px;
+  }
+
+  .strategy-header-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    display: flex;
+    flex-direction: column-reverse;
+    /* Strategy first, video/supplementary last? Or Keep top? */
+    /* Implementation plan didn't specify order, but usually content first is good. 
+       However, Top Section implies Quick Info. The supplementary info has video/spells.
+       Let's keep original order (Normal flow) which is Strategy Column first.
+    */
+    display: grid;
+  }
+
+  /* Supplementary Info mobile optimization */
+  .supplementary-info {
+    padding: 16px;
+    margin-top: 0;
+  }
+
+  .visual-grid-aid {
+    display: none;
+    /* Hide visual aid on mobile if too wide */
+  }
 }
 
 .realm-box.aln {

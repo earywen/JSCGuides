@@ -33,6 +33,14 @@
 
     <main class="main-view">
         <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <h1>Vaelgor & Ezzorak</h1>
             <div class="difficulty-switcher">
                 <button class="diff-btn" data-mode="normal">Normal</button>
@@ -120,41 +128,44 @@
                             <h2>Dualité du Vide : Sol et Air</h2>
                             <p>Vaelgor et Ezzorak alternent entre phase de combat actif et phase de soutien aérien.</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Phase</th>
-                                        <th style="width: 45%">Capacités Clés</th>
-                                        <th style="width: 30%">Action Requise</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Phase 1 (Sol/L'air)</strong></td>
-                                        <td>Un dragon est au sol (mécaniques lourdes), l'autre plane (moins actif).</td>
-                                        <td><strong>Focus Grounded :</strong> Swappez de cible après chaque
-                                            intermission.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Intermission</strong></td>
-                                        <td>À 100 Énergie, les deux s'envolent (<em><a
-                                                    href="https://www.wowhead.com/spell=1249748"
-                                                    data-wowhead="spell=1249748" class="spell-link-inline">Midnight
-                                                    Flames</a></em>).</td>
-                                        <td><strong>Stack <a href="https://www.wowhead.com/spell=1248847"
-                                                    data-wowhead="spell=1248847" class="spell-link-inline">Radiant
-                                                    Barrier</a> :</strong> Tuez l'add de fixate à l'intérieur
-                                            de la zone protective PNJ.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Tethering</strong></td>
-                                        <td>Les dragons partagent leurs PV mais doivent rester séparés.</td>
-                                        <td><strong>Distance :</strong> Gardez les Dragons à >15m pour éviter
-                                            <em>Twilight Fury</em>.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Phase</th>
+                                            <th style="width: 45%">Capacités Clés</th>
+                                            <th style="width: 30%">Action Requise</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Phase 1 (Sol/L'air)</strong></td>
+                                            <td>Un dragon est au sol (mécaniques lourdes), l'autre plane (moins actif).
+                                            </td>
+                                            <td><strong>Focus Grounded :</strong> Swappez de cible après chaque
+                                                intermission.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Intermission</strong></td>
+                                            <td>À 100 Énergie, les deux s'envolent (<em><a
+                                                        href="https://www.wowhead.com/spell=1249748"
+                                                        data-wowhead="spell=1249748" class="spell-link-inline">Midnight
+                                                        Flames</a></em>).</td>
+                                            <td><strong>Stack <a href="https://www.wowhead.com/spell=1248847"
+                                                        data-wowhead="spell=1248847" class="spell-link-inline">Radiant
+                                                        Barrier</a> :</strong> Tuez l'add de fixate à l'intérieur
+                                                de la zone protective PNJ.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Tethering</strong></td>
+                                            <td>Les dragons partagent leurs PV mais doivent rester séparés.</td>
+                                            <td><strong>Distance :</strong> Gardez les Dragons à >15m pour éviter
+                                                <em>Twilight Fury</em>.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <h2 class="mechanic-heroic">Soutien Intensif</h2>
                             <p>Le dragon en phase de soutien lance ses sorts plus fréquemment.</p>

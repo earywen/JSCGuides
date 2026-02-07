@@ -33,6 +33,14 @@
 
     <main class="main-view">
         <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <h1>Lightblinded Vanguard</h1>
             <div class="difficulty-switcher">
                 <button class="diff-btn" data-mode="normal">Normal</button>
@@ -121,53 +129,56 @@
                             <p>L'encontre se compose de trois commandants aux capacités synergiques. La gestion des
                                 Auras est la clé du combat.</p>
 
-                            <table class="ability-table">
-                                <thead>
-                                    <tr>
-                                        <th style="width: 25%">Commandant</th>
-                                        <th style="width: 45%">Capacités Clés</th>
-                                        <th style="width: 30%">Contre-mesure</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Chaplain Senn</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1248674"
-                                                    data-wowhead="spell=1248674" class="spell-link-inline">Sacred
-                                                    Shield</a></em> (Shield + Interrupt) et <em><a
-                                                    href="https://www.wowhead.com/spell=1248451"
-                                                    data-wowhead="spell=1248451" class="spell-link-inline">Aura of
-                                                    Peace</a></em>.</td>
-                                        <td><strong>Action :</strong> Nuke le shield, interrupt <em><a
-                                                    href="https://www.wowhead.com/spell=1258514"
-                                                    data-wowhead="spell=1258514" class="spell-link-inline">Blinding
-                                                    Light</a></em>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Commander Lightblood</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1248983"
-                                                    data-wowhead="spell=1248983" class="spell-link-inline">Execution
-                                                    Sentence</a></em> (Split soaks) et <em><a
-                                                    href="https://www.wowhead.com/spell=1246736"
-                                                    data-wowhead="spell=1246736"
-                                                    class="spell-link-inline">Judgment</a></em>.</td>
-                                        <td><strong>Management :</strong> Split-soakez les zones oranges, esquivez les
-                                            marteaux.</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>General Bellamy</strong></td>
-                                        <td><em><a href="https://www.wowhead.com/spell=1246162"
-                                                    data-wowhead="spell=1246162" class="spell-link-inline">Aura of
-                                                    Devotion</a></em> et <em><a
-                                                    href="https://www.wowhead.com/spell=1248644"
-                                                    data-wowhead="spell=1248644" class="spell-link-inline">Divine
-                                                    Toll</a></em> (Silencing shields).</td>
-                                        <td><strong>Dodge :</strong> Surveillez Bellamy et esquivez les boucliers
-                                            volants.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="table-responsive">
+                                <table class="ability-table">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 25%">Commandant</th>
+                                            <th style="width: 45%">Capacités Clés</th>
+                                            <th style="width: 30%">Contre-mesure</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Chaplain Senn</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1248674"
+                                                        data-wowhead="spell=1248674" class="spell-link-inline">Sacred
+                                                        Shield</a></em> (Shield + Interrupt) et <em><a
+                                                        href="https://www.wowhead.com/spell=1248451"
+                                                        data-wowhead="spell=1248451" class="spell-link-inline">Aura of
+                                                        Peace</a></em>.</td>
+                                            <td><strong>Action :</strong> Nuke le shield, interrupt <em><a
+                                                        href="https://www.wowhead.com/spell=1258514"
+                                                        data-wowhead="spell=1258514" class="spell-link-inline">Blinding
+                                                        Light</a></em>.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Commander Lightblood</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1248983"
+                                                        data-wowhead="spell=1248983" class="spell-link-inline">Execution
+                                                        Sentence</a></em> (Split soaks) et <em><a
+                                                        href="https://www.wowhead.com/spell=1246736"
+                                                        data-wowhead="spell=1246736"
+                                                        class="spell-link-inline">Judgment</a></em>.</td>
+                                            <td><strong>Management :</strong> Split-soakez les zones oranges, esquivez
+                                                les
+                                                marteaux.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>General Bellamy</strong></td>
+                                            <td><em><a href="https://www.wowhead.com/spell=1246162"
+                                                        data-wowhead="spell=1246162" class="spell-link-inline">Aura of
+                                                        Devotion</a></em> et <em><a
+                                                        href="https://www.wowhead.com/spell=1248644"
+                                                        data-wowhead="spell=1248644" class="spell-link-inline">Divine
+                                                        Toll</a></em> (Silencing shields).</td>
+                                            <td><strong>Dodge :</strong> Surveillez Bellamy et esquivez les boucliers
+                                                volants.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <h2 class="mechanic-heroic">Zèle Sacré</h2>
                             <p>En mode héroïque, les boss laissent des zones de consécration et utilisent leurs auras
