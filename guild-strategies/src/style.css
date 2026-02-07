@@ -768,6 +768,24 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
   background: none !important;
 }
 
+/* Inline Spell Links */
+.spell-link-inline {
+  color: #60a5fa;
+  /* Light Blue for better contrast on dark bg */
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dotted rgba(96, 165, 250, 0.4);
+  transition: all 0.2s ease;
+  padding: 0 2px;
+}
+
+.spell-link-inline:hover {
+  color: #93c5fd;
+  border-bottom-color: #93c5fd;
+  background-color: rgba(96, 165, 250, 0.1);
+  border-radius: 4px;
+}
+
 .accordion-content {
   max-height: 0;
   overflow: hidden;
