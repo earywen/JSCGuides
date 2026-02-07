@@ -136,6 +136,17 @@ h3 {
   align-items: center;
 }
 
+.sidebar-brand .brand-flex {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-logo {
+  height: 32px;
+  width: auto;
+}
+
 .sidebar-brand .lang-switcher {
   display: flex;
   gap: 8px;
