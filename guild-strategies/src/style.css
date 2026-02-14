@@ -63,6 +63,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition-snappy);
+}
+
+a:hover {
+  filter: brightness(1.2);
+  text-decoration: underline;
+}
+
 h1,
 h2,
 h3 {
@@ -801,6 +812,86 @@ body.mode-mythic tr.mechanic-mythic-only td:first-child {
   color: #fff;
   transition: color 0.2s;
 }
+
+/* Midnight Feature Card */
+.midnight-feature-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, var(--bg-surface) 0%, rgba(65, 190, 161, 0.05) 100%);
+  border-color: var(--accent);
+  min-height: 500px;
+}
+
+.midnight-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.midnight-card-header img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.midnight-header-text h3 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin: 0;
+}
+
+.midnight-header-text .subtitle {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.midnight-card-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-point {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.feature-point .icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.read-more {
+  margin-top: auto;
+  text-align: right;
+  color: var(--accent);
+  font-weight: 600;
+  padding-top: 16px;
+  font-size: 0.9rem;
+}
+
+.midnight-feature-card:hover {
+  text-decoration: none;
+}
+
+.midnight-feature-card:hover .read-more {
+  text-decoration: underline;
+}
+
+
 
 .accordion-header:hover {
   color: var(--color-accent-gold);

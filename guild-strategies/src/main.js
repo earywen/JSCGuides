@@ -1,5 +1,5 @@
 import './style.css';
-import i18next from './i18n.js';
+import i18next, { i18nPromise } from './i18n.js';
 
 // Logic to handle difficulty switching
 const MODES = ['normal', 'heroic', 'mythic'];
@@ -222,16 +222,31 @@ document.addEventListener('DOMContentLoaded', () => {
   initLangSwitcher();
 
   // i18n Initialization
-  i18next.on('languageChanged', () => {
-    updateContent();
+  i18next.on('languageChanged', (lng) => {
+    console.log('Language changed to:', lng);
+    if (i18next.isInitialized) {
+      updateContent();
+    }
   });
 
-  i18next.on('initialized', () => {
+  i18nPromise.then(() => {
+    console.log('i18next initialized successfully');
+    console.log('Current Language:', i18next.language);
+    console.log('Resources:', i18next.store.data);
+
+    // Expose for debugging
+    window.i18n = i18next;
+
     updateContent();
+  }).catch(err => {
+    console.error('i18next initialization failed:', err);
+    // Fallback?
   });
 });
 
 function updateContent() {
+  if (!i18next.isInitialized) return;
+
   document.querySelectorAll('[data-i18n]').forEach(element => {
     const key = element.getAttribute('data-i18n');
     const options = element.getAttribute('data-i18n-options'); // For future interpolation

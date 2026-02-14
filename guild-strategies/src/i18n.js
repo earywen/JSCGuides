@@ -1,9 +1,9 @@
 import i18next from 'i18next';
-import HttpBackend from 'i18next-http-backend';
+import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-i18next
-    .use(HttpBackend)
+const i18nPromise = i18next
+    .use(Backend)
     .use(LanguageDetector)
     .init({
         fallbackLng: 'fr',
@@ -20,4 +20,5 @@ i18next
         }
     });
 
+export { i18nPromise };
 export default i18next;

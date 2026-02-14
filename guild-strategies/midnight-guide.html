@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="midnight.title">Guide de Raid Midnight - Larias</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta name="description"
+        content="Guide complet pour le lancement de l'extension Midnight : Checklists hebdomadaires, optimisation des crests et crafting.">
+</head>
+
+<body>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-flex">
+                <img src="/logo.png" alt="JSCGuides Logo" class="sidebar-logo">
+                <span>JSCGUIDE</span>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
+            <a href="midnight-guide.html" class="nav-item active" data-i18n="nav.midnight">Guide Midnight</a>
+
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
+            <a href="boss-averzian.html" class="nav-item" data-i18n="boss.averzian.title">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item" data-i18n="boss.vorasius.title">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item" data-i18n="boss.salhadaar.title">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item" data-i18n="boss.vaelgor.title">Vaelgor &amp;
+                Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item" data-i18n="boss.lightblinded.title">L. Vanguard</a>
+            <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
+
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
+            <a href="boss-chimaerus.html" class="nav-item" data-i18n="boss.chimaerus.title">Chimaerus</a>
+
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
+            <a href="#" class="nav-item coming-soon">Belo’ren</a>
+            <a href="#" class="nav-item coming-soon">Midnight Falls</a>
+        </nav>
+    </aside>
+
+    <main class="main-view">
+        <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 data-i18n="midnight.title">Larias’ Raider’s Guide for Midnight</h1>
+        </header>
+
+        <div class="content-area blur-fade">
+            <div class="guide-content">
+
+                <!-- Alert Section -->
+                <div class="tactics-box"
+                    style="border-left-color: var(--vanguard-devotion) !important; background: linear-gradient(90deg, rgba(234, 179, 8, 0.08) 0%, var(--bg-surface) 100%) !important;">
+                    <h3 style="color: var(--vanguard-devotion); display: flex; align-items: center; gap: 8px;"
+                        data-i18n="midnight.alert.title">
+                        ⚠️ Mise à jour du 13 Février - Important
+                    </h3>
+                    <ul>
+                        <li data-i18n="midnight.alert.li1">J'ai voulu mettre à jour le guide...</li>
+                        <li data-i18n="midnight.alert.li2">En conséquence...</li>
+                        <li data-i18n="midnight.alert.li3">Ce que nous ne savons pas...</li>
+                        <li data-i18n="midnight.alert.li4">Je mettrai à jour...</li>
+                    </ul>
+                </div>
+
+                <!-- Introduction Content -->
+                <section class="phase-block">
+                    <h2 class="section-title-large" data-i18n="midnight.intro.structure_title">Structure du Raid &
+                        Changements de Gear</h2>
+                    <p style="margin-bottom: 20px;" data-i18n="midnight.intro.structure_desc">Blizzard revient à
+                        l'époque de Mist/Cata...</p>
+                    <div class="tactics-box">
+                        <ul>
+                            <li data-i18n="midnight.intro.w1">Semaine 1...</li>
+                            <li data-i18n="midnight.intro.w2">Semaine 2...</li>
+                            <li data-i18n="midnight.intro.w3">Semaine 3...</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="section-title-large" data-i18n="midnight.intro.crests_title">Changements Majeurs : Crests
+                        & Upgrades</h2>
+                    <div class="tldr-grid">
+                        <div class="role-column">
+                            <h3 data-i18n="midnight.intro.crests_subtitle">Les Crests (Écus)</h3>
+                            <ul>
+                                <li data-i18n="midnight.intro.crests_li1">Track-Specific...</li>
+                                <li data-i18n="midnight.intro.crests_li2">Plus de Valorstones...</li>
+                                <li data-i18n="midnight.intro.crests_li3">Champion Track Nerf...</li>
+                                <li data-i18n="midnight.intro.crests_li4">Coûts Progressifs...</li>
+                                <li data-i18n="midnight.intro.crests_li5">Cap...</li>
+                            </ul>
+                        </div>
+                        <div class="role-column">
+                            <h3 data-i18n="midnight.intro.upgrade_subtitle">Stratégie d'Upgrade</h3>
+                            <ul>
+                                <li data-i18n="midnight.intro.upgrade_li1">Heroic Crests utiles...</li>
+                                <li data-i18n="midnight.intro.upgrade_li2">Armes...</li>
+                                <li data-i18n="midnight.intro.upgrade_li3">Crafting OP...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="phase-block">
+                    <h2 class="section-title-large" data-i18n="midnight.systems.title">Nouveaux Systèmes</h2>
+                    <div class="tldr-grid">
+                        <div class="role-column">
+                            <h3 data-i18n="midnight.systems.tokens_subtitle">Tier Tokens & Catalyst</h3>
+                            <ul>
+                                <li data-i18n="midnight.systems.tokens_li1">Les tokens...</li>
+                                <li data-i18n="midnight.systems.tokens_li2">L'Omnitoken...</li>
+                                <li data-i18n="midnight.systems.tokens_li3">Important...</li>
+                            </ul>
+                        </div>
+                        <div class="role-column">
+                            <h3 data-i18n="midnight.systems.prey_subtitle">Prey & Consommables</h3>
+                            <ul>
+                                <li data-i18n="midnight.systems.prey_li1">Prey...</li>
+                                <li data-i18n="midnight.systems.prey_li2">Consommables...</li>
+                                <li data-i18n="midnight.systems.prey_li3">Renown...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="phase-block">
+                    <h2 class="section-title-large" data-i18n="midnight.sandbag.title">Pourquoi "Sandbag" (Garder ses
+                        crests) ?</h2>
+                    <div class="tactics-box"
+                        style="border-left-color: var(--diff-mythic) !important; background: linear-gradient(90deg, rgba(163, 53, 238, 0.08) 0%, var(--bg-surface) 100%) !important;">
+                        <h3 style="color: var(--diff-mythic);" data-i18n="midnight.sandbag.box_title">Le piège de
+                            l'Upgrade Immédiat</h3>
+                        <p data-i18n="midnight.sandbag.desc1">Blizzard incite...</p>
+                        <p data-i18n="midnight.sandbag.desc2">La règle d'or...</p>
+                        <ul>
+                            <li data-i18n="midnight.sandbag.li1">Si vous upgradez...</li>
+                            <li data-i18n="midnight.sandbag.li2">Les crests Heroïques...</li>
+                            <li data-i18n="midnight.sandbag.li3">Exception...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Weekly Timeline Accordion -->
+                <section class="phase-block">
+                    <h2 class="section-title-large" data-i18n="midnight.timeline.title">Timeline Hebdomadaire Détaillée
+                    </h2>
+                    <div class="accordion">
+
+                        <!-- Early Access -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.ea.title">Early Access (26 Fév - 3 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <p><em data-i18n="midnight.timeline.ea.quote">"Midnight Early Access..."</em></p>
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.ea.li1">Levelez...</li>
+                                        <li data-i18n="midnight.timeline.ea.li2">Darkmoon Faire...</li>
+                                        <li data-i18n="midnight.timeline.ea.li3">Complétez...</li>
+                                        <li data-i18n="midnight.timeline.ea.li4">Crafters...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pre-Season Week 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.pre_w1.title">Pre-Season Week 1 (3 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <h4 data-i18n="midnight.timeline.pre_w1.subtitle">M0 disponibles</h4>
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.pre_w1.li1">NE DÉPENSEZ AUCUN CREST.</li>
+                                        <li data-i18n="midnight.timeline.pre_w1.li2">Débloquez...</li>
+                                        <li data-i18n="midnight.timeline.pre_w1.li3">Faites Prey...</li>
+                                        <li data-i18n="midnight.timeline.pre_w1.li4">WQ...</li>
+                                        <li data-i18n="midnight.timeline.pre_w1.li5">World Tour M0...</li>
+                                        <li data-i18n="midnight.timeline.pre_w1.li6">Loremaster...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pre-Season Week 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.pre_w2.title">Pre-Season Week 2 (10 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <h4 data-i18n="midnight.timeline.pre_w2.subtitle">M0 disponibles</h4>
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.pre_w2.li1">NE DÉPENSEZ AUCUN CREST.</li>
+                                        <li data-i18n="midnight.timeline.pre_w2.li2">Continuez...</li>
+                                        <li data-i18n="midnight.timeline.pre_w2.li3">World Tour...</li>
+                                        <li>
+                                            <span data-i18n="midnight.timeline.pre_w2.li4_title">CRAFTING...</span>
+                                            <ul>
+                                                <li data-i18n="midnight.timeline.pre_w2.li4_sub1">Vous pouvez...</li>
+                                                <li data-i18n="midnight.timeline.pre_w2.li4_sub2">Mettez...</li>
+                                                <li data-i18n="midnight.timeline.pre_w2.li4_sub3">Si vous ne raidez
+                                                    pas...</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Season 1 Week 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.s1_w1.title">Week 1 - Heroic Week (17 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <h4 data-i18n="midnight.timeline.s1_w1.subtitle">M0 disponibles</h4>
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.s1_w1.li1">NE DÉPENSEZ PAS...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li2">LFR...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li3">World Tour M0...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li4">World Boss...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li5">PvP...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li6">Delves...</li>
+                                        <li>
+                                            <span data-i18n="midnight.timeline.s1_w1.li7_title">Crafting...</span>
+                                            <ul>
+                                                <li data-i18n="midnight.timeline.s1_w1.li7_sub1">Craftez...</li>
+                                                <li data-i18n="midnight.timeline.s1_w1.li7_sub2">Comblez...</li>
+                                            </ul>
+                                        </li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li8">Dépense Crests...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li9">Raid...</li>
+                                        <li data-i18n="midnight.timeline.s1_w1.li10">Total Crests...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Season 1 Week 2 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.s1_w2.title">Week 2 - Mythic Week (24 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <p data-i18n="midnight.timeline.s1_w2.desc">(La semaine...)</p>
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.s1_w2.li1">M+...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li2">Si les +10...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li3">Upgrades Crests...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li4">Exception...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li5">Raid...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li6">Total Crests...</li>
+                                        <li data-i18n="midnight.timeline.s1_w2.li7">Fin de semaine...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Week 3 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.w3.title">Week 3 - Final Raid Opens (31 Mars)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.w3.li1">Vault...</li>
+                                        <li data-i18n="midnight.timeline.w3.li2">Crafting...</li>
+                                        <li data-i18n="midnight.timeline.w3.li3">LFR...</li>
+                                        <li data-i18n="midnight.timeline.w3.li4">M+...</li>
+                                        <li data-i18n="midnight.timeline.w3.li5">Raid...</li>
+                                        <li>
+                                            <span data-i18n="midnight.timeline.w3.li6_title">Dépense Heroic...</span>
+                                            <ul>
+                                                <li data-i18n="midnight.timeline.w3.li6_sub1">Upgradez...</li>
+                                                <li data-i18n="midnight.timeline.w3.li6_sub2">Chaque...</li>
+                                                <li data-i18n="midnight.timeline.w3.li6_sub3">LAISSEZ...</li>
+                                            </ul>
+                                        </li>
+                                        <li data-i18n="midnight.timeline.w3.li7">Upgrades Mythic...</li>
+                                        <li data-i18n="midnight.timeline.w3.li8">Total Crests...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.w4.title">Week 4 (7 Avril)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.w4.li1">Vault...</li>
+                                        <li data-i18n="midnight.timeline.w4.li2">M+...</li>
+                                        <li data-i18n="midnight.timeline.w4.li3">On assume...</li>
+                                        <li data-i18n="midnight.timeline.w4.li4">Heroic Upgrades...</li>
+                                        <li>
+                                            <span data-i18n="midnight.timeline.w4.li5_title">Mythic Upgrades...</span>
+                                            <ul>
+                                                <li data-i18n="midnight.timeline.w4.li5_sub1">Upgrade Vault...</li>
+                                                <li data-i18n="midnight.timeline.w4.li5_sub2">Upgrade Raid...</li>
+                                                <li data-i18n="midnight.timeline.w4.li5_sub3">Upgrade Best...</li>
+                                            </ul>
+                                        </li>
+                                        <li data-i18n="midnight.timeline.w4.li6">Total Crests...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <h3 data-i18n="midnight.timeline.w5.title">Week 5 (14 Avril)</h3>
+                                <span class="arrow">▼</span>
+                            </button>
+                            <div class="accordion-content">
+                                <div class="tactics-box">
+                                    <ul>
+                                        <li data-i18n="midnight.timeline.w5.li1">Vault...</li>
+                                        <li data-i18n="midnight.timeline.w5.li2">Crafting...</li>
+                                        <li data-i18n="midnight.timeline.w5.li3">Heroic...</li>
+                                        <li data-i18n="midnight.timeline.w5.li4">Mythic...</li>
+                                        <li data-i18n="midnight.timeline.w5.li5">Total Crests...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="visuals-section" style="margin-top: 40px;">
+                    <h2 class="section-title-large" data-i18n="midnight.resources.title">Ressources Utiles</h2>
+                    <div class="tldr-grid">
+                        <a href="https://docs.google.com/spreadsheets/d/1iK2SZUcz_ljnkdTG7KW6pqfzaUDuSgnlh1HupcLrkus"
+                            target="_blank" class="role-column" style="text-decoration: none; cursor: pointer;">
+                            <h3 data-i18n="midnight.resources.checklist.title">📋 Checklist Hebdo</h3>
+                            <p data-i18n="midnight.resources.checklist.desc">Spreadsheet complet à cocher.</p>
+                        </a>
+
+                    </div>
+                </section>
+
+                <div class="citation-text" style="margin-top: 40px;" data-i18n="midnight.citation">
+                    Guide original par...
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-info">
+        v2.2 - Midnight Guide (Detailed)
+    </footer>
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
