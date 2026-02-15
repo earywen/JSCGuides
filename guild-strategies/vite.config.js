@@ -12,6 +12,7 @@ export default defineConfig({
                 vaelgor: resolve(__dirname, 'boss-vaelgor-ezzorak.html'),
                 lightblinded: resolve(__dirname, 'boss-lightblinded.html'),
                 chimaerus: resolve(__dirname, 'boss-chimaerus.html'),
+                midnight: resolve(__dirname, 'midnight-guide.html'),
             },
         },
     },
