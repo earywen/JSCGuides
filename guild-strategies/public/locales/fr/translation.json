@@ -355,20 +355,22 @@
         "title": "Guide de Raid Midnight - Larias",
         "card_desc": "Préparation, Crests & Roster",
         "tldr": {
+            "weapons": "<strong>Armes :</strong> Les armes tombées en raid/vault sont compétitives.",
+            "crafting": "<strong>Crafting :</strong> Ne craftez que vos 2 premiers items si vous raidez. Ne craftez pas au-delà !",
+            "sandbag": "<strong>Sandbagging :</strong> Vous ne gardez vos Crests Héroïques qu'1 semaine. Dépensez-les AVANT le Mythique.",
+            "timeline": "<strong>Progression :</strong> L'ilvl augmente plus vite (ex: +2.67 ilvl en S3 par rapport à l'ancien système).",
+            "conversion": "<strong>Conversion :</strong> Vous pouvez convertir des Crests Héroïques en Mythiques via une astuce d'upgrade.",
+            "read_more": "Lire le guide complet →",
             "early_access": "<strong>Early Access :</strong> Leveling + Métiers uniquement. Ne dépensez rien.",
             "crests": "<strong>Crests :</strong> Capez vos comptes. Valorstones supprimées (coût en or).",
-            "timeline": "<strong>Timeline :</strong> Semaine 1 Héroïque, Semaine 2 Mythique.",
-            "sandbag": "<strong>Sandbagging :</strong> Ne dépensez PAS vos Crests Héroïques en Semaine 1. Gardez-les pour upgrade les items Mythiques en Semaine 2.",
-            "tokens": "<strong>Tokens :</strong> L'Omnitoken disponible Semaine 3 (Dernier boss). Le Catalyst (charges) débloqué Semaine 1.",
-            "sparks": "<strong>Crafting :</strong> 2 Embellissements disponibles semaine 1. Crafting 246 ilvl possible immédiatement avec les bons crests.",
-            "read_more": "Lire le guide complet →"
+            "tokens": "<strong>Tokens :</strong> L'Omnitoken disponible Semaine 3 (Dernier boss). Le Catalyst (charges) débloqué Semaine 1."
         },
         "alert": {
-            "title": "⚠️ Mise à jour du 13 Février - Important",
-            "li1": "J'ai voulu mettre à jour le guide avec des informations plus précises, mais à moins de 2 semaines de l'Early Access, nous n'avons toujours <strong>aucune information officielle</strong> de Blizzard concernant les systèmes de récompenses mis à jour.",
-            "li2": "En conséquence, je mets à jour ce guide avec mes <strong>meilleures estimations</strong> basées sur le contenu disponible.",
-            "li3": "Ce que nous ne savons pas : Coûts exacts des crafts/upgrades, contenu exact de l'Early Access (quels crests/delves ?), fonctionnement des sparks, renown de raid, boost turbo, etc.",
-            "li4": "Je mettrai à jour ce guide dès que nous aurons plus d'informations."
+            "title": "⚠️ Mise à jour du 20 Février - Important",
+            "li1": "1) Les armes tombées en raid et vault sont de nouveau compétitives.",
+            "li2": "2) Le crafting n'est intéressant que pour vos deux premiers items (si vous raidez). Ne craftez pas au-delà !",
+            "li3": "3) Vous ne gardez vos Crests qu'une seule semaine (à dépenser en Semaine 2 juste avant d'attaquer le Mythique).",
+            "li4": "4) L'item level monte plus vite: Vous finirez vos upgrades avec les crests Héroïques beaucoup plus tôt !"
         },
         "intro": {
             "structure_title": "Structure du Raid & Changements de Gear",
@@ -381,12 +383,12 @@
             "crests_li1": "<strong>Track-Specific :</strong> Les Crests sont désormais spécifiques au track. Les items 'Hero track' ne demandent QUE des crests Heroique, les 'Mythic track' QUE des crests Mythique.",
             "crests_li2": "<strong>Plus de Valorstones !</strong> Remplacé par un coût minime en or.",
             "crests_li3": "<strong>Champion Track Nerf :</strong> Réduit à 6 rangs. Un item 6/6 Champion équivaut à un 2/6 Hero.",
-            "crests_li4": "<strong>Coûts Progressifs :</strong> Le coût augmente à chaque palier.<br><em>1/6 -> 2/6 = 10 crests</em><br><em>2/6 -> 3/6 = 20 crests</em><br><em>3/6 -> 4/6 = 30 crests...</em><br>Update complet = 150 crests (vs 75 avant).",
-            "crests_li5": "<strong>Cap :</strong> Augmenté à 100 (au lieu de 90), mais la progression globale est ralentie.",
+            "crests_li4": "<strong>Coûts Fixes :</strong> Le coût est désormais de 20 crests par palier, du niveau 1/6 jusqu'au 6/6.",
+            "crests_li5": "<strong>Cap :</strong> Augmenté à 100 (au lieu de 90). Vous avez donc 5 upgrades possibles par semaine (contre 6 avant).",
             "upgrade_subtitle": "Stratégie d'Upgrade",
-            "upgrade_li1": "<strong>Heroic Crests utiles :</strong> Même tard dans le tier, vous pouvez update vos pièces Hero 4/6 restantes pour de petits gains.",
-            "upgrade_li2": "<strong>Armes :</strong> Les armes 1H et 2H (non craftées) sont devenues une <strong>mauvaise option</strong> en raid/vault à cause du coût exorbitant pour les maxer (50 crests pour le dernier rang).",
-            "upgrade_li3": "<strong>Crafting OP :</strong> Crafter un item 5/6 coûte 60 crests (60% du cap hebdo). Upgrade un item dropé de 1/6 à 5/6 coûte 100 crests.<br><strong>Conclusion :</strong> Ne gaspillez pas vos crests pour upgrade un slot que vous comptez crafter !"
+            "upgrade_li1": "<strong>Heroic Crests utiles :</strong> Vous pouvez convertir des Heroic crests en Mythic crests avec l'astuce d'upgrade (décrite plus bas).",
+            "upgrade_li2": "<strong>Armes :</strong> Les armes 1H et 2H tombées ou dans le vault restent de très bonnes options.",
+            "upgrade_li3": "<strong>Crafting Fixé :</strong> Crafter un item coûte 80 crests (soit exactement le même prix que d'upgrade un drop de 1/6 à 5/6).<br><strong>Conclusion :</strong> Ne craftez que vos 2 premiers items si vous êtes un raider !"
         },
         "systems": {
             "title": "Nouveaux Systèmes",
@@ -402,110 +404,102 @@
         "sandbag": {
             "title": "Pourquoi 'Sandbag' (Garder ses crests) ?",
             "box_title": "Le piège de l'Upgrade Immédiat",
-            "desc1": "Blizzard incite directement les joueurs à 'sandbag' (ne pas dépenser) leur équipement pour gagner de la puissance plus tard.",
-            "desc2": "La règle d'or (sauf guilde Top 100) : <strong>Dépensez ZERO crests héroïques jusqu'à la fin du reclear de la Semaine 3.</strong>",
-            "li1": "Si vous upgradez un item Semaine 1 ou 2, il y a de grandes chances qu'il soit remplacé par un drop Mythique ou Vault, <strong>gaspillant ainsi vos précieux crests</strong>.",
-            "li2": "Les crests Heroïques restent utiles longtemps (jusqu'en semaine 8+), ne les jetez pas par les fenêtres.",
-            "li3": "<strong>Exception :</strong> Trinkets BiS Hero que vous garderez tout le progress."
+            "desc1": "Blizzard incite les joueurs à 'sandbag' (garder précieusement) leur équipement pendant la 1re semaine.",
+            "desc2": "La règle d'or : <strong>Dépensez vos crests Héroïques à la fin du reclear de la Semaine 2, juste avant le Mythique.</strong>",
+            "li1": "Vous ne les gardez plus que pour 1 petite semaine pour ne pas gaspiller de crests sur des slots qui dropperont vite.",
+            "li2": "Les crests Heroïques finiront par ne plus être rentables vers la S6, mais aide pour l'astuce de conversion en Mythique.",
+            "li3": "<strong>Astuce Mythique :</strong> Si vous tirez un item Mythic 1/6, upgradez sa version Hero 6/6 (20 hero crests) pour bénéficier de ses upgrades gratuits en Mythique !"
         },
         "timeline": {
-            "title": "Timeline Hebdomadaire Détaillée",
             "ea": {
                 "title": "Early Access (26 Fév - 3 Mars)",
                 "quote": "\"Midnight Early Access is Pay to Win if you do not have unlimited time.\"",
                 "li1": "Levelez tout personnage que vous comptez jouer. Les M0 seront dispos au reset, donc soyez prêts.",
                 "li2": "<strong>Darkmoon Faire (Dimanche) :</strong> Ouvre dimanche pour +10% XP/Reput.",
-                "li3": "Complétez les événements hebdomadaires si disponibles (TBD).",
-                "li4": "<strong>Crafters/Renown :</strong> Minimisez les quêtes secondaires jusqu'à dimanche pour profiter du bonus DMF."
+                "li3": "Complétez les événements hebdomadaires si disponibles.",
+                "li4": "<strong>Crafters/Renown :</strong> Minimisez les quêtes secondaires jusqu'au bonus DMF."
             },
             "pre_w1": {
                 "title": "Pre-Season Week 1 (3 Mars)",
                 "subtitle": "M0 disponibles (ilvl réduit)",
                 "li1": "<strong>NE DÉPENSEZ AUCUN CREST.</strong>",
-                "li2": "Débloquez les Delves Tier 8 (ou 11 si dispo) et farmez pour gear ?? et crests.",
-                "li3": "Faites 'Prey' si les récompenses sont utiles.",
-                "li4": "Faites les World Quests qui donnent des upgrades.",
-                "li5": "<strong>World Tour M0 :</strong> Sur chaque perso. Drop du 3/6 Veteran (240 ilvl). N'upgradez PAS ces items.",
-                "li6": "Si vous êtes crafter/intéressé par le Renown : Faites le Loremaster avec le bonus DMF."
+                "li2": "Débloquez les Delves Tier 8+ et farmez.",
+                "li3": "World Tour M0 : Sur chaque perso (3/6 Veteran, 240 ilvl). Ne pas upgrade.",
+                "li4": "Montez vos Renoms : Singularity (7), Hara’ti (8), Silvermoon (9), Amani (9) pour des pièces Champion (avec DMF !).",
+                "li5": "Faites le Loremaster avec DMF si vous visez les Renoms."
             },
             "pre_w2": {
                 "title": "Pre-Season Week 2 (10 Mars)",
                 "subtitle": "M0 disponibles (ilvl réduit)",
                 "li1": "<strong>NE DÉPENSEZ AUCUN CREST.</strong>",
-                "li2": "Continuez : Delves Tier 8+, Prey, World Quests.",
-                "li3": "World Tour M0 complet (3/6 Veteran 240 ilvl).",
-                "li4_title": "<strong>CRAFTING (Seulement si vous raidez le Mardi 17) :</strong>",
-                "li4_sub1": "Vous pouvez crafter des pièces 246 ilvl dans 3-5 slots (Bracers, Belt, Boots) en utilisant 60x Veteran Dawncrests chacun.",
-                "li4_sub2": "Mettez 2x Embellishments pour le boost de puissance en raid.",
-                "li4_sub3": "<em>Si vous ne raidez pas le mardi ou avez le temps de faire des M0 la semaine suivante, ATTENDEZ.</em>"
+                "li2": "Continuez Delves, World Quests, Renom.",
+                "li3": "Nouveau World Tour M0 complet.",
+                "li4_title": "<strong>CRAFTING (Si raid le 17) :</strong>",
+                "li4_sub1": "Craftez des pièces 246 ilvl dans 2 slots (80x Veteran Dawncrests).",
+                "li4_sub2": "Mettez 2x Embellishments pour le boost.",
+                "li4_sub3": "<em>Si vous ne raidez pas mardi, ATTENDEZ.</em>"
             },
             "s1_w1": {
-                "title": "Week 1 - Heroic Week (17 Mars) - No M+",
+                "title": "Week 1 - Heroic Week (17 Mars)",
                 "subtitle": "M0 disponibles (Full ilvl)",
-                "li1": "<strong>NE DÉPENSEZ PAS DE CRESTS HÉROÏQUES OU MYTHIQUES.</strong>",
-                "li2": "<strong>LFR :</strong> Faites-le pour les pièces de set (Tier). Raison : débloquer le catalyst.",
-                "li3": "<strong>World Tour M0 :</strong> Drop du 1/6 Champion (246 ilvl).",
-                "li4": "<strong>World Boss :</strong> Tuez-le pour un item 2/6 Champion (250 ilvl).",
-                "li5": "<strong>PvP :</strong> Faites la quête pour un item Hero track garanti (ne l'upgradez pas). <em>Note: A disparu de la beta, à vérifier.</em>",
-                "li6": "<strong>Delves :</strong> High level Bountiful Delves avec clés.",
-                "li7_title": "<strong>Crafting (Avant Raid) :</strong>",
-                "li7_sub1": "Craftez des 246 ilvl (Bracer/Belt/Boots) avec 2x Embellishments si pas fait.",
-                "li7_sub2": "Comblez les slots vides avec du 233 ilvl (Adventurer Dawncrests).",
-                "li8": "<strong>Dépense Crests :</strong> Vous pouvez dépenser les crests NON-Heroique/Mythique pour des upgrades temporaires (Trinkets).",
-                "li9": "<strong>Raid :</strong> Clear autant de Normal et Heroic que possible.",
-                "li10": "<strong>Total Crests dépensés :</strong> 0/100 Heroic."
+                "li1": "<strong>NE DÉPENSEZ PAS DE CRESTS HÉRO OR MYTH.</strong>",
+                "li2": "<strong>LFR :</strong> Parfait pour débloquer le catalyst globalement.",
+                "li3": "<strong>World Tour M0 :</strong> (1/6 Champion 246 ilvl).",
+                "li4": "<strong>World Boss / Delves Bountiful :</strong> Cherchez la quête 'Cracked Keystone'.",
+                "li5_title": "<strong>Avant le Raid :</strong>",
+                "li5_sub1": "Dépensez vos Veteran/Champion Crests pour tout upgrade.",
+                "li5_sub2": "Craftez 2 pièces 246 avec 80x Veteran Crests si pas fait.",
+                "li6": "Clear Normal et Héroïque. Dépense Heroic Crests uniquement si trinket BiS ou set urgent.",
+                "li7": "<strong>Total Crests dépensés :</strong> 0/100 Heroic."
             },
             "s1_w2": {
                 "title": "Week 2 - Mythic Week (24 Mars) - M+ Open",
                 "desc": "<em>(La semaine où vous devriez poser des congés)</em>",
-                "li1": "<strong>M+ :</strong> Farm des +10 pour du 3/6 Hero (266 ilvl), des vault slots et TOUS vos crests.",
-                "li2": "Si les +10 sont trop dures, faites des +8 pour du 2/6 Hero.",
-                "li3": "<strong>Upgrades Crests :</strong> NE DÉPENSEZ PAS DE CRESTS HÉROÏQUES OU MYTHIQUES.",
-                "li4": "<strong>Exception Mythic Loot :</strong> Si vous avez la chance de looter un item Mythic en raid, vous pouvez l'upgrade 2 fois sans affecter la stratégie (ajustez juste la suite).",
-                "li5": "<strong>Raid :</strong> Full clear Normal, Heroic, et début du Mythic !",
-                "li6": "<strong>Total Crests dépensés :</strong> 0/200 Heroic, 0/100 Gilded.",
-                "li7": "<strong>Fin de semaine :</strong> Item level approx 15x 266."
+                "li1": "<strong>M+ :</strong> Farm des +10 pour du 3/6 Hero (266), slots de vault et crests.",
+                "li2": "Si +10 trop difficile, visez les +8 (2/6 Hero).",
+                "li3": "Clear Normal et Heroic.",
+                "li4": "<strong>AVANT le Mythique :</strong> Upgradez environ 11 items 3/6 vers 4/6 (269) pour 220 Hero Crests.",
+                "li5": "<strong>Astuce Mythique :</strong> Si loot Mythic 1/6: maxez sa version Hero pour un upgrade gratuit en Mythic.",
+                "li6": "<strong>Total Crests dépensés :</strong> 220/220 Heroic. Item level : ~4x 266, 11x 269."
             },
             "w3": {
                 "title": "Week 3 - Final Raid Opens (31 Mars)",
-                "li1": "<strong>Vault :</strong> Ouvrez pour un item Myth track 272+. Upgradez-le APRÈS avoir crafté.",
-                "li2": "<strong>Crafting :</strong> Craftez une arme 2H Mythic à 5/6 (285 ilvl) pour 60 Myth Crests (sauf si votre discord de classe dit le contraire).<br><em>Pourquoi ? Car les armes dropées coûtent trop cher à upgrade.</em>",
-                "li3": "<strong>LFR :</strong> Si vous n'avez pas le 4p, faites le LFR.",
-                "li4": "<strong>M+ :</strong> Farm +12s pour vault et crests.",
-                "li5": "<strong>Raid :</strong> Reclear.",
-                "li6_title": "<strong>Dépense Heroic Crests (ENFIN) :</strong> AVANT le mythic prog, dépensez vos crests heroïques.",
-                "li6_sub1": "Upgradez autant d'items que possible de 3/6 (266) à 4/6 (269).",
-                "li6_sub2": "Chaque upgrade coûte 30 crests => 10 items total.",
-                "li6_sub3": "LAISSEZ un anneau, un trinket, et le slot que vous comptez crafter dans 2 semaines non-upgradés.",
-                "li7": "<strong>Upgrades Mythic :</strong> Upgradez votre item Vault 1/6 -> 4/6 (282 ilvl) pour 60 crests.",
-                "li8": "<strong>Total Crests dépensés :</strong> 300/300 Heroic, 120/200 Gilded."
+                "li1": "<strong>Vault :</strong> Item Myth track 272+ (arme 2H !).",
+                "li2": "<strong>Crafting :</strong> Craftez arme 2H Mythic 5/6 (285) pour 80 Myth Crests sauf si lootée.",
+                "li3": "<strong>M+ & Raid :</strong> Farm +10s/+12s (vault & crests). Reclear raid (LFR si manque 4p).",
+                "li4_title": "<strong>Upgrades :</strong>",
+                "li4_sub1": "<strong>Hero :</strong> Upgradez 2 items 4/6 à 6/6 (276) pour 80 Hero Crests. Gardez 20.",
+                "li4_sub2": "<strong>Myth :</strong> Upgrade item Vault 1/6 -> 6/6 (289) pour 80 Myth crests.",
+                "li4_sub3": "Rappel conversion: Mettez d'abord la version Héro de ce slot à 6/6 avec les 20 Hero.",
+                "li5": "<strong>Total :</strong> 320/320 Heroic, 160/320 Myth."
             },
             "w4": {
                 "title": "Week 4 (7 Avril)",
-                "li1": "<strong>Vault :</strong> Myth track item 272+.",
-                "li2": "<strong>M+ :</strong> Farm +12s.",
-                "li3": "On assume que vous avez chopé 1 pièce Mythic Loot (2/6 276 ilvl) sur vos 2 premières semaines de raid.",
-                "li4": "<strong>Heroic Upgrades :</strong> Upgradez 2 de vos items 3/6 restants à 4/6 (60 crests). Upgradez UN item 4/6 à 5/6 (40 crests).<br><em>Préférez upgrade un trinket ou anneau Hero que vous ne remplacerez pas de sitôt.</em>",
-                "li5_title": "<strong>Mythic Upgrades :</strong>",
-                "li5_sub1": "Upgrade Vault item 1/6 -> 4/6 (60 crests).",
-                "li5_sub2": "Upgrade Raid item 2/6 -> 4/6 (50 crests).",
-                "li5_sub3": "Upgrade Best Item 4/6 -> 5/6 (50 crests).",
-                "li6": "<strong>Total Crests dépensés :</strong> 400/400 Heroic, 280/300 Gilded."
+                "li1": "<strong>Vault & M+ :</strong> Myth track item 272+. Farm +10s/+12s.",
+                "li2_title": "<strong>Upgrades Hero & Myth :</strong>",
+                "li2_sub1": "Hero : 2 items 4/6 à 6/6 (80 Hero). +20 en réserve pour astuce.",
+                "li2_sub2": "Myth: Upgrade du Vault item 1/6 à 6/6 (80 Mythic) avec l'astuce conversion.",
+                "li2_sub3": "Myth: Upgrade Raid drop 2/6 -> 6/6 (80 Myth Crests).",
+                "li3": "<strong>Total :</strong> 420/420 Heroic, 320/420 Mythic."
             },
             "w5": {
                 "title": "Week 5 (14 Avril)",
                 "li1": "<strong>Vault :</strong> Myth track item 272+.",
-                "li2": "<strong>Crafting :</strong> Craftez votre 2ème item Mythic 5/6 (285) pour 60 mythic crests. Préférez un slot où vous avez un item Heroic.",
-                "li3": "<strong>Heroic Upgrades :</strong> Upgradez deux items 4/6 -> 5/6 (80 Crests). Essayez de choisir des items peu susceptibles d'être remplacés par le vault.",
-                "li4": "<strong>Mythic Upgrades :</strong> Upgrade item Vault 1/6 -> 4/6 (60 crests).",
-                "li5": "<strong>Total Crests dépensés :</strong> 480/500 Heroic, 400/400 Gilded."
-            }
+                "li2": "<strong>Crafting :</strong> 2ème item Mythic 5/6 (285) pour 80 mythic crests.",
+                "li3": "<strong>Upgrades :</strong> Upgradez les derniers items importants.",
+                "li4": "<strong>Total :</strong> 520/520 Heroic, 480/520 Myth."
+            },
+            "title": "Timeline Hebdomadaire Détaillée"
         },
         "resources": {
             "title": "Ressources Utiles",
             "checklist": {
                 "title": "📋 Checklist Hebdo",
                 "desc": "Spreadsheet complet à cocher."
+            },
+            "addon": {
+                "title": "🧩 In-game Addon",
+                "desc": "Mise à jour automatique en jeu."
             }
         },
         "citation": "Guide original par <a href='https://docs.google.com/document/d/e/2PACX-1vTGkZ2Cjr0jlv90XqW9vy9VXsVucd-yMCgHdyCvX_kQfOrexNDAC7Lf3LifuhqxrcWqJ0W3zIhvK3ii/pub' target='_blank' style='color: var(--accent);'>Larias</a>. N'hésitez pas à lui offrir un <a href='https://buymeacoffee.com/larias' target='_blank' style='color: var(--accent);'>café</a>."
