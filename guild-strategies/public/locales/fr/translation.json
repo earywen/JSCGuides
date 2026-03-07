@@ -10,13 +10,26 @@
         "voidspear": "The Voidspear",
         "dreamrift": "The Dreamrift",
         "queldanas": "March on Quel'Danas",
-        "midnight": "Midnight Guide"
+        "midnight": "Midnight Guide",
+        "quiz": "🎯 Quiz"
     },
     "common": {
         "normal": "Normal",
         "heroic": "Héroïque",
         "mythic": "Mythique",
         "menu": "Menu"
+    },
+    "quiz": {
+        "title": "Quiz Connaissances Boss",
+        "select_boss": "Choisissez un Boss à réviser",
+        "all_bosses": "👑 Tous les Boss",
+        "select_role": "Filtrez par Rôle",
+        "role_all": "Tous Rôles",
+        "start": "Lancer le Quiz 🚀",
+        "next": "Suivant ➡",
+        "results_title": "Résultats du Quiz",
+        "retry": "🔄 Rejouer",
+        "back_home": "🏠 Retour à l'accueil"
     },
     "boss": {
         "averzian": {

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boss Knowledge Quiz - JSCGuides</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="icon" type="image/png" href="/logo.png">
+    <meta name="description" content="Testez vos connaissances tactiques sur les boss du raid avec le Quiz JSCGuides.">
+</head>
+
+<body>
+    <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">
+            <div class="brand-flex">
+                <img src="/logo.png" alt="JSCGuides Logo" class="sidebar-logo">
+                <span>JSCGUIDE</span>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="fr">🇫🇷</button>
+                <button class="lang-btn" data-lang="en">🇬🇧</button>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="index.html" class="nav-item" data-i18n="app.dashboard">Dashboard</a>
+            <a href="quiz.html" class="nav-item active" data-i18n="nav.quiz">🎯 Quiz</a>
+            <a href="midnight-guide.html" class="nav-item" data-i18n="nav.midnight">Guide Midnight</a>
+
+            <div class="sidebar-section" data-i18n="nav.voidspear">The Voidspear</div>
+            <a href="boss-averzian.html" class="nav-item">Imperator Averzian</a>
+            <a href="boss-vorasius.html" class="nav-item">Vorasius</a>
+            <a href="boss-salhadaar.html" class="nav-item">Salhadaar</a>
+            <a href="boss-vaelgor-ezzorak.html" class="nav-item">Vaelgor &amp; Ezzorak</a>
+            <a href="boss-lightblinded.html" class="nav-item">L. Vanguard</a>
+            <a href="#" class="nav-item coming-soon">Alleria Windrunner</a>
+
+            <div class="sidebar-section" data-i18n="nav.dreamrift">The Dreamrift</div>
+            <a href="boss-chimaerus.html" class="nav-item">Chimaerus</a>
+
+            <div class="sidebar-section" data-i18n="nav.queldanas">March on Quel'Danas</div>
+            <a href="boss-beloren.html" class="nav-item">Belo'ren</a>
+            <a href="#" class="nav-item coming-soon">Midnight Falls</a>
+        </nav>
+        <div class="sidebar-footer">© 2026 · Jet Set Club</div>
+    </aside>
+
+    <main class="main-view">
+        <header class="main-header">
+            <button id="mobile-menu-btn" aria-label="Toggle navigation" class="mobile-menu-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 data-i18n="quiz.title">Boss Knowledge Quiz</h1>
+        </header>
+
+        <div class="content-area blur-fade">
+            <div class="quiz-container">
+                <!-- SETUP VIEW -->
+                <div id="quiz-setup" class="quiz-view">
+                    <h2 data-i18n="quiz.select_boss">Choisissez un Boss à réviser</h2>
+
+                    <div class="boss-grid quiz-boss-selector">
+                        <button class="boss-card quiz-boss-btn active" data-boss="all">
+                            <div class="boss-card-info" style="text-align:center; padding: 2rem;">
+                                <h3 style="font-size: 1.5rem;" data-i18n="quiz.all_bosses">👑 Tous les Boss</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="averzian">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Averzian" alt="Averzian"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Averzian</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="vorasius">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Vorasius" alt="Vorasius"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Vorasius</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="salhadaar">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Salhadaar" alt="Salhadaar"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Salhadaar</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="vaelgor">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Vaelgor+Ezzorak" alt="Vaelgor"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Vaelgor & Ezzorak</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="lightblinded">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=L.+Vanguard" alt="Lightblinded"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>L. Vanguard</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="chimaerus">
+                            <img src="https://placehold.co/600x300/1a1a1a/4a4a4a?text=Chimaerus" alt="Chimaerus"
+                                class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Chimaerus</h3>
+                            </div>
+                        </button>
+                        <button class="boss-card quiz-boss-btn" data-boss="beloren">
+                            <img src="/beloren.png" alt="Belo'ren" class="boss-card-img">
+                            <div class="boss-card-info">
+                                <h3>Belo'ren</h3>
+                            </div>
+                        </button>
+                    </div>
+
+                    <h2 data-i18n="quiz.select_role" style="margin-top: 2rem;">Filtrez par Rôle</h2>
+                    <div class="difficulty-switcher quiz-role-selector" style="margin-bottom: 2rem;">
+                        <button class="diff-btn active" data-role="all" data-i18n="quiz.role_all">Tous</button>
+                        <button class="diff-btn" data-role="tank" data-i18n="boss.averzian.tldr_tanks">🛡️
+                            Tanks</button>
+                        <button class="diff-btn" data-role="healer" data-i18n="boss.averzian.tldr_healers">💚
+                            Healers</button>
+                        <button class="diff-btn" data-role="dps" data-i18n="boss.averzian.tldr_dps">⚔️ DPS</button>
+                    </div>
+
+                    <button id="start-quiz-btn" class="diff-btn"
+                        style="background: var(--accent); color: white; padding: 1rem 2rem; font-size: 1.2rem; width: 100%; max-width: 400px; display: block; margin: 0 auto;"
+                        data-i18n="quiz.start">Lancer le Quiz</button>
+                </div>
+
+                <!-- ACTIVE QUIZ VIEW -->
+                <div id="quiz-active" class="quiz-view" style="display: none;">
+                    <div class="quiz-header">
+                        <span id="quiz-progress-text">Question 1/10</span>
+                        <div class="quiz-progress-bar">
+                            <div id="quiz-progress-fill" style="width: 10%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question-card phase-block">
+                        <div class="quiz-badges">
+                            <span id="quiz-boss-badge" class="badge">Boss</span>
+                            <span id="quiz-difficulty-badge" class="badge">Diff</span>
+                        </div>
+                        <h2 id="quiz-question-text" style="font-size: 1.5rem; margin: 1.5rem 0; line-height: 1.4;">
+                            Question text here</h2>
+
+                        <div id="quiz-answers" class="quiz-answers-grid">
+                            <!-- Answer buttons injectés via JS -->
+                        </div>
+                    </div>
+
+                    <div id="quiz-feedback" class="quiz-feedback" style="display: none;">
+                        <h3 id="quiz-feedback-title">Correct!</h3>
+                        <p id="quiz-feedback-text">Explanation here.</p>
+                        <button id="next-question-btn" class="diff-btn"
+                            style="background: var(--accent); color: white; display: block; margin-top: 1rem;"
+                            data-i18n="quiz.next">Suivant ➡</button>
+                    </div>
+                </div>
+
+                <!-- RESULTS VIEW -->
+                <div id="quiz-results" class="quiz-view" style="display: none; text-align: center;">
+                    <h2 data-i18n="quiz.results_title">Résultats du Quiz</h2>
+
+                    <div class="quiz-score-circle">
+                        <div id="quiz-score-number" class="score-number">80%</div>
+                        <div id="quiz-grade" class="score-grade">A</div>
+                    </div>
+
+                    <p id="quiz-results-text" style="font-size: 1.2rem; margin: 2rem 0; color: var(--text-muted);">
+                        Vous avez obtenu <strong style="color:white" id="quiz-score-points">8/10</strong> bonnes
+                        réponses.
+                    </p>
+
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <button id="retry-quiz-btn" class="diff-btn" style="background: var(--accent); color: white;"
+                            data-i18n="quiz.retry">Rejouer</button>
+                        <button id="back-home-btn" class="diff-btn" data-i18n="quiz.back_home">Retour à
+                            l'accueil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="./src/quiz.js"></script>
+</body>
+
+</html>
