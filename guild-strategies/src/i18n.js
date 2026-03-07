@@ -9,7 +9,7 @@ const i18nPromise = i18next
         fallbackLng: 'fr',
         debug: true,
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json',
+            loadPath: '/locales/{{lng}}/{{ns}}.json?v=' + new Date().getTime(),
         },
         detection: {
             order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
