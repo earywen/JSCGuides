@@ -1,8 +1,8 @@
-export const quizData = [
+﻿export const quizData = [
     // --- AVERZIAN ---
     {
         boss: "averzian",
-        roles: ["all", "dps", "healer"],
+        roles: ["dps", "healer"],
         difficulty: "normal",
         question_fr: "Lors de la mécanique Umbral Collapse, que doit faire le joueur ciblé ?",
         question_en: "During the Umbral Collapse mechanic, what should the targeted player do?",
@@ -24,7 +24,7 @@ export const quizData = [
     },
     {
         boss: "averzian",
-        roles: ["all", "tank"],
+        roles: ["tank"],
         difficulty: "normal",
         question_fr: "Combien de fois les tanks peuvent-ils soaker une case de grille par vague ?",
         question_en: "How many grid cells can tanks soak per wave?",
@@ -60,7 +60,7 @@ export const quizData = [
     },
     {
         boss: "averzian",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Que se passe-t-il si un Voidshaper atteint 100 d'énergie (Gathering Darkness) ?",
         question_en: "What happens if a Voidshaper reaches 100 energy (Gathering Darkness)?",
@@ -86,7 +86,7 @@ export const quizData = [
     },
     {
         boss: "vorasius",
-        roles: ["all", "dps", "healer"],
+        roles: ["dps", "healer"],
         difficulty: "normal",
         question_fr: "Comment anticiper le point de départ du balayage Void Breath ?",
         question_en: "How do you anticipate the starting point of the Void Breath sweep?",
@@ -98,7 +98,7 @@ export const quizData = [
     },
     {
         boss: "vorasius",
-        roles: ["all", "healer"],
+        roles: ["healer"],
         difficulty: "normal",
         question_fr: "Que faut-il faire sur le debuff des joueurs touchés par l'explosion des adds ?",
         question_en: "What must be done about the debuff on players hit by an add explosion?",
@@ -148,7 +148,7 @@ export const quizData = [
     },
     {
         boss: "salhadaar",
-        roles: ["all", "healer"],
+        roles: ["healer"],
         difficulty: "normal",
         question_fr: "À quel seul moment faut-il dispeler Despotic Command ?",
         question_en: "When is the ONLY time you should dispel Despotic Command?",
@@ -160,7 +160,7 @@ export const quizData = [
     },
     {
         boss: "salhadaar",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Quelle phase offre le meilleur moment pour utiliser la Bloodlust ?",
         question_en: "Which phase offers the best moment to use Bloodlust?",
@@ -172,7 +172,7 @@ export const quizData = [
     },
     {
         boss: "salhadaar",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "heroic",
         question_fr: "En Héroïque, que ne faut-il JAMAIS faire lors de la gestion des orbes ?",
         question_en: "On Heroic, what should you NEVER do when managing orbs?",
@@ -198,7 +198,7 @@ export const quizData = [
     // --- VAELGOR & EZZORAK ---
     {
         boss: "vaelgor",
-        roles: ["all", "tank"],
+        roles: ["tank"],
         difficulty: "normal",
         question_fr: "Quelle est la distance minimale à conserver entre les deux boss pour éviter Twilight Fury ?",
         question_en: "What is the minimum distance to keep between the two bosses to avoid Twilight Fury?",
@@ -222,7 +222,7 @@ export const quizData = [
     },
     {
         boss: "vaelgor",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Les deux dragons partagent-ils leurs points de vie (Health Pool) ?",
         question_en: "Do both dragons share their health pool?",
@@ -234,7 +234,7 @@ export const quizData = [
     },
     {
         boss: "vaelgor",
-        roles: ["all", "dps", "healer"],
+        roles: ["dps", "healer"],
         difficulty: "heroic",
         question_fr: "Quelle est la restriction majeure pour la mécanique Gloom (soak des sphères) ?",
         question_en: "What is the major restriction for the Gloom mechanic (sphere soaking)?",
@@ -260,7 +260,7 @@ export const quizData = [
     // --- LIGHTBLINDED VANGUARD ---
     {
         boss: "lightblinded",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Quel membre du trio doit être la priorité absolue (Focus target) ?",
         question_en: "Which member of the trio must be the absolute priority (Focus target)?",
@@ -308,7 +308,7 @@ export const quizData = [
     },
     {
         boss: "lightblinded",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Quand faut-il utiliser la Bloodlust ?",
         question_en: "When should Bloodlust be used?",
@@ -346,7 +346,7 @@ export const quizData = [
     },
     {
         boss: "chimaerus",
-        roles: ["all", "healer"],
+        roles: ["healer"],
         difficulty: "heroic",
         question_fr: "Comment doit être géré le DoT Consuming Miasma ?",
         question_en: "How should the Consuming Miasma DoT be managed?",
@@ -358,7 +358,7 @@ export const quizData = [
     },
     {
         boss: "chimaerus",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Que devez-vous faire lors des souffles Corrupted Devastation en Phase 2 ?",
         question_en: "What must you do during the Corrupted Devastation breaths in Phase 2?",
@@ -384,7 +384,7 @@ export const quizData = [
     // --- BELO'REN ---
     {
         boss: "beloren",
-        roles: ["all", "tank"],
+        roles: ["tank"],
         difficulty: "normal",
         question_fr: "Lors du Guardian's Edict (Combo de Frontaux), qui doit soak le 3ème frontal ?",
         question_en: "During Guardian's Edict (Frontal Combo), who must soak the 3rd frontal?",
@@ -408,7 +408,7 @@ export const quizData = [
     },
     {
         boss: "beloren",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "Quelle est la règle d'or concernant les Radiant Echoes (vague d'orbes) ?",
         question_en: "What is the golden rule concerning Radiant Echoes (orb wave)?",
@@ -420,7 +420,7 @@ export const quizData = [
     },
     {
         boss: "beloren",
-        roles: ["all", "dps"],
+        roles: ["dps"],
         difficulty: "normal",
         question_fr: "En Phase 2 (Intermission Ashen Shell), quand devez-vous utiliser votre Bloodlust ?",
         question_en: "In Phase 2 (Ashen Shell Intermission), when should you use Bloodlust?",
