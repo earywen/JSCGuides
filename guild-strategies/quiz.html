@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boss Knowledge Quiz - JSCGuides</title>
     <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="./src/quiz-layout.css">
     <link rel="icon" type="image/png" href="/logo.png">
     <meta name="description" content="Testez vos connaissances tactiques sur les boss du raid avec le Quiz JSCGuides.">
 </head>
@@ -62,71 +63,81 @@
             <div class="quiz-container">
                 <!-- SETUP VIEW -->
                 <div id="quiz-setup" class="quiz-view">
-                    <h2 data-i18n="quiz.select_boss">Choisissez un Boss à réviser</h2>
-
-                    <div class="boss-grid quiz-boss-selector">
-                        <button class="boss-card quiz-boss-btn active" data-boss="all">
-                            <div class="boss-card-info" style="text-align:center; padding: 2rem;">
-                                <h3 style="font-size: 1.5rem;" data-i18n="quiz.all_bosses">👑 Tous les Boss</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="averzian">
-                            <img src="/averzian.png" alt="Averzian" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Averzian</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="vorasius">
-                            <img src="/vorasius.png" alt="Vorasius" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Vorasius</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="salhadaar">
-                            <img src="/salhadaar.png" alt="Salhadaar" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Salhadaar</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="vaelgor">
-                            <img src="/vaelgor.png" alt="Vaelgor" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Vaelgor & Ezzorak</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="lightblinded">
-                            <img src="/lightblinded.png" alt="Lightblinded" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>L. Vanguard</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="chimaerus">
-                            <img src="/chimaerus.png" alt="Chimaerus" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Chimaerus</h3>
-                            </div>
-                        </button>
-                        <button class="boss-card quiz-boss-btn" data-boss="beloren">
-                            <img src="/beloren.png" alt="Belo'ren" class="boss-card-img">
-                            <div class="boss-card-info">
-                                <h3>Belo'ren</h3>
-                            </div>
-                        </button>
+                    
+                    <!-- 1. Top Section: Role Filter -->
+                    <div class="quiz-role-header">
+                        <h2 data-i18n="quiz.select_role">Choisissez votre Rôle</h2>
+                        <div class="difficulty-switcher quiz-role-selector">
+                            <button class="diff-btn active" data-role="all" data-i18n="quiz.role_all">🏆 Tous</button>
+                            <button class="diff-btn" data-role="tank" data-i18n="boss.averzian.tldr_tanks">🛡️ Tanks</button>
+                            <button class="diff-btn" data-role="healer" data-i18n="boss.averzian.tldr_healers">💚 Healers</button>
+                            <button class="diff-btn" data-role="dps" data-i18n="boss.averzian.tldr_dps">⚔️ DPS</button>
+                        </div>
                     </div>
 
-                    <h2 data-i18n="quiz.select_role" style="margin-top: 2rem;">Filtrez par Rôle</h2>
-                    <div class="difficulty-switcher quiz-role-selector" style="margin-bottom: 2rem;">
-                        <button class="diff-btn active" data-role="all" data-i18n="quiz.role_all">Tous</button>
-                        <button class="diff-btn" data-role="tank" data-i18n="boss.averzian.tldr_tanks">🛡️
-                            Tanks</button>
-                        <button class="diff-btn" data-role="healer" data-i18n="boss.averzian.tldr_healers">💚
-                            Healers</button>
-                        <button class="diff-btn" data-role="dps" data-i18n="boss.averzian.tldr_dps">⚔️ DPS</button>
+                    <!-- 2. Middle Section: Horizontal Boss Gallery -->
+                    <div class="quiz-gallery-container">
+                        <div class="quiz-gallery quiz-boss-selector">
+                            
+                            <!-- Master Card -->
+                            <button class="quiz-hero-card master-card quiz-boss-btn active" data-boss="all">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3 data-i18n="quiz.all_bosses">👑 Tous les Boss</h3>
+                                    <p class="hero-sub">Le défi Ultime</p>
+                                </div>
+                            </button>
+
+                            <!-- Boss Cards -->
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="averzian" style="background-image: url('/averzian.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Averzian</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="vorasius" style="background-image: url('/vorasius.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Vorasius</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="salhadaar" style="background-image: url('/salhadaar.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Salhadaar</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="vaelgor" style="background-image: url('/vaelgor.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Vaelgor & Ezzorak</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="lightblinded" style="background-image: url('/lightblinded.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>L. Vanguard</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="chimaerus" style="background-image: url('/chimaerus.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Chimaerus</h3>
+                                </div>
+                            </button>
+                            
+                            <button class="quiz-hero-card quiz-boss-btn" data-boss="beloren" style="background-image: url('/beloren.png');">
+                                <div class="hero-overlay glass-overlay">
+                                    <h3>Belo'ren</h3>
+                                </div>
+                            </button>
+
+                        </div>
                     </div>
 
-                    <button id="start-quiz-btn" class="diff-btn"
-                        style="background: var(--accent); color: white; padding: 1rem 2rem; font-size: 1.2rem; width: 100%; max-width: 400px; display: block; margin: 0 auto;"
-                        data-i18n="quiz.start">Lancer le Quiz</button>
+                    <!-- 3. Bottom Section: Action Button -->
+                    <div class="quiz-action-footer">
+                        <button id="start-quiz-btn" class="quiz-start-glow" data-i18n="quiz.start">Lancer le Quiz 🚀</button>
+                    </div>
+
                 </div>
 
                 <!-- ACTIVE QUIZ VIEW -->
