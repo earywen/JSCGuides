@@ -30,8 +30,8 @@ const DOM = {
     retryBtn: document.getElementById('retry-quiz-btn'),
     homeBtn: document.getElementById('back-home-btn'),
     gallery: document.querySelector('.quiz-gallery'),
-    prevBtn: document.querySelector('.gallery-prev'),
-    nextBtn: document.querySelector('.gallery-next')
+    galleryPrevBtn: document.querySelector('.gallery-prev'),
+    galleryNextBtn: document.querySelector('.gallery-next')
 };
 
 function initQuiz() {
@@ -76,14 +76,14 @@ function initGalleryInteractions() {
     if (!DOM.gallery) return;
 
     // Arrow Navigation
-    if (DOM.prevBtn) {
-        DOM.prevBtn.addEventListener('click', () => {
+    if (DOM.galleryPrevBtn) {
+        DOM.galleryPrevBtn.addEventListener('click', () => {
             DOM.gallery.scrollBy({ left: -300, behavior: 'smooth' });
         });
     }
     
-    if (DOM.nextBtn) {
-        DOM.nextBtn.addEventListener('click', () => {
+    if (DOM.galleryNextBtn) {
+        DOM.galleryNextBtn.addEventListener('click', () => {
             DOM.gallery.scrollBy({ left: 300, behavior: 'smooth' });
         });
     }
