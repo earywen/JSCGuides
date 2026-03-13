@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -72,10 +72,8 @@
                             <div class="role-column tanks">
                                 <h3 data-i18n="boss.vaelgor.tldr_tanks">🛡️ Tanks</h3>
                                 <ul>
-                                    <li><strong data-i18n="boss.vaelgor.alternatance">Alternatance :</strong> <span
-                                            data-i18n="boss.vaelgor.alternatance_desc">Un boss au sol, l'autre en l'air.
-                                            Ils swappent
-                                            après l'intermission.</span></li>
+                                    <li><strong data-i18n="boss.vaelgor.alternatance">Tank Swap :</strong> <span
+                                            data-i18n="boss.vaelgor.alternatance_desc">Échangez les boss après chaque <em>Gloom</em> en courant vers l'autre boss (ne les déplacez pas). Le boss en l'air utilise <em>Grappling Maw</em>.</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1262623"
                                                 data-wowhead="spell=1262623" class="spell-link-inline"
                                                 data-i18n="boss.vaelgor.nullbeam">Nullbeam</a>
@@ -94,12 +92,10 @@
                             <div class="role-column healers">
                                 <h3 data-i18n="boss.vaelgor.tldr_healers">💚 Healers</h3>
                                 <ul>
-                                    <li><strong><a href="https://www.wowhead.com/spell=1244413"
-                                                data-wowhead="spell=1244413" class="spell-link-inline"
-                                                data-i18n="boss.vaelgor.nullsnap">Nullsnap</a>
-                                            :</strong> <span data-i18n="boss.vaelgor.nullsnap_desc">Prévoyez de gros CDs
-                                            lors de la rupture des tethers.
-                                            C'est le pic de dégâts majeur.</span></li>
+                                    <li><strong><a href="https://www.wowhead.com/spell=1244672"
+                                                data-wowhead="spell=1244672" class="spell-link-inline"
+                                                data-i18n="boss.vaelgor.nullzone">Nullzone</a>
+                                            :</strong> <span data-i18n="boss.vaelgor.nullzone_desc">Le raid casse ses liens en premier. <strong>Le Tank casse son lien en dernier</strong> (le dernier lien déclenche <em>Nullzone Implosion</em> = gros DoT raid).</span></li>
                                     <li><strong><a href="https://www.wowhead.com/spell=1248847"
                                                 data-wowhead="spell=1248847" class="spell-link-inline"
                                                 data-i18n="boss.vaelgor.radiant_barrier">Radiant
@@ -134,9 +130,7 @@
                                             nukes immédiats
                                             sur ces adds.</span></li>
                                     <li><strong data-i18n="boss.vaelgor.hp_balance">HP Balance :</strong> <span
-                                            data-i18n="boss.vaelgor.hp_balance_desc">Les boss doivent mourir ensemble
-                                            (max 10%
-                                            d'écart). Focus le dragon au sol.</span></li>
+                                            data-i18n="boss.vaelgor.hp_balance_desc">Les boss doivent rester sous les <strong>10% d'écart de PV</strong> tout le combat, sinon buff de dégâts 100% (<em>Twilight Bond</em>). Split DPS équilibré.</span></li>
                                 </ul>
                             </div>
                         </section>
@@ -185,27 +179,22 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><strong data-i18n="boss.vaelgor.phase_1">Phase 1 (Sol/L'air)</strong>
+                                            <td><strong data-i18n="boss.vaelgor.phase_1">Phase 1 (Combo Répété)</strong>
                                             </td>
-                                            <td data-i18n="boss.vaelgor.phase_1_desc">Un dragon est au sol (mécaniques
-                                                lourdes), l'autre plane (moins actif).
+                                            <td data-i18n="boss.vaelgor.phase_1_desc">Séquence : <em>Void Howl</em> → <em>Nullbeam/Nullzone</em> → <em>Gloom</em>.
                                             </td>
-                                            <td><strong data-i18n="boss.vaelgor.phase_1_strat">Focus Grounded : Swappez
-                                                    de cible après chaque
-                                                    intermission.</strong></td>
+                                            <td><strong data-i18n="boss.vaelgor.phase_1_strat">Pack serré pour <em>Void Howl</em> sans superposer. Cassez les liens, MAIS le Tank en dernier. Soakez <em>Gloom</em> (5 Ranged).</strong></td>
                                         </tr>
                                         <tr>
                                             <td><strong data-i18n="boss.vaelgor.intermission">Intermission</strong></td>
-                                            <td><span data-i18n="boss.vaelgor.intermission_desc">À 100 Énergie, les deux
-                                                    s'envolent (</span><em><a
+                                            <td><span data-i18n="boss.vaelgor.intermission_desc">À 100 Énergie : </span><em><a
                                                         href="https://www.wowhead.com/spell=1249748"
                                                         data-wowhead="spell=1249748" class="spell-link-inline">Midnight
-                                                        Flames</a></em>).</td>
+                                                        Flames</a></em>. Apparition de la <em>Manifestation of Midnight</em>.</td>
                                             <td><strong data-i18n="boss.vaelgor.intermission_strat">Stack <a
                                                         href="https://www.wowhead.com/spell=1248847"
                                                         data-wowhead="spell=1248847" class="spell-link-inline">Radiant
-                                                        Barrier</a> : Tuez l'add de fixate à l'intérieur
-                                                    de la zone protective PNJ.</strong></td>
+                                                        Barrier</a> : Cible d'un cercle violet ? Écartez-vous sur le côté. Nuke rapide de la Manifestation.</strong></td>
                                         </tr>
                                         <tr>
                                             <td><strong data-i18n="boss.vaelgor.tethering">Tethering</strong></td>
@@ -340,6 +329,8 @@
                                             <a href="#" class="spell-link" data-wowhead="spell=1244221">Dread Breath</a>
                                             <a href="#" class="spell-link" data-wowhead="spell=1265131">Vaelwing
                                                 (Tank)</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1280458">Grappling Maw
+                                                (Air Phase)</a>
                                         </div>
                                     </div>
                                 </div>

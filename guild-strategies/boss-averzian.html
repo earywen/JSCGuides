@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -76,9 +76,7 @@
                                                 data-wowhead="spell=1265540" class="spell-link-inline"
                                                 data-i18n="boss.averzian.blackening_wounds">Blackening
                                                 Wounds</a> :</strong> <span
-                                            data-i18n="boss.averzian.blackening_desc">Debuff PV max. Swap à chaque
-                                            <em>Shadow's
-                                                Advance</em>.</span></li>
+                                            data-i18n="boss.averzian.blackening_desc">Debuff PV max. Swap autour de <strong>8-10 stacks</strong> selon votre confort.</span></li>
                                     <li><strong data-i18n="boss.averzian.positioning">Positionnement :</strong> <span
                                             data-i18n="boss.averzian.positioning_desc">Gardez le boss loin des <em>Dark
                                                 Tears</em>
@@ -105,10 +103,8 @@
                                             :</strong> <span data-i18n="boss.averzian.dark_upheaval_desc">Dégâts
                                             périodiques constants sur tout le raid.</span>
                                     </li>
-                                    <li><strong data-i18n="boss.averzian.desolation">Desolation (Héro) :</strong> <span
-                                            data-i18n="boss.averzian.desolation_desc">Surveillez les joueurs qui soakent
-                                            les
-                                            zones.</span></li>
+                                    <li><strong data-i18n="boss.averzian.desolation">Oblivion :</strong> <span
+                                            data-i18n="boss.averzian.desolation_desc">Organisez les soaks solitaires sur les zones déjà capturées. Attention aux dégâts de raid sinon !</span></li>
                                 </ul>
                             </div>
                             <div class="role-column dps">
@@ -126,9 +122,8 @@
                                                 data-wowhead="spell=1255749" class="spell-link-inline"
                                                 data-i18n="boss.averzian.gathering_darkness">Gathering
                                                 Darkness</a> :</strong> <span
-                                            data-i18n="boss.averzian.gathering_desc">Tuez le Voidshaper avant qu'il
-                                            n'atteigne
-                                            100 d'énergie (Wipe).</span></li>
+                                            data-i18n="boss.averzian.gathering_desc">Tuez le Voidshaper restant avant qu'il n'atteigne
+                                            100 d'énergie (devient un <em>Obsidian Endwalker</em> mortel). Esquivez les rayons du portail (<em>Light's End</em>).</span></li>
                                 </ul>
                             </div>
                         </section>
@@ -175,12 +170,12 @@
                                             <td><em><a href="https://www.wowhead.com/spell=1249714"
                                                         data-wowhead="spell=1249714" class="spell-link-inline">Umbral
                                                         Barrier</a></em> (99% réduction dégâts).<br><em>Gathering
-                                                    Darkness</em>.</td>
+                                                    Darkness</em> / <em>Light's End</em> (Rayons lasers du portail final).</td>
                                             <td>Doit être touché par <strong><a
                                                         href="https://www.wowhead.com/spell=1249262"
                                                         data-wowhead="spell=1249262" class="spell-link-inline">Umbral
                                                         Collapse</a></strong> pour briser son
-                                                bouclier.</td>
+                                                bouclier. Nuke.</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Shadowguard Stalwart</strong></td>
@@ -249,12 +244,18 @@
                                                 conquise.
                                             </td>
                                         </tr>
-                                        <tr class="mechanic-heroic">
-                                            <td><strong>Desolation</strong></td>
-                                            <td>Bombardement sur les zones DÉJÀ capturées.</td>
-                                            <td><strong>Soak obligatoire</strong> par 1 joueur pour éviter les dégâts
-                                                raid
+                                        <tr>
+                                            <td><strong>Oblivion</strong></td>
+                                            <td>Apparition de cercles sur les zones DÉJÀ capturées.</td>
+                                            <td><strong>1 joueur EXACTEMENT</strong> par cercle de soak obligatoire pour éviter des dégâts raid
                                                 massifs.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong><a href="https://www.wowhead.com/spell=1258883"
+                                                        data-wowhead="spell=1258883" class="spell-link-inline">Void
+                                                        Fall</a> / Oblivion's Wrath</strong></td>
+                                            <td>Knockback, apparition de swirlies massives et de pointes directionnelles.</td>
+                                            <td><strong>Esquivez</strong> les zones au sol.</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -303,9 +304,9 @@
                                     </p>
                                 </div>
 
-                                <!-- Schema 2: Desolation (Heroic) -->
+                                <!-- Schema 2: Oblivion Soaks -->
                                 <div class="visual-mechanic">
-                                    <h3>Desolation (Héroïque)</h3>
+                                    <h3>Oblivion Soaks</h3>
                                     <div class="averzian-grid">
                                         <!-- Row 1 -->
                                         <div class="grid-cell claimed">PRIS</div>
@@ -325,10 +326,10 @@
                                     </div>
                                     <div class="schema-legend" style="margin-top: 10px;">
                                         <span><i class="orb-indicator" style="background: rgba(234, 179, 8, 0.8);"></i>
-                                            Desolation</span>
+                                            Oblivion</span>
                                     </div>
                                     <p class="citation-text">
-                                        <em>Un joueur doit soaker le cercle jaune qui apparaît sur une zone
+                                        <em>1 joueur doit soaker le cercle jaune qui apparaît sur chaque zone
                                             capturée.</em>
                                     </p>
                                 </div>
@@ -372,6 +373,8 @@
                                             <a href="#" class="spell-link" data-wowhead="spell=1253918">Void Claimed</a>
                                             <a href="#" class="spell-link" data-wowhead="spell=1260712">Oblivion's
                                                 Wrath</a>
+                                            <a href="#" class="spell-link" data-wowhead="spell=1258883">Void
+                                                Fall</a>
                                             <a href="#" class="spell-link" data-wowhead="spell=1251583">March of the
                                                 Endless</a>
                                         </div>
