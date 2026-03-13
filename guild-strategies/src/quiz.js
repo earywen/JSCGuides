@@ -28,7 +28,10 @@ const DOM = {
     scorePoints: document.getElementById('quiz-score-points'),
     grade: document.getElementById('quiz-grade'),
     retryBtn: document.getElementById('retry-quiz-btn'),
-    homeBtn: document.getElementById('back-home-btn')
+    homeBtn: document.getElementById('back-home-btn'),
+    gallery: document.querySelector('.quiz-gallery'),
+    prevBtn: document.querySelector('.gallery-prev'),
+    nextBtn: document.querySelector('.gallery-next')
 };
 
 function initQuiz() {
@@ -65,6 +68,59 @@ function initQuiz() {
     DOM.nextBtn.addEventListener('click', handleNextQuestion);
     DOM.retryBtn.addEventListener('click', resetQuiz);
     DOM.homeBtn.addEventListener('click', () => window.location.href = 'index.html');
+
+    initGalleryInteractions();
+}
+
+function initGalleryInteractions() {
+    if (!DOM.gallery) return;
+
+    // Arrow Navigation
+    if (DOM.prevBtn) {
+        DOM.prevBtn.addEventListener('click', () => {
+            DOM.gallery.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+    }
+    
+    if (DOM.nextBtn) {
+        DOM.nextBtn.addEventListener('click', () => {
+            DOM.gallery.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    }
+
+    // Mouse Drag Scrolling
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    DOM.gallery.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - DOM.gallery.offsetLeft;
+        scrollLeft = DOM.gallery.scrollLeft;
+        // Temporarily disable scroll-snap during drag for smoother sliding
+        DOM.gallery.style.scrollSnapType = 'none';
+        
+        // Prevent default to avoid text selection during drag
+        e.preventDefault();
+    });
+
+    DOM.gallery.addEventListener('mouseleave', () => {
+        isDown = false;
+        DOM.gallery.style.scrollSnapType = 'x mandatory';
+    });
+
+    DOM.gallery.addEventListener('mouseup', () => {
+        isDown = false;
+        DOM.gallery.style.scrollSnapType = 'x mandatory';
+    });
+
+    DOM.gallery.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - DOM.gallery.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll-fast multiplier
+        DOM.gallery.scrollLeft = scrollLeft - walk;
+    });
 }
 
 function startQuiz() {

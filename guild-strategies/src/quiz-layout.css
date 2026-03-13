@@ -67,12 +67,46 @@
 
 
 /* 2. Middle Section: Horizontal Boss Gallery */
-.quiz-gallery-container {
+.quiz-gallery-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
-    margin: 0 -32px; /* Pull out of padding if needed, depending on container */
-    padding: 1rem 32px;
+    margin-bottom: 2rem;
+}
+
+.gallery-nav-btn {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--accent);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    z-index: 10;
+}
+
+.gallery-nav-btn:hover {
+    background: rgba(65, 190, 161, 0.1);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(65, 190, 161, 0.3);
+    transform: scale(1.1);
+}
+
+.gallery-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.quiz-gallery-container {
+    flex: 1;
     overflow: hidden;
     position: relative;
+    padding: 1rem 0;
 }
 
 .quiz-gallery {
@@ -80,9 +114,18 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 1.5rem;
-    padding-bottom: 2rem;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    padding-bottom: 1rem;
+    scrollbar-width: none; /* Hide scrollbar for cleaner look */
+    -ms-overflow-style: none; /* IE and Edge */
+    cursor: grab;
+}
+
+.quiz-gallery:active {
+    cursor: grabbing;
+}
+
+.quiz-gallery::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .quiz-gallery::-webkit-scrollbar {

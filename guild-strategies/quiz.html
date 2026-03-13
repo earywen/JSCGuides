@@ -76,8 +76,13 @@
                     </div>
 
                     <!-- 2. Middle Section: Horizontal Boss Gallery -->
-                    <div class="quiz-gallery-container">
-                        <div class="quiz-gallery quiz-boss-selector">
+                    <div class="quiz-gallery-wrapper">
+                        <button class="gallery-nav-btn gallery-prev" aria-label="Scroll Left">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        </button>
+                        
+                        <div class="quiz-gallery-container" id="quiz-boss-gallery">
+                            <div class="quiz-gallery quiz-boss-selector">
                             
                             <!-- Master Card -->
                             <button class="quiz-hero-card master-card quiz-boss-btn active" data-boss="all">
@@ -132,6 +137,11 @@
 
                         </div>
                     </div>
+                    
+                    <button class="gallery-nav-btn gallery-next" aria-label="Scroll Right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
 
                     <!-- 3. Bottom Section: Action Button -->
                     <div class="quiz-action-footer">
